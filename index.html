@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,10 +8,9 @@
   <style>
     body {
       font-family: "Inter", sans-serif;
-      scroll-behavior: smooth; /* 平滑滚动 */
+      scroll-behavior: smooth;
     }
 
-    /* ===== Navbar ===== */
     .navbar {
       border-bottom: 1px solid #eee;
     }
@@ -21,7 +19,6 @@
       font-weight: 500;
     }
 
-    /* ===== Title ===== */
     .title-main {
       font-size: 2.5rem;
       font-weight: 700;
@@ -59,121 +56,126 @@
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
+<!-- NAVBAR -->
 <nav class="navbar is-white is-fixed-top">
   <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item"><strong>OmniFashion</strong></a>
+    </div>
 
-<div class="navbar-brand">
-  <a class="navbar-item"><strong>OmniFashion</strong></a>
-</div>
-
-<div class="navbar-menu">
-  <div class="navbar-end">
-    <a class="navbar-item" href="#abstract">Abstract</a>
-    <a class="navbar-item" href="#framework">Framework</a>
-    <a class="navbar-item" href="#dataset">Dataset</a>
-    <a class="navbar-item" href="#training">Training</a>
-    <a class="navbar-item" href="#results">Results</a>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#abstract">Abstract</a>
+        <a class="navbar-item" href="#framework">Framework</a>
+        <a class="navbar-item" href="#dataset">Dataset</a>
+        <a class="navbar-item" href="#training">Training</a>
+        <a class="navbar-item" href="#results">Results</a>
+      </div>
+    </div>
   </div>
 </nav>
-
-<!-- 顶部留白 -->
 
 <div style="height:80px;"></div>
 
 <section class="section">
   <div class="container is-max-desktop">
 
-<!-- ================= TITLE ================= -->
-<div class="has-text-centered">
-  <h1 class="title-main">OmniFashion</h1>
+    <!-- TITLE -->
+    <div class="has-text-centered">
+      <h1 class="title-main">OmniFashion</h1>
 
-  <p class="subtitle-main">
-    Towards Generalist Fashion Intelligence via Multi-Task Vision-Language Learning
-  </p>
+      <p class="subtitle-main">
+        Towards Generalist Fashion Intelligence via Multi-Task Vision-Language Learning
+      </p>
 
+      <div style="margin-top: 1rem;">
+        <!-- ✅ 改好的 Paper 按钮 -->
+        <a onclick="alert('Paper coming soon!')" class="button is-dark is-rounded">📄 Paper</a>
 
-  <div style="margin-top: 1rem;">
-    <a href="static/pdfs/paper123.pdf" class="button is-dark is-rounded">📄 Paper</a>
-    <a href="#" class="button is-link is-rounded">💻 Code</a>
-    <a href="#" class="button is-info is-rounded">📊 Dataset</a>
+        <a href="#" class="button is-link is-rounded">💻 Code</a>
+        <a href="#" class="button is-info is-rounded">📊 Dataset</a>
+      </div>
+    </div>
+
+    <!-- ABSTRACT -->
+    <div class="section-box" id="abstract">
+      <h2 class="title is-4">Abstract</h2>
+      <p>
+        Fashion intelligence spans multiple tasks, retrieval, recommendation, recognition, and dialogue, yet remains hindered by fragmented supervision and incomplete fashion annotations.
+        These limitations jointly restrict the formation of consistent visual-semantic structures, preventing recent vision-language models (VLMs) from serving as a generalist fashion brain that unifies understanding and reasoning across tasks.
+        Therefore, we construct FashionX, a million-scale dataset that exhaustively annotates visible fashion items within an outfit and organizes attributes from global to part-level.
+        Built upon this foundation, we propose OmniFashion, a unified vision-language framework that bridges diverse fashion tasks under a unified fashion dialogue paradigm, enabling both multi-task reasoning and interactive dialogue.
+        Experiments on multi-subtasks and retrieval benchmarks show that OmniFashion achieves strong task-level accuracy and cross-task generalization, highlighting its offering of a scalable path toward universal, dialogue-oriented fashion intelligence.
+      </p>
+    </div>
+
+    <!-- FRAMEWORK -->
+    <div class="section-box" id="framework">
+      <h2 class="title is-4">Framework</h2>
+
+      <div class="image-block">
+        <img src="static/images/framwork_mid_v3.3.png">
+        <div class="caption">Framework overview</div>
+      </div>
+    </div>
+
+    <!-- DATASET -->
+    <div class="section-box" id="dataset">
+      <h2 class="title is-4">Dataset</h2>
+
+      <div class="image-block">
+        <img src="static/images/dataset1.png">
+        <div class="caption">Dataset comparison</div>
+      </div>
+
+      <div class="image-block">
+        <img src="static/images/dataset2.png">
+        <div class="caption">FashionX annotation pipeline</div>
+      </div>
+
+      <table class="table is-bordered is-fullwidth">
+        <thead>
+          <tr>
+            <th>Task</th><th>#Samples</th><th>Format</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Style</td><td>XXX</td><td>Image→Label</td></tr>
+          <tr><td>Attribute</td><td>XXX</td><td>Image→Text</td></tr>
+          <tr><td>FITB</td><td>XXX</td><td>Multi-image</td></tr>
+          <tr><td>Retrieval</td><td>XXX</td><td>Cross-modal</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TRAINING -->
+    <div class="section-box" id="training">
+      <h2 class="title is-4">Training</h2>
+
+      <table class="table is-bordered is-fullwidth">
+        <tr><td>Model</td><td>Qwen2.5-VL</td></tr>
+        <tr><td>Batch</td><td>XXX</td></tr>
+        <tr><td>Epoch</td><td>XXX</td></tr>
+      </table>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="section-box" id="results">
+      <h2 class="title is-4">Results</h2>
+
+      <div class="image-block">
+        <img src="static/images/result.png">
+        <div class="caption">Results</div>
+      </div>
+
+      <p>
+        Comparison with the SOTA methods across eight fashion dialogue subtasks, 
+        including overall style, part style, occasion, color recognition, and four retrieval dialogue settings (I2T, T2I, I2I, CIR). 
+        The table reports both A@1 and Acc metrics. OmniFashion shows consistently strong performance across all subtasks and achieves the highest mean accuracy among the open- and close-source models.
+      </p>
+    </div>
+
   </div>
-</div>
-
-<!-- ================= ABSTRACT ================= -->
-<div class="section-box" id="abstract">
-  <h2 class="title is-4">Abstract</h2>
-  <p>
-    Fashion intelligence spans multiple tasks, retrieval, recommendation, recognition, and dialogue, yet remains hindered by fragmented supervision and incomplete fashion annotations.
-These limitations jointly restrict the formation of consistent visual-semantic structures, preventing recent vision-language models (VLMs) from serving as a generalist fashion brain that unifies understanding and reasoning across tasks.
-Therefore, we construct FashionX, a million-scale dataset that exhaustively annotates visible fashion items within an outfit and organizes attributes from global to part-level.
-Built upon this foundation, we propose OmniFashion, a unified vision-language framework that bridges diverse fashion tasks under a unified fashion dialogue paradigm, enabling both multi-task reasoning and interactive dialogue.
-Experiments on multi-subtasks and retrieval benchmarks show that OmniFashion achieves strong task-level accuracy and cross-task generalization, highlighting its offering of a scalable path toward universal, dialogue-oriented fashion intelligence.
-
-  </p>
-</div>
-
-<!-- ================= FRAMEWORK ================= -->
-<div class="section-box" id="framework">
-  <h2 class="title is-4">Framework</h2>
-
-  <div class="image-block">
-    <img src="static/images/framwork_mid_v3.3.png">
-    <div class="caption">Framework overview</div>
-  </div>
-</div>
-
-<!-- ================= DATASET ================= -->
-<div class="section-box" id="dataset">
-  <h2 class="title is-4">Dataset</h2>
-  <div class="image-block">
-    <img src="static/images/dataset1.png">
-    <div class="caption">Dataset comparison</div>
-  </div>
-   <div class="image-block">
-    <img src="static/images/dataset2.png">
-    <div class="caption">FashionX annotation pipeline</div>
-  </div>
-  <table class="table is-bordered is-fullwidth">
-    <thead>
-      <tr>
-        <th>Task</th><th>#Samples</th><th>Format</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Style</td><td>XXX</td><td>Image→Label</td></tr>
-      <tr><td>Attribute</td><td>XXX</td><td>Image→Text</td></tr>
-      <tr><td>FITB</td><td>XXX</td><td>Multi-image</td></tr>
-      <tr><td>Retrieval</td><td>XXX</td><td>Cross-modal</td></tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- ================= TRAINING ================= -->
-<div class="section-box" id="training">
-  <h2 class="title is-4">Training</h2>
-
-  <table class="table is-bordered is-fullwidth">
-    <tr><td>Model</td><td>Qwen2.5-VL</td></tr>
-    <tr><td>Batch</td><td>XXX</td></tr>
-    <tr><td>Epoch</td><td>XXX</td></tr>
-  </table>
-</div>
-
-<!-- ================= RESULTS ================= -->
-<div class="section-box" id="results">
-  <h2 class="title is-4">Results</h2>
-
-  <div class="image-block">
-    <img src="static/images/result.png">
-    <div class="caption">Results</div>
-  </div>
-<p>
-Comparison with the SOTA methods across eight fashion dialogue subtasks, 
-including overall style, part style, occasion, color recognition, and four retrieval dialogue settings (I2T, T2I, I2I, CIR). 
-The table reports both A@1 and Acc metrics. OmniFashion shows consistently strong performance across all subtasks and achieves the highest mean accuracy among the open- and close-source models.
-  </p>
 </section>
 
 </body>
