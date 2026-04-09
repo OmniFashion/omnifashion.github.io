@@ -4,76 +4,167 @@
   <meta charset="UTF-8">
   <title>OmniFashion Project Page</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
       font-family: "Inter", sans-serif;
       scroll-behavior: smooth;
+      background-color: #fafafa;
     }
 
-    .navbar {
-      border-bottom: 1px solid #eee;
-    }
-
-    .navbar-item {
-      font-weight: 500;
-    }
-
-    .title-main {
-      font-size: 2.5rem;
-      font-weight: 700;
-    }
-
-    .subtitle-main {
-      font-size: 1.2rem;
-      color: #555;
-    }
-
+    .navbar { border-bottom: 1px solid #eee; }
+    .navbar-item { font-weight: 500; }
+    
+    .title-main { font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; }
+    .subtitle-main { font-size: 1.25rem; color: #555; max-width: 800px; margin: 0 auto; line-height: 1.6; }
+    
     .section-box {
       margin-top: 4rem;
+      background: #fff;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.04);
     }
 
-    .image-block {
-      margin: 2rem 0;
-      text-align: center;
-    }
+    .image-block { margin: 2.5rem 0; text-align: center; }
+    .image-block img { width: 100%; max-width: 850px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); transition: transform 0.3s ease; }
+    .image-block img:hover { transform: translateY(-2px); }
+    .caption { margin-top: 0.8rem; color: #777; font-size: 0.95rem; font-style: italic; }
 
-    .image-block img {
-      width: 100%;
-      max-width: 850px;
+    /* --- 新增：优势卡片样式 (Highlights) --- */
+    .feature-card {
+      background: #f8fbff;
+      border: 1px solid #e1edfc;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      height: 100%;
     }
+    .feature-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .feature-title { font-weight: 700; color: #1a365d; margin-bottom: 0.5rem; }
 
-    .caption {
-      margin-top: 0.5rem;
-      color: #666;
+    /* --- 新增：样本构造展示样式 (Construction) --- */
+    .construction-box {
+      background: #fff;
+      border: 2px dashed #d1d5db;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      position: relative;
+    }
+    .flow-arrow {
+      text-align: center;
+      color: #9ca3af;
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+    .code-block {
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 1rem;
+      border-radius: 8px;
+      font-family: monospace;
       font-size: 0.9rem;
     }
+    /* 训练流程序列化 */
+.train-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.stage-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+.stage-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.stage-number {
+  background: #2563eb;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.stage-title {
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 1.1rem;
+}
+
+/* 任务网格 */
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.task-item {
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.task-item b {
+  color: #2563eb;
+  display: block;
+  margin-bottom: 4px;
+}
+.task-item p {
+  font-size: 0.85rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* 连接箭头 */
+.flow-connector {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #2563eb;
+  margin: -1rem 0;
+}
+    /* --- 交互式对话框样式 (Scenarios) --- */
+    .demo-container { background: #fff; border-radius: 12px; border: 1px solid #eee; margin-top: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .chat-window { max-width: 700px; margin: 2rem auto; padding: 0 1rem; }
+    .message { margin-bottom: 1.5rem; display: flex; flex-direction: column; }
+    .user-msg { align-items: flex-end; }
+    .ai-msg { align-items: flex-start; }
+    .bubble { padding: 14px 20px; border-radius: 20px; max-width: 85%; font-size: 0.95rem; line-height: 1.5; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    .user-bubble { background-color: #2563eb; color: white; border-bottom-right-radius: 4px; }
+    .ai-bubble { background-color: #f3f4f6; color: #1f2937; border-bottom-left-radius: 4px; border: 1px solid #e5e7eb; }
+    .chat-img { width: 180px; border-radius: 12px; margin-bottom: 8px; border: 2px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    
+    .tab-content { display: none; animation: slideUp 0.4s ease; }
+    .tab-content.is-active { display: block; }
+    @keyframes slideUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar is-white is-fixed-top">
   <div class="container">
-
     <div class="navbar-brand">
-      <a class="navbar-item"><strong>OmniFashion</strong></a >
+      <a class="navbar-item"><strong>OmniFashion</strong></a>
     </div>
-
     <div class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href=" ">Abstract</a >
-        <a class="navbar-item" href="#framework">Framework</a >
-        <a class="navbar-item" href="#dataset">Dataset</a >
-        <a class="navbar-item" href="#training">Training</a >
-        <a class="navbar-item" href="#results">Results</a >
+        <a class="navbar-item" href="#abstract">Abstract</a>
+        <a class="navbar-item" href="#dataset">Dataset</a>
+        <a class="navbar-item" href="#scenarios">Scenarios</a>
+        <a class="navbar-item" href="#training">Training</a>
+        <a class="navbar-item" href="#results">Results</a>
       </div>
     </div>
-
-  </div> <!-- ✅ 补上 -->
+  </div>
 </nav>
 
 <div style="height:80px;"></div>
@@ -81,153 +172,260 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <!-- TITLE -->
-    <div class="has-text-centered">
+    <div class="has-text-centered" style="margin-bottom: 3rem;">
       <h1 class="title-main">OmniFashion</h1>
-
       <p class="subtitle-main">
         Towards Generalist Fashion Intelligence via Multi-Task Vision-Language Learning
-      </p >
-
-      <div style="margin-top: 1rem;">
-        <a href="static/pdfs/paper222.pdf" class="button is-dark is-rounded">📄 Paper</a >
-        <a href="#" class="button is-link is-rounded">💻 Code</a >
-        <a href="#" class="button is-info is-rounded">📊 Dataset</a >
+      </p>
+      <div style="margin-top: 1.5rem;">
+        <a href="#" class="button is-dark is-rounded">📄 Paper</a>
+        <a href="#" class="button is-link is-rounded">💻 Code</a>
+        <a href="#" class="button is-info is-rounded">📊 Dataset</a>
       </div>
     </div>
 
-    <!-- ABSTRACT -->
     <div class="section-box" id="abstract">
       <h2 class="title is-4">Abstract</h2>
-      <p>
+      <p class="content has-text-justified">
         Fashion intelligence spans multiple tasks, retrieval, recommendation, recognition, and dialogue, yet remains hindered by fragmented supervision and incomplete fashion annotations.
         These limitations jointly restrict the formation of consistent visual-semantic structures, preventing recent vision-language models (VLMs) from serving as a generalist fashion brain that unifies understanding and reasoning across tasks.
         Therefore, we construct <b>FashionX</b>, a million-scale dataset that exhaustively annotates visible fashion items within an outfit and organizes attributes from global to part-level.
         Built upon this foundation, we propose <b>OmniFashion</b>, a unified vision-language framework that bridges diverse fashion tasks under a unified fashion dialogue paradigm, enabling both multi-task reasoning and interactive dialogue.
         Experiments on multi-subtasks and retrieval benchmarks show that OmniFashion achieves strong task-level accuracy and cross-task generalization, highlighting its offering of a scalable path toward universal, dialogue-oriented fashion intelligence.
-      </p >
-    </div>
+      </p>
 
-    <!-- FRAMEWORK -->
-    <div class="section-box" id="framework">
-      <h2 class="title is-4">Framework</h2>
-
+      <h2 class="title is-4 mt-6">Framework</h2>
       <div class="image-block">
         <img src="static/images/framwork_mid_v3.3.png">
-        <div class="caption">llustration of the progressive learning task design in OmniFashion. Different color stands for different tasks.</div>
+        <div class="caption">Illustration of the progressive learning task design in OmniFashion. Different color stands for different tasks.</div>
       </div>
     </div>
 
-    <!-- DATASET -->
     <div class="section-box" id="dataset">
-      <h2 class="title is-4">Dataset</h2>
+      <h2 class="title is-4">Dataset: The Power of FashionX</h2>
+      
+      <div class="columns is-multiline mt-4 mb-6">
+        <div class="column is-4">
+          <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <div class="feature-title">Million-Scale Volume</div>
+            <p class="is-size-7 text-gray-600">Addressing data scarcity with massive, exhaustively annotated visible fashion items across diverse scenarios.</p>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="feature-card">
+            <div class="feature-icon">🔍</div>
+            <div class="feature-title">Hierarchical Granularity</div>
+            <p class="is-size-7 text-gray-600">Organized attributes ranging from global outfit semantics down to fine-grained, part-level details.</p>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="feature-card">
+            <div class="feature-icon">🔗</div>
+            <div class="feature-title">Unified Formulation</div>
+            <p class="is-size-7 text-gray-600">Transforms fragmented fashion attributes into a consistent visual-semantic dialogue structure.</p>
+          </div>
+        </div>
+      </div>
 
-      <p>
+      <p class="content has-text-justified">
         OmniFashion builds on <b>FashionX</b> to support unified vision-language learning. 
         We first present the FashionX annotation pipeline, which produces large-scale annotations with hierarchical semantics. 
         We then introduce a unified task formulation along with a progressive training strategy, explaining how diverse fashion tasks are cast into a consistent paradigm. 
         Next, we describe the inference setup of the framework. 
         Finally, we provide statistical analyses of FashionX, summarizing the task composition and illustrating how it supports both alignment and unified multi-task learning.
-      </p >
+      </p>
 
-      <div class="image-block">
-        <img src="static/images/dataset1.png">
-        <div class="caption">Dataset comparison</div>
+      <div class="image-block"><img src="static/images/dataset1.png"><div class="caption">Dataset comparison</div></div>
+      <div class="image-block"><img src="static/images/dataset2.png"><div class="caption">FashionX annotation pipeline</div></div>
+      
+      <h3 class="title is-5 mt-6">How We Build High-Quality Dialogue Samples</h3>
+      <div class="construction-box">
+        <div class="columns is-vcentered">
+          <div class="column is-5 has-text-centered">
+            <span class="tag is-info is-light mb-2">1. Raw Annotation (FashionX)</span>
+            <div class="box" style="background:#f8f9fa;">
+              <p class="is-size-7 has-text-left"><b>Item:</b> Blouse<br><b>Material:</b> Chiffon<br><b>Sleeve:</b> Puff sleeve<br><b>Style:</b> Elegant, Summer</p>
+            </div>
+          </div>
+          <div class="column is-2 flow-arrow">➔</div>
+          <div class="column is-5 has-text-centered">
+            <span class="tag is-success is-light mb-2">2. Unified QA Generation</span>
+            <div class="code-block has-text-left">
+              <span style="color:#a78bfa">User:</span> Describe the material and style of the top in the image.<br><br>
+              <span style="color:#34d399">OmniFashion:</span> The top is an elegant chiffon blouse featuring puff sleeves, making it highly suitable for summer wear.
+            </div>
+          </div>
+        </div>
+        <p class="is-size-7 has-text-centered mt-3 color:gray"><i>By mapping dense attributes into natural language templates, we enable the model to learn complex reasoning.</i></p>
       </div>
 
-      <div class="image-block">
-        <img src="static/images/dataset2.png">
-        <div class="caption">FashionX annotation pipeline</div>
-      </div>
+      <div class="image-block"><img src="static/images/analysis.png"><div class="caption">Statistical Detail of FashionX. Abbreviations: One-piece(O), top (T), bottom (B), footwear (F), accessory (A).</div></div>
+    </div>
 
-      <div class="image-block">
-        <img src="static/images/analysis.png">
-        <div class="caption">Statistical Detail of FashionX. Abbreviations: One-piece(O), top (T), bottom (B), footwear (F), accessory (A).</div>
+    <div class="section-box" id="scenarios">
+      <h2 class="title is-4">Simulated User Q&A Scenarios</h2>
+      <p class="mb-5">Experience how OmniFashion acts as a generalist fashion assistant in real-world interactive dialogues.</p>
+      
+      <div class="demo-container p-5">
+        <div class="tabs is-centered is-boxed is-toggle is-toggle-rounded">
+          <ul>
+            <li class="is-active" data-tab="search"><a><span>🔍 Cross-Modal Search</span></a></li>
+            <li data-tab="styling"><a><span>👗 Outfit Styling</span></a></li>
+            <li data-tab="inquiry"><a><span>💎 Attribute Inquiry</span></a></li>
+          </ul>
+        </div>
+
+        <div id="tab-content-container">
+          <div class="tab-content is-active" id="search">
+            <div class="chat-window">
+              <div class="message user-msg">
+                <img src="static/images/cloth3.png" class="chat-img" alt="Query">
+                <div class="bubble user-bubble">I really like the fit and the flutter sleeves of this leopard top, but I'm looking for a version with a more vibrant floral print instead. Can you find something with this exact same silhouette?</div>
+              </div>
+              <div class="message ai-msg">
+                <div class="bubble ai-bubble">Understood. I have retrieved this top for you. It perfectly maintains the loose flutter-sleeve design and elasticated hem you like, while featuring a rich, multi-colored floral pattern as requested.</div>
+                <img src="static/images/cloth4.png" class="chat-img" style="margin-top:10px;" alt="Result">
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="styling">
+            <div class="chat-window">
+              <div class="message user-msg">
+                <img src="static/images/cloth1.png" class="chat-img">
+                <div class="bubble user-bubble">What kind of footwear would perfectly match this skirt?</div>
+              </div>
+              <div class="message ai-msg">
+                <div class="bubble ai-bubble">Pair this structured peplum dress with minimalist strappy heels or pointed stilettos. Slender straps balance the bold jeweled collar, while nude or metallic tones elongate your legs for a polished, sophisticated look. Avoid bulky footwear to maintain its elegant silhouette.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="inquiry">
+            <div class="chat-window">
+              <div class="message user-msg">
+                <img src="static/images/cloth2.png" class="chat-img">
+                <div class="bubble user-bubble">Can you analyze the material of this top? Is it breathable enough for hot summer days?</div>
+              </div>
+              <div class="message ai-msg">
+                <div class="bubble ai-bubble">The top appears to be crafted from sheer chiffon or a lightweight lace-mesh blend, featuring delicate textured embroidery. Its airy, semi-transparent weave and loose-fitting cut provide excellent ventilation, making it a highly breathable and stylish choice for hot summer days.</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- TRAINING -->
     <div class="section-box" id="training">
       <h2 class="title is-4">Training</h2>
-
-      <p>
+      <p class="content has-text-justified">
         We then introduce a unified task formulation along with a progressive training strategy, explaining how diverse fashion tasks are cast into a consistent paradigm. 
         Next, we describe the inference setup of the framework. 
         Finally, we provide statistical analyses of FashionX, summarizing the task composition and illustrating how it supports both alignment and unified multi-task learning.
-      </p >
+      </p>
 
-      <div class="image-block">
-        <img src="static/images/structure.png">
-        <div class="caption">Pipeline of OmniFashion.</div>
-      </div>
-      <div class="section-box" id="training-detail">
+      <div class="image-block"><img src="static/images/structure.png"><div class="caption">Pipeline of OmniFashion.</div></div>
+      
+<div class="content mt-5" style="background: #fafafa; padding: 2rem; border-radius: 12px;">
   <p><b>Training Details</b></p>
+  <p>OmniFashion unifies all fashion tasks into a dialogue-based QA format, enabling retrieval, recognition, and reasoning within a single framework.</p>
 
-  <p>
- OmniFashion unifies all fashion tasks into a dialogue-based QA format, enabling retrieval, recognition, and reasoning within a single framework.
-The model takes image(s) and a query as input, and generates a textual answer using a shared autoregressive objective.
-  </p >
+  <div class="train-flow">
+    <div class="stage-card">
+      <div class="stage-header">
+        <span class="stage-number">Stage 1</span>
+        <span class="stage-title">Alignment</span>
+      </div>
+      <p class="is-size-7">The model first learns fashion-aware visual-semantic grounding via template-based QA pairs constructed from FashionX annotations.</p>
+    </div>
 
-  <p>
-    <b>Stage 1: Alignment.</b> The model first learns fashion-aware visual-semantic grounding via template-based QA pairs constructed from FashionX annotations.
-  </p >
+    <div class="flow-connector">↓</div>
 
-  <p>
-    <b>Stage 2: Multi-task Learning.</b> The same QA formulation is extended to multiple fashion tasks through task-specific question-answer templates.
-  </p >
-
-  <p>
-    <b>Recommendation.</b> Supports single- and multi-image inputs to reason about style compatibility and scenario suitability.
-  </p >
-
-  <p>
-    <b>Retrieval.</b> Reformulates text-image matching and comparison tasks as dialogue queries over candidate sets.
-  </p >
-
-  <p>
-    <b>Recognition.</b> Focuses on fine-grained garment attributes such as color, material, and design details.
-  </p >
-
-  <p>
-    <b>Quick Assistance.</b> Handles condition-based queries with concise answers for tasks like style or occasion judgment.
-  </p >
-
+    <div class="stage-card">
+      <div class="stage-header">
+        <span class="stage-number">Stage 2</span>
+        <span class="stage-title">Multi-task Learning</span>
+      </div>
+      <p class="is-size-7">The same QA formulation is extended to multiple fashion tasks through task-specific question-answer templates:</p>
+      
+      <div class="task-grid">
+        <div class="task-item">
+          <b>Recommendation</b>
+          <p>Reasons about style compatibility and scenario suitability via single/multi-image inputs.</p>
+        </div>
+        <div class="task-item">
+          <b>Retrieval</b>
+          <p>Reformulates text-image matching and comparison as dialogue queries over candidate sets.</p>
+        </div>
+        <div class="task-item">
+          <b>Recognition</b>
+          <p>Focuses on fine-grained attributes like color, material, and complex design details.</p>
+        </div>
+        <div class="task-item">
+          <b>Quick Assistance</b>
+          <p>Handles condition-based queries with concise answers for style or occasion judgment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
     </div>
 
-    <!-- RESULTS -->
     <div class="section-box" id="results">
-      <h2 class="title is-4">Results</h2>
+      <h2 class="title is-4">Quantitative & Qualitative Results</h2>
 
-      <div class="image-block">
-        <img src="static/images/result.png">
-        <div class="caption">Results.</div>
-      </div>
-
-      <p>
+      <div class="image-block"><img src="static/images/result.png"><div class="caption">Results.</div></div>
+      <p class="content has-text-justified">
         Comparison with the SOTA methods across eight fashion dialogue subtasks, 
         including overall style, part style, occasion, color recognition, and four retrieval dialogue settings (I2T, T2I, I2I, CIR). 
         The table reports both A@1 and Acc metrics. OmniFashion shows consistently strong performance across all subtasks and achieves the highest mean accuracy among the open- and close-source models.
-      </p >
+      </p>
 
+      <h3 class="title is-5 mt-6">High-Quality Generation Examples</h3>
+      <p class="mb-4">The qualitative results below demonstrate OmniFashion's exceptional capability in visual cue extraction and multi-modal reasoning. By successfully grounding fine-grained concepts (underlined), the model delivers accurate predictions (green) while avoiding common failure modes (red) seen in standard VLMs.</p>
+      
       <div class="image-block">
         <img src="static/images/result2.png">
         <div class="caption">Qualitative comparison across subtasks. Each block shows input queries and model responses. Colored text highlights correct
         (green), incorrect (red), and uncertain (orange) predictions, while underlined phrases mark key visual cues.</div>
       </div>
 
-      <p>
+      <hr class="my-6">
+
+      <p class="content has-text-justified">
         In this work, we present FashionX and OmniFashion as two complementary contributions toward advancing generalist fashion intelligence.
         FashionX offers large-scale, structured, and automatically generated annotations that address the incompleteness and inconsistency of existing datasets. Its unified, head-to-toe schema integrates global outfit semantics with fine-grained part attributes, providing a coherent foundation for multi-level fashion understanding.
         Built upon this foundation, OmniFashion reformulates diverse fashion tasks,
         including reasoning, attribute recognition, and cross-modal retrieval, into a unified fashion dialogue paradigm. This formulation connects detailed visual cues with holistic outfit interpretation and supports consistent learning across heterogeneous objectives. 
         Surpassing all comparable open-source VLMs and remaining competitive with much stronger closed-source models across style reasoning, multi-image comparison, and fine-grained retrieval, OmniFashion shows that unified dialogue learning and structured fashion supervision can meaningfully advance VLMs toward practical generalist fashion intelligence.
-      </p >
-
+      </p>
     </div>
 
   </div>
 </section>
+
+<footer class="footer mt-6" style="background-color: #fff; border-top: 1px solid #eee;">
+  <div class="content has-text-centered is-size-7 color-gray">
+    <p>OmniFashion Project Page. Crafted for academic demonstration.</p>
+  </div>
+</footer>
+
+<script>
+  // Tab Switching Logic for Interactive Scenarios
+  document.querySelectorAll('.tabs li').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tabs li').forEach(t => t.classList.remove('is-active'));
+      tab.classList.add('is-active');
+
+      const target = tab.dataset.tab;
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('is-active');
+      });
+      document.getElementById(target).classList.add('is-active');
+    });
+  });
+</script>
 
 </body>
 </html>
