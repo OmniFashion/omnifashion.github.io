@@ -262,30 +262,6 @@
       </div>
 
     <h3 class="title is-5 mt-6">📊 Data Insight: Composition & Performance</h3>
-      <div class="columns is-multiline">
-        <div class="column is-6">
-          <div class="box">
-            <h4 class="has-text-centered mb-4"><b>Source Dataset Distribution</b></h4>
-            <div id="pie-source" style="width: 100%; height: 350px;"></div>
-          </div>
-        </div>
-        <div class="column is-6">
-          <div class="box">
-            <h4 class="has-text-centered mb-4"><b>Prediction Accuracy Comparison</b></h4>
-            <div id="bar-acc" style="width: 100%; height: 350px;"></div>
-          </div>
-        </div>
-        <div class="column is-12">
-          <div class="box">
-            <h4 class="has-text-centered mb-4"><b>Hierarchical Attribute & Item Statistics</b></h4>
-            <div id="bar-category" style="width: 100%; height: 400px;"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="section-box" style="background: #fdfdfd; border: 1px solid #edf2f7; margin-top: 2rem; padding: 2rem; box-shadow: none;">
-        <h3 class="title is-4 mb-5">📊 FashionX Statistical Insights</h3>
-        
         <div class="columns has-text-centered mb-6">
           <div class="column">
             <div class="box" style="background: #f0f7ff; border:none;">
@@ -306,30 +282,48 @@
             </div>
           </div>
         </div>
-
-        <div class="columns is-multiline">
-          <div class="column is-12">
-            <div class="box is-shadowless" style="border: 1px solid #f0f0f0;">
+      <div class="columns is-multiline">
+        <div class="column is-6">
+          <div class="box">
+            <h4 class="has-text-centered mb-4"><b>Source Dataset Distribution</b></h4>
+            <div id="pie-source" style="width: 100%; height: 350px;"></div>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="box">
+            <h4 class="has-text-centered mb-4"><b>Prediction Accuracy Comparison</b></h4>
+            <div id="bar-acc" style="width: 100%; height: 350px;"></div>
+          </div>
+        </div>
+        <div class="column is-12">
+          <div class="box">
+            <h4 class="has-text-centered mb-4"><b>Hierarchical Attribute & Item Statistics</b></h4>
+            <div id="bar-category" style="width: 100%; height: 400px;"></div>
+          </div>
+        </div>
+        <div class="column is-12">
+            <div class="box">
               <h4 class="title is-6 mb-4 has-text-centered">Global Semantic Distribution (Style, Season, Occasion)</h4>
               <div id="global-dist-charts" style="width: 100%; height: 320px;"></div>
             </div>
           </div>
 
           <div class="column is-6">
-            <div class="box is-shadowless" style="border: 1px solid #f0f0f0;">
+            <div class="box">
               <h4 class="title is-6 mb-4 has-text-centered">Top 15 Item Terms</h4>
               <div id="item-terms-chart" style="width: 100%; height: 400px;"></div>
             </div>
           </div>
 
           <div class="column is-6">
-            <div class="box is-shadowless" style="border: 1px solid #f0f0f0;">
+            <div class="box">
               <h4 class="title is-6 mb-4 has-text-centered">Color & Material Dominance</h4>
               <div id="color-material-chart" style="width: 100%; height: 400px;"></div>
             </div>
           </div>
-        </div>
       </div>
+
+
 
 
     </div> <div class="section-box" id="scenarios">
@@ -590,7 +584,7 @@
           type: 'line',
           yAxisIndex: 1,
           data: [2656329, 7855390, 5099191, 3964328, 4533838],
-          itemStyle: { color: '#10b981' },
+          itemStyle: { color: '#f59e0b' },
           smooth: true,
           areaStyle: { opacity: 0.1 }
         }
@@ -657,12 +651,12 @@
         {
           name: 'Color Distribution', type: 'bar',
           data: [1422636, 796572, 225972, 204433, 192820],
-          itemStyle: { color: '#1f2937' }
+          itemStyle: { color: '#3b82f6' }
         },
         {
           name: 'Material Distribution', type: 'line', smooth: true,
           data: [799877, 627858, 245475, 213271, 189623],
-          itemStyle: { color: '#ef4444' },
+          itemStyle: { color: '#f59e0b' },
           lineStyle: { width: 3 }
         }
       ]
