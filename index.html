@@ -146,6 +146,7 @@
     .tab-content.is-active { display: block; }
     @keyframes slideUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
 </head>
 
 <body>
@@ -202,7 +203,7 @@
     </div>
 
     <div class="section-box" id="dataset">
-      <h2 class="title is-4">Dataset: The Power of FashionX</h2>
+      <h2 class="title is-4">Dataset</h2>
       
       <div class="columns is-multiline mt-4 mb-6">
         <div class="column is-4">
@@ -239,7 +240,7 @@
       <div class="image-block"><img src="static/images/dataset1.png"><div class="caption">Dataset comparison</div></div>
       <div class="image-block"><img src="static/images/dataset2.png"><div class="caption">FashionX annotation pipeline</div></div>
       
-      <h3 class="title is-5 mt-6">How We Build High-Quality Dialogue Samples</h3>
+      <h3 class="title is-5 mt-6">🤔 How We Build High-Quality Dialogue Samples</h3>
       <div class="construction-box">
         <div class="columns is-vcentered">
           <div class="column is-5 has-text-centered">
@@ -260,11 +261,79 @@
         <p class="is-size-7 has-text-centered mt-3 color:gray"><i>By mapping dense attributes into natural language templates, we enable the model to learn complex reasoning.</i></p>
       </div>
 
-      <div class="image-block"><img src="static/images/analysis.png"><div class="caption">Statistical Detail of FashionX. Abbreviations: One-piece(O), top (T), bottom (B), footwear (F), accessory (A).</div></div>
-    </div>
+    <h3 class="title is-5 mt-6">📊 Data Insight: Composition & Performance</h3>
+      <div class="columns is-multiline">
+        <div class="column is-6">
+          <div class="box">
+            <h4 class="has-text-centered mb-4"><b>Source Dataset Distribution</b></h4>
+            <div id="pie-source" style="width: 100%; height: 350px;"></div>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="box">
+            <h4 class="has-text-centered mb-4"><b>Prediction Accuracy Comparison</b></h4>
+            <div id="bar-acc" style="width: 100%; height: 350px;"></div>
+          </div>
+        </div>
+        <div class="column is-12">
+          <div class="box">
+            <h4 class="has-text-centered mb-4"><b>Hierarchical Attribute & Item Statistics</b></h4>
+            <div id="bar-category" style="width: 100%; height: 400px;"></div>
+          </div>
+        </div>
+      </div>
 
-    <div class="section-box" id="scenarios">
-      <h2 class="title is-4">Simulated User Q&A Scenarios</h2>
+      <div class="section-box" style="background: #fdfdfd; border: 1px solid #edf2f7; margin-top: 2rem; padding: 2rem; box-shadow: none;">
+        <h3 class="title is-4 mb-5">📊 FashionX Statistical Insights</h3>
+        
+        <div class="columns has-text-centered mb-6">
+          <div class="column">
+            <div class="box" style="background: #f0f7ff; border:none;">
+              <p class="heading">Total Samples</p>
+              <p class="title is-size-3" style="color: #2563eb;">1,032,710</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box" style="background: #f0fff4; border:none;">
+              <p class="heading">Unique Styles</p>
+              <p class="title is-size-3" style="color: #10b981;">995</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box" style="background: #fffcf0; border:none;">
+              <p class="heading">Unique Materials</p>
+              <p class="title is-size-3" style="color: #f59e0b;">2,836</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-multiline">
+          <div class="column is-12">
+            <div class="box is-shadowless" style="border: 1px solid #f0f0f0;">
+              <h4 class="title is-6 mb-4 has-text-centered">Global Semantic Distribution (Style, Season, Occasion)</h4>
+              <div id="global-dist-charts" style="width: 100%; height: 320px;"></div>
+            </div>
+          </div>
+
+          <div class="column is-6">
+            <div class="box is-shadowless" style="border: 1px solid #f0f0f0;">
+              <h4 class="title is-6 mb-4 has-text-centered">Top 15 Item Terms</h4>
+              <div id="item-terms-chart" style="width: 100%; height: 400px;"></div>
+            </div>
+          </div>
+
+          <div class="column is-6">
+            <div class="box is-shadowless" style="border: 1px solid #f0f0f0;">
+              <h4 class="title is-6 mb-4 has-text-centered">Color & Material Dominance</h4>
+              <div id="color-material-chart" style="width: 100%; height: 400px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div> <div class="section-box" id="scenarios">
+      <h2 class="title is-4">Scenarios</h2>
       <p class="mb-5">Experience how OmniFashion acts as a generalist fashion assistant in real-world interactive dialogues.</p>
       
       <div class="demo-container p-5">
@@ -373,7 +442,7 @@
     </div>
 
     <div class="section-box" id="results">
-      <h2 class="title is-4">Quantitative & Qualitative Results</h2>
+      <h2 class="title is-4">Results</h2>
 
       <div class="image-block"><img src="static/images/result.png"><div class="caption">Results.</div></div>
       <p class="content has-text-justified">
@@ -423,6 +492,187 @@
         content.classList.remove('is-active');
       });
       document.getElementById(target).classList.add('is-active');
+    });
+  });
+
+  // --- ECharts 数据可视化配置 ---
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    // 1. 数据集来源饼图
+    const pieChart = echarts.init(document.getElementById('pie-source'));
+    pieChart.setOption({
+      tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' },
+      legend: { bottom: '0%', left: 'center', itemGap: 10, textStyle: {fontSize: 10} },
+      series: [{
+        name: 'Sources',
+        type: 'pie',
+        radius: ['40%', '70%'],
+        avoidLabelOverlap: false,
+        itemStyle: { borderRadius: 10, borderColor: '#fff', borderWidth: 2 },
+        label: { show: false },
+        data: [
+          { value: 45623, name: 'Fashionpedia' },
+          { value: 52712, name: 'DeepFashion-ICRB' },
+          { value: 239557, name: 'DeepFashion-CSCR' },
+          { value: 289229, name: 'DeepFashion-CAPB' },
+          { value: 405589, name: 'Fashion550k' }
+        ]
+      }]
+    });
+
+    // 2. 准确性分组柱状图 (替换雷达图)
+    const accChart = echarts.init(document.getElementById('bar-acc'));
+    accChart.setOption({
+      tooltip: { 
+        trigger: 'axis', 
+        axisPointer: { type: 'shadow' },
+        formatter: function(params) {
+          let res = params[0].name + '<br/>';
+          params.forEach(item => {
+            res += item.marker + item.seriesName + ': ' + (item.value * 100).toFixed(2) + '%<br/>';
+          });
+          return res;
+        }
+      },
+      legend: { data: ['Attribute Accuracy', 'Style Accuracy'], bottom: 0 },
+      grid: { left: '3%', right: '4%', bottom: '15%', containLabel: true },
+      xAxis: { 
+        type: 'category', 
+        data: ['CAPB', 'CSCR', 'ICRB'],
+        axisLabel: { fontWeight: 'bold' }
+      },
+      yAxis: { 
+        type: 'value', 
+        min: 0.6, 
+        max: 1.0,
+        axisLabel: { formatter: (value) => value * 100 + '%' }
+      },
+      series: [
+        {
+          name: 'Attribute Accuracy',
+          type: 'bar',
+          barWidth: '30%',
+          data: [0.7752, 0.9677, 0.938],
+          itemStyle: { color: '#3b82f6', borderRadius: [4, 4, 0, 0] },
+          label: { show: true, position: 'top', formatter: (p) => (p.value * 100).toFixed(1) + '%' }
+        },
+        {
+          name: 'Style Accuracy',
+          type: 'bar',
+          barWidth: '30%',
+          data: [0.80, 0.89, 0.98],
+          itemStyle: { color: '#fb923c', borderRadius: [4, 4, 0, 0] },
+          label: { show: true, position: 'top', formatter: (p) => (p.value * 100).toFixed(1) + '%' }
+        }
+      ]
+    });
+
+    // 3. 细粒度类别柱状图
+    const barChart = echarts.init(document.getElementById('bar-category'));
+    barChart.setOption({
+      tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+      legend: { data: ['Num. Items', 'Num. Attributes'], top: '0%' },
+      grid: { left: '3%', right: '4%', bottom: '10%', containLabel: true },
+      xAxis: { type: 'category', data: ['One-piece', 'Tops', 'Bottoms', 'Footwear', 'Accessory'] },
+      yAxis: [
+        { type: 'value', name: 'Items', position: 'left' },
+        { type: 'value', name: 'Attributes', position: 'right', splitLine: {show: false} }
+      ],
+      series: [
+        {
+          name: 'Num. Items',
+          type: 'bar',
+          data: [261389, 952229, 729562, 593448, 797970],
+          itemStyle: { color: '#2563eb' }
+        },
+        {
+          name: 'Num. Attributes',
+          type: 'line',
+          yAxisIndex: 1,
+          data: [2656329, 7855390, 5099191, 3964328, 4533838],
+          itemStyle: { color: '#10b981' },
+          smooth: true,
+          areaStyle: { opacity: 0.1 }
+        }
+      ]
+    });
+    // --- 新增：4. 全局分布 (三联饼图) ---
+    const globalChart = echarts.init(document.getElementById('global-dist-charts'));
+    globalChart.setOption({
+      tooltip: { trigger: 'item', formatter: '{a} <br/>{b}: {c} ({d}%)' },
+      series: [
+        {
+          name: 'Style', type: 'pie', radius: '45%', center: ['18%', '50%'],
+          data: [
+            { value: 886998, name: 'Casual' }, { value: 176233, name: 'Chic' },
+            { value: 108204, name: 'Streetwear' }, { value: 86163, name: 'Bohemian' },
+            { value: 750000, name: 'Others' }
+          ],
+          label: { show: true, position: 'inner', formatter: '{b}', fontSize: 9 }
+        },
+        {
+          name: 'Season', type: 'pie', radius: '45%', center: ['50%', '50%'],
+          data: [
+            { value: 882572, name: 'Spring' }, { value: 583577, name: 'Summer' },
+            { value: 461389, name: 'Fall' }, { value: 181849, name: 'Winter' }
+          ],
+          label: { show: true, position: 'inner', formatter: '{b}', fontSize: 10 }
+        },
+        {
+          name: 'Occasion', type: 'pie', radius: '45%', center: ['82%', '50%'],
+          data: [
+            { value: 864823, name: 'Daily' }, { value: 755452, name: 'Social' },
+            { value: 237812, name: 'Semi-Formal' }, { value: 35636, name: 'Travel' }
+          ],
+          label: { show: true, position: 'inner', formatter: '{b}', fontSize: 9 }
+        }
+      ]
+    });
+
+    // --- 新增：5. 热门单品 (横向柱状图) ---
+    const itemChart = echarts.init(document.getElementById('item-terms-chart'));
+    itemChart.setOption({
+      grid: { left: '18%', right: '10%', top: '5%', bottom: '10%' },
+      xAxis: { type: 'value', show: false },
+      yAxis: { 
+        type: 'category', 
+        data: ['Top', 'Pants', 'Dress', 'Shoes', 'Skirt', 'Shorts', 'Boots', 'Sandals', 'Jacket', 'Sunglasses', 'Handbag', 'T-shirt', 'Shirt', 'Bag', 'Necklace'].reverse() 
+      },
+      series: [{
+        type: 'bar',
+        data: [361472, 248526, 239606, 197498, 183442, 149988, 149912, 111865, 105970, 99292, 97494, 93674, 89005, 88881, 83639].reverse(),
+        itemStyle: { color: '#3b82f6', borderRadius: [0, 4, 4, 0] },
+        label: { show: true, position: 'right', fontSize: 10 }
+      }]
+    });
+
+    // --- 新增：6. 颜色与材质 (分组对比) ---
+    const cmChart = echarts.init(document.getElementById('color-material-chart'));
+    cmChart.setOption({
+      tooltip: { trigger: 'axis' },
+      legend: { data: ['Color Distribution', 'Material Distribution'], bottom: 0 },
+      xAxis: { type: 'category', data: ['Black/Cotton', 'White/Leather', 'Blue/Denim', 'Brown/Fabric', 'Beige/Metal'] },
+      yAxis: { type: 'value' },
+      series: [
+        {
+          name: 'Color Distribution', type: 'bar',
+          data: [1422636, 796572, 225972, 204433, 192820],
+          itemStyle: { color: '#1f2937' }
+        },
+        {
+          name: 'Material Distribution', type: 'line', smooth: true,
+          data: [799877, 627858, 245475, 213271, 189623],
+          itemStyle: { color: '#ef4444' },
+          lineStyle: { width: 3 }
+        }
+      ]
+    });
+
+    // 响应式处理
+    window.addEventListener('resize', function() {
+      pieChart.resize();
+      accChart.resize();
+      barChart.resize();
     });
   });
 </script>
