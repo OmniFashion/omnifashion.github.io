@@ -1,205 +1,1151 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OmniFashion Project Page</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="static/images/FashionX.png">
 
   <style>
-    body {
-      font-family: "Inter", sans-serif;
+    :root {
+      --bg-page: #f7f4ee;
+      --bg-soft: rgba(255, 255, 255, 0.84);
+      --text-primary: #152033;
+      --text-secondary: #5f6879;
+      --text-inverse: #f8fafc;
+      --border-soft: rgba(15, 23, 42, 0.08);
+      --shadow-soft: 0 18px 50px rgba(15, 23, 42, 0.07);
+      --shadow-strong: 0 28px 80px rgba(15, 23, 42, 0.2);
+      --blue: #2563eb;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+    }
+
+    html {
       scroll-behavior: smooth;
-      background-color: #fafafa;
     }
 
-    .navbar { border-bottom: 1px solid #eee; }
-    .navbar-item { font-weight: 500; }
-    
-    .title-main { font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; }
-    .subtitle-main { font-size: 1.25rem; color: #555; max-width: 800px; margin: 0 auto; line-height: 1.6; }
-    
-    .section-box {
-      margin-top: 4rem;
-      background: #fff;
-      padding: 3rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+    [hidden] {
+      display: none !important;
     }
 
-    .image-block { margin: 2.5rem 0; text-align: center; }
-    .image-block img { width: 100%; max-width: 850px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); transition: transform 0.3s ease; }
-    .image-block img:hover { transform: translateY(-2px); }
-    .caption { margin-top: 0.8rem; color: #777; font-size: 0.95rem; font-style: italic; }
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: var(--text-primary);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 28%),
+        linear-gradient(180deg, #f7f4ee 0%, #f9f7f3 38%, #fcfbf8 100%);
+    }
 
-    .feature-card {
-      background: #f8fbff;
-      border: 1px solid #e1edfc;
-      border-radius: 12px;
-      padding: 1.5rem;
-      height: 100%;
+    .navbar {
+      border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+      background: rgba(255, 255, 255, 0.82) !important;
+      backdrop-filter: blur(20px);
     }
-    .feature-icon { font-size: 2rem; margin-bottom: 1rem; }
-    .feature-title { font-weight: 700; color: #1a365d; margin-bottom: 0.5rem; }
 
-    .construction-box {
-      background: #fff;
-      border: 2px dashed #d1d5db;
-      border-radius: 12px;
-      padding: 2rem;
-      margin: 2rem 0;
-      position: relative;
+    .navbar-item {
+      font-weight: 600;
+      color: var(--text-primary);
     }
-    .flow-arrow {
-      text-align: center;
-      color: #9ca3af;
-      font-size: 1.5rem;
-      margin: 1rem 0;
+
+    .navbar-item:hover {
+      color: var(--blue);
+      background: transparent !important;
     }
-    .code-block {
-      background: #1e293b;
-      color: #e2e8f0;
-      padding: 1rem;
-      border-radius: 8px;
-      font-family: monospace;
-      font-size: 0.9rem;
-    }
-    .train-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      margin-top: 1.5rem;
-    }
-    .stage-card {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-    }
-    .stage-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+
+    .title-main {
+      font-size: clamp(2.4rem, 4vw, 3.35rem);
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      line-height: 1.05;
       margin-bottom: 1rem;
     }
-    .stage-number {
-      background: #2563eb;
-      color: #fff;
-      padding: 2px 10px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 0.9rem;
-    }
-    .stage-title {
-      font-weight: 700;
-      color: #1f2937;
-      font-size: 1.1rem;
+
+    .subtitle-main {
+      max-width: 860px;
+      margin: 0 auto;
+      font-size: 1.18rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
     }
 
-    .task-grid {
+    .hero-links {
+      margin-top: 1.75rem;
+      display: flex;
+      gap: 0.8rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-links .button {
+      padding-left: 1.15rem;
+      padding-right: 1.15rem;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+    }
+
+    .hero-links .button.is-paper-placeholder {
+      color: #f8fafc;
+      cursor: default;
+      border: 0;
+      background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    }
+
+    .section-box {
+      margin-top: 3rem;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-soft);
+      padding: 3rem;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(10px);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+
+    .lead-copy {
+      font-size: 1.06rem;
+      line-height: 1.85;
+      color: var(--text-secondary);
+    }
+
+    .info-strip,
+    .feature-grid,
+    .schema-grid,
+    .framework-grid,
+    .stat-row,
+    .image-grid,
+    .detail-captions,
+    .detail-overall-groups,
+    .detail-parts-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
+    }
+
+    .info-strip {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 1.75rem;
+    }
+
+    .hero-proof-grid {
+      margin-top: 1.8rem;
+    }
+
+    .info-pill,
+    .feature-card,
+    .schema-card,
+    .framework-card,
+    .stat-card,
+    .part-group-card,
+    .detail-copy-card,
+    .overall-group,
+    .image-block,
+    .dataset-note,
+    .detail-id-card {
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .info-pill {
+      padding: 1rem 1.1rem;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .info-pill b { color: var(--blue); }
+
+    .hero-proof-card {
+      display: grid;
+      gap: 0.35rem;
+      background: linear-gradient(180deg, rgba(37, 99, 235, 0.08) 0%, rgba(255, 255, 255, 0.92) 100%);
+    }
+
+    .proof-value {
+      font-size: 1.42rem;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      color: var(--text-primary);
+    }
+
+    .proof-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    .showcase-shell {
+      position: relative;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
       margin-top: 1rem;
+      padding: 4.5rem 0 4.85rem;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 12% 16%, rgba(37, 99, 235, 0.1), transparent 22%),
+        radial-gradient(circle at 84% 18%, rgba(214, 166, 50, 0.12), transparent 24%),
+        linear-gradient(180deg, rgba(253, 248, 238, 0.96) 0%, rgba(249, 244, 235, 0.98) 48%, rgba(247, 242, 233, 0.95) 100%);
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.06);
     }
-    .task-item {
-      background: #f9fafb;
-      border: 1px solid #f3f4f6;
-      padding: 1rem;
-      border-radius: 8px;
+
+    .showcase-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(37, 99, 235, 0.04) 1px, transparent 1px),
+        linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+      background-size: 120px 120px;
+      opacity: 0.45;
+      pointer-events: none;
     }
-    .task-item b {
-      color: #2563eb;
+
+    .showcase-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1240px;
+      margin: 0 auto 1.65rem;
+      padding: 0 2rem;
+    }
+
+    .showcase-kicker {
+      display: inline-block;
+      margin-bottom: 0.95rem;
+      padding: 0.45rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.04);
+    }
+
+    .showcase-title {
+      max-width: 780px;
+      margin-bottom: 1rem;
+      font-size: clamp(2rem, 3vw, 2.7rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.08;
+      color: var(--text-primary);
+    }
+
+    .showcase-copy,
+    .showcase-hint,
+    .section-header p,
+    .feature-card p,
+    .schema-card p,
+    .framework-card p,
+    .caption,
+    .dataset-note,
+    .detail-subtitle,
+    .detail-copy-card p,
+    .figure-body p,
+    .figure-highlight {
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+
+    .showcase-copy,
+    .showcase-hint {
+      max-width: 760px;
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+    }
+
+    .showcase-hint {
+      margin-top: 1.15rem;
+      font-size: 0.95rem;
+    }
+
+    .showcase-carousel-shell {
+      position: relative;
+      z-index: 1;
+      max-width: 1240px;
+      margin: 0 auto 1.8rem;
+      padding: 0 1.35rem;
+    }
+
+    .showcase-carousel-stage {
+      position: relative;
+      height: 332px;
+      margin: 0 auto;
+      --carousel-step: clamp(134px, 15vw, 194px);
+    }
+
+    .showcase-carousel-card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: clamp(164px, 16vw, 214px);
+      padding: 0;
+      overflow: hidden;
+      cursor: pointer;
+      text-align: left;
+      border-radius: 22px;
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+      will-change: transform, opacity;
+      transition:
+        transform 1.04s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.62s ease,
+        box-shadow 0.45s ease,
+        border-color 0.45s ease;
+      transform:
+        translate(
+          calc(-50% + (var(--offset) * var(--carousel-step))),
+          calc(-50% + (var(--abs-offset) * 14px))
+        )
+        scale(calc(1 - (var(--abs-offset) * 0.08)));
+      opacity: calc(1 - (var(--abs-offset) * 0.18));
+      z-index: calc(20 - var(--abs-offset));
+    }
+
+    .showcase-carousel-card:hover,
+    .showcase-carousel-card:focus-visible {
+      outline: none;
+      border-color: rgba(37, 99, 235, 0.28);
+      box-shadow: 0 22px 48px rgba(15, 23, 42, 0.12);
+    }
+
+    .showcase-carousel-card.is-active {
+      border-color: rgba(37, 99, 235, 0.34);
+      box-shadow: 0 28px 58px rgba(37, 99, 235, 0.14);
+    }
+
+    .showcase-carousel-card.is-selected-detail {
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18), 0 22px 48px rgba(15, 23, 42, 0.12);
+    }
+
+    .showcase-carousel-card.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .showcase-carousel-card img {
       display: block;
-      margin-bottom: 4px;
+      width: 100%;
+      height: 214px;
+      object-fit: cover;
+      background: #eef2f7;
     }
-    .task-item p {
+
+    .showcase-sample-body {
+      padding: 0.8rem 0.85rem 0.9rem;
+    }
+
+    .showcase-sample-title,
+    .feature-card h3,
+    .schema-card h3,
+    .framework-card h3,
+    .part-group-head h4,
+    .item-term,
+    .figure-body h3 {
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+
+    .showcase-sample-title {
+      margin-bottom: 0.42rem;
+      font-size: 0.92rem;
+    }
+
+    .showcase-sample-meta {
+      font-size: 0.78rem;
+      line-height: 1.48;
+      color: var(--text-secondary);
+    }
+
+    .annotation-detail-wrap {
+      position: relative;
+      z-index: 1;
+      width: min(96vw, 1560px);
+      margin: 0 auto;
+      padding: 0 1.4rem;
+    }
+
+    .detail-empty-state {
+      padding: 2rem 2.1rem;
+      border-radius: 28px;
+      background: rgba(255, 253, 249, 0.96);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: 0 24px 56px rgba(15, 23, 42, 0.1);
+    }
+
+    .detail-empty-state h3 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(1.55rem, 2.2vw, 1.9rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+    }
+
+    .detail-empty-state p {
+      max-width: 880px;
+      margin: 0;
+      line-height: 1.78;
+      color: var(--text-secondary);
+    }
+
+    .annotation-detail {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(290px, 350px) minmax(0, 1.35fr);
+      gap: 1.4rem;
+      padding: 1.7rem;
+      border-radius: 30px;
+      background: rgba(255, 253, 249, 0.97);
+      color: var(--text-primary);
+      box-shadow: 0 28px 64px rgba(15, 23, 42, 0.12);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .detail-media {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .detail-aside-stack {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .detail-image-frame {
+      overflow: hidden;
+      border-radius: 22px;
+      aspect-ratio: 4 / 5;
+      padding: 0.85rem;
+      background: linear-gradient(180deg, #f4f8fd 0%, #ebf1f7 100%);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    }
+
+    .detail-image-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-height: 340px;
+      object-fit: contain;
+    }
+
+    .detail-id-card {
+      padding: 0.9rem 1rem;
+      background: #f6f8fb;
       font-size: 0.85rem;
-      color: #4b5563;
+    }
+
+    .detail-figure-facts {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.7rem;
+    }
+
+    .detail-metric {
+      padding: 0.85rem 0.8rem;
+      border-radius: 18px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.05);
+    }
+
+    .detail-metric-label {
+      display: block;
+      margin-bottom: 0.35rem;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    .detail-metric strong {
+      font-size: 1.2rem;
+      letter-spacing: -0.04em;
+    }
+
+    .detail-id-card code,
+    .detail-json-panel pre {
+      display: block;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: "SFMono-Regular", Consolas, monospace;
+    }
+
+    .detail-id-card code {
+      margin-top: 0.4rem;
+      color: var(--text-primary);
+      background: transparent;
+      font-size: 0.8rem;
+    }
+
+    .detail-header,
+    .section-header,
+    .part-group-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .detail-header {
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+
+    .detail-header h3 {
+      margin: 0.15rem 0 0.4rem;
+      font-size: clamp(1.55rem, 2.5vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+    }
+
+    .detail-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: flex-end;
+    }
+
+    .json-toggle {
+      border: 0;
+      cursor: pointer;
+      padding: 0.78rem 1rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: transform 0.2s ease;
+    }
+
+    .json-toggle {
+      color: var(--text-primary);
+      background: rgba(15, 23, 42, 0.08);
+    }
+
+    .json-toggle:hover {
+      transform: translateY(-2px);
+    }
+
+    .detail-copy-card {
+      padding: 1rem 1.05rem;
+      background: #f7f9fc;
+    }
+
+    .detail-overview-card,
+    .detail-overall-wrap,
+    .detail-general-card,
+    .detail-part-meta {
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      background: #f8fafc;
+    }
+
+    .detail-overview-card,
+    .detail-overall-wrap,
+    .detail-part-meta {
+      padding: 0.95rem 1rem;
+    }
+
+    .detail-general-card {
+      margin-bottom: 1rem;
+    }
+
+    .detail-section-label,
+    .stat-card .stat-label,
+    .item-meta-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    .detail-overall-groups {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin-top: 0.7rem;
+    }
+
+    .overall-group {
+      padding: 0.8rem 0.85rem;
+      background: #ffffff;
+    }
+
+    .overall-group h4 {
+      margin: 0 0 0.7rem;
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    .tag-list,
+    .item-tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .semantic-chip,
+    .item-chip,
+    .count-badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .semantic-chip,
+    .item-chip {
+      min-height: 30px;
+      padding: 0.32rem 0.72rem;
+      font-size: 0.82rem;
+      line-height: 1.35;
+    }
+
+    .semantic-chip.style-chip { color: #155e75; background: #e0f2fe; }
+    .semantic-chip.season-chip { color: #166534; background: #dcfce7; }
+    .semantic-chip.occasion-chip { color: #9a3412; background: #ffedd5; }
+
+    .detail-parts-grid {
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 0.95rem;
+      margin-top: 0.95rem;
+      align-items: start;
+    }
+
+    .part-group-card {
+      padding: 0.9rem;
+      background: linear-gradient(180deg, #fbfdff 0%, #f6f9fc 100%);
+      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.04);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .part-group-card.group-one_piece {
+      border-top: 4px solid #8b5cf6;
+      background: linear-gradient(180deg, #fbf7ff 0%, #f6f0ff 100%);
+    }
+
+    .part-group-card.group-upper_garment {
+      border-top: 4px solid #2563eb;
+      background: linear-gradient(180deg, #f6fbff 0%, #edf5ff 100%);
+    }
+
+    .part-group-card.group-lower_garment {
+      border-top: 4px solid #0f766e;
+      background: linear-gradient(180deg, #f4fffc 0%, #ebfbf7 100%);
+    }
+
+    .part-group-card.group-footwear {
+      border-top: 4px solid #b45309;
+      background: linear-gradient(180deg, #fffaf2 0%, #fff3e2 100%);
+    }
+
+    .part-group-card.group-accessories {
+      border-top: 4px solid #db2777;
+      background: linear-gradient(180deg, #fff7fb 0%, #fff0f7 100%);
+    }
+
+    .group-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0.2rem 0.62rem;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .part-group-card.group-one_piece .group-badge { color: #6d28d9; background: #f3e8ff; }
+    .part-group-card.group-upper_garment .group-badge { color: #1d4ed8; background: #dbeafe; }
+    .part-group-card.group-lower_garment .group-badge { color: #0f766e; background: #ccfbf1; }
+    .part-group-card.group-footwear .group-badge { color: #b45309; background: #ffedd5; }
+    .part-group-card.group-accessories .group-badge { color: #be185d; background: #fce7f3; }
+
+    .count-badge {
+      min-width: 2.2rem;
+      height: 2rem;
+      justify-content: center;
+      padding: 0 0.6rem;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--blue);
+      font-size: 0.85rem;
+    }
+
+    .item-card {
+      padding: 0.78rem 0.82rem;
+      margin-top: 0.65rem;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+    }
+
+    .item-term {
+      margin-bottom: 0.7rem;
+      font-size: 0.96rem;
+    }
+
+    .item-attribute-grid {
+      display: grid;
+      gap: 0.38rem;
+    }
+
+    .item-attribute-row {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 0.6rem;
+      align-items: start;
+    }
+
+    .item-meta-label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+    }
+
+    .item-chip {
+      color: var(--text-primary);
+      background: #eef2f7;
+      min-height: 28px;
+      padding: 0.24rem 0.62rem;
+      font-size: 0.78rem;
+    }
+
+    .item-chip.is-muted {
+      color: #7b8797;
+      background: #f3f4f6;
+    }
+
+    .detail-missing-groups {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.65rem;
+    }
+
+    .missing-group-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0.22rem 0.62rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #7b8797;
+      background: #f1f5f9;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .detail-json-wrap {
+      margin-top: 1.5rem;
+    }
+
+    .detail-json-panel {
+      margin-top: 0.9rem;
+      padding: 1rem 1.1rem;
+      border-radius: 18px;
+      background: #111827;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .detail-json-panel pre {
+      margin: 0;
+      color: #dbeafe;
+      font-size: 0.85rem;
+      line-height: 1.72;
+      background: transparent;
+    }
+
+    .section-header {
+      align-items: flex-end;
+      margin-bottom: 1.75rem;
+    }
+
+    .section-header p {
+      margin: 0;
+      max-width: 760px;
+    }
+
+    .feature-grid,
+    .schema-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .dataset-figure-stack {
+      display: grid;
+      gap: 1.55rem;
+      margin: 1.8rem 0 1.95rem;
+    }
+
+    .figure-editorial-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.9fr);
+      gap: 1.35rem;
+      align-items: center;
+      padding: 1.3rem;
+      border-radius: 24px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      background: #ffffff;
+      box-shadow: 0 18px 38px rgba(15, 23, 42, 0.05);
+    }
+
+    .figure-wide-card {
+      grid-template-columns: 1fr;
+      gap: 1.15rem;
+      padding: 1.45rem;
+    }
+
+    .figure-wide-card .figure-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(280px, 0.82fr);
+      gap: 1rem 1.25rem;
+      align-items: start;
+    }
+
+    .figure-wide-card .figure-body p {
       margin: 0;
     }
 
-    .flow-connector {
-      text-align: center;
-      font-size: 1.5rem;
-      color: #2563eb;
-      margin: -1rem 0;
+    .figure-wide-card .figure-highlights {
+      margin-top: 0;
+      align-content: start;
     }
-/* --- 新增：自动滚动与标注展示模块 --- */
-    .marquee-container {
-      overflow: hidden;
+
+    .figure-wide-card .figure-media {
+      padding: 1.15rem 1.2rem;
+    }
+
+    .figure-schema-card {
+      grid-template-columns: 1fr;
+      gap: 1.15rem;
+    }
+
+    .figure-focus-card {
+      grid-template-columns: minmax(0, 1.78fr) minmax(250px, 0.52fr);
+      gap: 1.1rem;
+    }
+
+    .figure-focus-card.figure-wide-card {
+      grid-template-columns: 1fr;
+      gap: 0.95rem;
+    }
+
+    .figure-focus-card.figure-wide-card .figure-body {
+      grid-template-columns: minmax(0, 1.16fr) minmax(240px, 0.84fr);
+      gap: 0.85rem 1rem;
+    }
+
+    .figure-editorial-card.is-reversed {
+      grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.15fr);
+    }
+
+    .figure-editorial-card.is-reversed .figure-media {
+      order: 2;
+    }
+
+    .figure-editorial-card.is-reversed .figure-body {
+      order: 1;
+    }
+
+    .figure-media {
+      padding: 1rem;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .figure-media img {
+      display: block;
       width: 100%;
-      white-space: nowrap;
-      padding: 1rem 0;
-      position: relative;
+      border-radius: 14px;
+      box-shadow: 0 16px 30px rgba(15, 23, 42, 0.08);
     }
-    .marquee-track {
-      display: inline-block;
-      white-space: nowrap;
-      /* 这里的 5s 控制滚动速度，数值越大越慢 */
-      animation: scrollMarquee 5s linear infinite;
+
+    .figure-media-wide img,
+    .figure-media-schema img,
+    .figure-media-focus img {
+      width: 100%;
+      height: auto;
     }
-    /* 点击后添加这个类名来暂停动画 */
-    .marquee-track.paused {
-      animation-play-state: paused;
+
+    .figure-media-focus {
+      padding: 1rem;
     }
-    .marquee-item {
-      display: inline-block;
-      width: 160px;
-      height: 200px;
-      margin: 0 15px;
-      border-radius: 12px;
-      object-fit: cover;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      border: 3px solid transparent;
-      transition: all 0.3s ease;
+
+    .figure-kicker {
+      display: inline-flex;
+      margin-bottom: 0.85rem;
+      padding: 0.42rem 0.74rem;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
-    .marquee-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+
+    .figure-body h3 {
+      margin: 0 0 0.7rem;
+      font-size: 1.22rem;
+      line-height: 1.28;
     }
-    /* 选中状态的高亮边框 */
-    .marquee-item.is-selected {
-      border-color: #2563eb;
-      transform: scale(1.05);
+
+    .figure-body p {
+      margin: 0;
     }
-    @keyframes scrollMarquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); } /* 移动一半的距离，配合JS复制一份DOM实现无缝循环 */
+
+    .figure-body-main {
+      max-width: 760px;
     }
-    .annotation-detail {
-      display: none; /* 默认隐藏，点击后显示 */
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 2rem;
+
+    .figure-body-side {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .figure-highlights {
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .figure-highlight {
+      padding: 0.85rem 0.95rem;
+      border-radius: 16px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      background: #f8fafc;
+    }
+
+    .figure-highlight strong {
+      color: var(--text-primary);
+    }
+
+    .framework-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .feature-card,
+    .schema-card,
+    .framework-card {
+      padding: 1.4rem;
+      background: #ffffff;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.04);
+    }
+
+    .feature-card h3,
+    .schema-card h3,
+    .framework-card h3 {
+      margin: 0 0 0.6rem;
+      font-size: 1.06rem;
+    }
+
+    .feature-card p,
+    .schema-card p,
+    .framework-card p {
+      font-size: 0.96rem;
+    }
+
+    .detail-copy-card p,
+    .detail-overview-card p,
+    .detail-part-meta p {
+      margin: 0;
+      color: var(--text-primary);
+    }
+
+    .feature-card {
+      background: linear-gradient(180deg, #fbfdff 0%, #f5f8fd 100%);
+    }
+
+    .feature-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      margin-bottom: 1rem;
+      border-radius: 14px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: var(--blue);
+      background: rgba(37, 99, 235, 0.12);
+    }
+
+    .stat-row {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin: 1.5rem 0 1rem;
+    }
+
+    .stat-card {
+      padding: 1.1rem 1.2rem;
+      background: #f7f9fc;
+    }
+
+    .stat-card .stat-value {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--text-primary);
+    }
+
+    .image-block {
+      margin: 0;
+      padding: 1rem;
+      background: #f8fafc;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.04);
+      text-align: center;
+    }
+
+    .image-block img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 16px 30px rgba(15, 23, 42, 0.08);
+      transition: transform 0.25s ease;
+    }
+
+    .image-block img:hover {
+      transform: translateY(-2px);
+    }
+
+    .dataset-note {
       margin-top: 1.5rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      animation: slideUp 0.4s ease;
+      padding: 1.25rem;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--text-primary);
     }
-    /* --- 交互式对话框样式 (Scenarios) --- */
-    .demo-container { background: #fff; border-radius: 12px; border: 1px solid #eee; margin-top: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
-    .chat-window { max-width: 700px; margin: 2rem auto; padding: 0 1rem; }
-    .message { margin-bottom: 1.5rem; display: flex; flex-direction: column; }
-    .user-msg { align-items: flex-end; }
-    .ai-msg { align-items: flex-start; }
-    .bubble { padding: 14px 20px; border-radius: 20px; max-width: 85%; font-size: 0.95rem; line-height: 1.5; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    .user-bubble { background-color: #2563eb; color: white; border-bottom-right-radius: 4px; }
-    .ai-bubble { background-color: #f3f4f6; color: #1f2937; border-bottom-left-radius: 4px; border: 1px solid #e5e7eb; }
-    .chat-img { width: 180px; border-radius: 12px; margin-bottom: 8px; border: 2px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-    
-    .tab-content { display: none; animation: slideUp 0.4s ease; }
-    .tab-content.is-active { display: block; }
-    @keyframes slideUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    .framework-card.recommendation { border-top: 4px solid #10b981; }
+    .framework-card.retrieval { border-top: 4px solid #d6a632; }
+    .framework-card.recognition { border-top: 4px solid #0ea5e9; }
+    .framework-card.assistance { border-top: 4px solid #2563eb; }
+
+    .footer {
+      margin-top: 4rem;
+      background: rgba(255, 255, 255, 0.7);
+      border-top: 1px solid rgba(15, 23, 42, 0.08);
+      padding: 2.5rem 1.5rem 3rem;
+    }
+
+    .footer .content { color: var(--text-secondary); }
+
+    @media screen and (max-width: 1024px) {
+      .annotation-detail,
+      .feature-grid,
+      .schema-grid,
+      .framework-grid,
+      .detail-parts-grid,
+      .info-strip,
+      .stat-row {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .annotation-detail {
+        grid-template-columns: 1fr;
+      }
+
+      .figure-editorial-card,
+      .figure-editorial-card.is-reversed,
+      .figure-schema-card,
+      .figure-focus-card {
+        grid-template-columns: 1fr;
+      }
+
+      .figure-wide-card .figure-body {
+        grid-template-columns: 1fr;
+      }
+
+      .figure-editorial-card.is-reversed .figure-media,
+      .figure-editorial-card.is-reversed .figure-body {
+        order: initial;
+      }
+
+      .showcase-carousel-stage {
+        height: 314px;
+        --carousel-step: clamp(114px, 17vw, 162px);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .section-box { padding: 2rem 1.35rem; border-radius: 20px; }
+      .hero-links { justify-content: flex-start; }
+      .showcase-shell { padding-top: 3.75rem; padding-bottom: 4rem; }
+      .showcase-inner { padding: 0 1.1rem; }
+      .showcase-carousel-shell { padding: 0 0.6rem; }
+      .showcase-carousel-stage {
+        height: 276px;
+        --carousel-step: clamp(66px, 17vw, 92px);
+      }
+      .showcase-carousel-card {
+        width: min(58vw, 184px);
+      }
+      .showcase-carousel-card img {
+        height: 180px;
+      }
+      .showcase-carousel-card[data-abs-offset="2"] {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .annotation-detail,
+      .feature-grid,
+      .schema-grid,
+      .framework-grid,
+      .detail-parts-grid,
+      .info-strip,
+      .stat-row {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-figure-facts {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .detail-overall-groups {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-image-frame img { max-height: 280px; }
+      .item-attribute-row { grid-template-columns: 64px 1fr; }
+      .detail-header,
+      .section-header { flex-direction: column; align-items: flex-start; }
+      .detail-controls { width: 100%; justify-content: flex-start; }
+      .chat-img { width: 150px; }
+    }
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
 </head>
 
 <body>
 
-<nav class="navbar is-white is-fixed-top">
+<nav class="navbar is-fixed-top">
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item"><strong>OmniFashion</strong></a>
@@ -207,9 +1153,9 @@
     <div class="navbar-menu">
       <div class="navbar-end">
         <a class="navbar-item" href="#abstract">Abstract</a>
+        <a class="navbar-item" href="#fashionx-showcase">Showcase</a>
         <a class="navbar-item" href="#dataset">Dataset</a>
-        <a class="navbar-item" href="#scenarios">Scenarios</a>
-        <a class="navbar-item" href="#training">Training</a>
+        <a class="navbar-item" href="#framework">Framework</a>
         <a class="navbar-item" href="#results">Results</a>
       </div>
     </div>
@@ -221,540 +1167,726 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="has-text-centered" style="margin-bottom: 3rem;">
+    <div class="has-text-centered" style="margin-bottom: 2.6rem;">
       <h1 class="title-main">OmniFashion</h1>
       <p class="subtitle-main">
-        Towards Generalist Fashion Intelligence via Multi-Task Vision-Language Learning
+        A scalable path toward dialogue-oriented fashion intelligence.
       </p>
-      <div style="margin-top: 1.5rem;">
-        <a href="#" class="button is-dark is-rounded">📄 Paper</a>
-        <a href="#" class="button is-link is-rounded">💻 Code</a>
-        <a href="#" class="button is-info is-rounded">📊 Dataset</a>
+      <div class="hero-links">
+        <span id="paper-button" class="button is-dark is-rounded is-paper-placeholder">Paper</span>
+        <a href="#framework" class="button is-link is-rounded">Framework</a>
+        <a href="#dataset" class="button is-info is-rounded">Dataset</a>
       </div>
     </div>
 
     <div class="section-box" id="abstract">
-      <h2 class="title is-4">Abstract</h2>
-      <p class="content has-text-justified">
-        Fashion intelligence spans multiple tasks, retrieval, recommendation, recognition, and dialogue, yet remains hindered by fragmented supervision and incomplete fashion annotations.
-        These limitations jointly restrict the formation of consistent visual-semantic structures, preventing recent vision-language models (VLMs) from serving as a generalist fashion brain that unifies understanding and reasoning across tasks.
-        Therefore, we construct <b>FashionX</b>, a million-scale dataset that exhaustively annotates visible fashion items within an outfit and organizes attributes from global to part-level.
-        Built upon this foundation, we propose <b>OmniFashion</b>, a unified vision-language framework that bridges diverse fashion tasks under a unified fashion dialogue paradigm, enabling both multi-task reasoning and interactive dialogue.
-        Experiments on multi-subtasks and retrieval benchmarks show that OmniFashion achieves strong task-level accuracy and cross-task generalization, highlighting its offering of a scalable path toward universal, dialogue-oriented fashion intelligence.
+      <span class="eyebrow">Abstract</span>
+      <p class="lead-copy">
+        Fashion intelligence is still fragmented. <b>FashionX</b> brings million-scale, head-to-toe supervision, and <b>OmniFashion</b> turns it into one unified fashion dialogue paradigm.
       </p>
-
-      <h2 class="title is-4 mt-6">Framework</h2>
-      <div class="image-block">
-        <img src="static/images/framwork_mid_v3.3.png">
-        <div class="caption">Illustration of the progressive learning task design in OmniFashion. Different color stands for different tasks.</div>
-      </div>
-    </div>
-
-    <div class="section-box" id="dataset">
-      <h2 class="title is-4">Dataset</h2>
-      
-      <div class="columns is-multiline mt-4 mb-6">
-        <div class="column is-4">
-          <div class="feature-card">
-            <div class="feature-icon">📈</div>
-            <div class="feature-title">Million-Scale Volume</div>
-            <p class="is-size-7 text-gray-600">Addressing data scarcity with massive, exhaustively annotated visible fashion items across diverse scenarios.</p>
-          </div>
+      <div class="info-strip hero-proof-grid">
+        <div class="info-pill hero-proof-card">
+          <span class="proof-value">1.03M outfits</span>
+          <span class="proof-label">Head-to-toe supervision</span>
         </div>
-        <div class="column is-4">
-          <div class="feature-card">
-            <div class="feature-icon">🔍</div>
-            <div class="feature-title">Hierarchical Granularity</div>
-            <p class="is-size-7 text-gray-600">Organized attributes ranging from global outfit semantics down to fine-grained, part-level details.</p>
-          </div>
+        <div class="info-pill hero-proof-card">
+          <span class="proof-value">24.1M attributes</span>
+          <span class="proof-label">Global to part level</span>
         </div>
-        <div class="column is-4">
-          <div class="feature-card">
-            <div class="feature-icon">🔗</div>
-            <div class="feature-title">Unified Formulation</div>
-            <p class="is-size-7 text-gray-600">Transforms fragmented fashion attributes into a consistent visual-semantic dialogue structure.</p>
-          </div>
-        </div>
-      </div>
-
-      <p class="content has-text-justified">
-        OmniFashion builds on <b>FashionX</b> to support unified vision-language learning. 
-        We first present the FashionX annotation pipeline, which produces large-scale annotations with hierarchical semantics. 
-        We then introduce a unified task formulation along with a progressive training strategy, explaining how diverse fashion tasks are cast into a consistent paradigm. 
-        Next, we describe the inference setup of the framework. 
-        Finally, we provide statistical analyses of FashionX, summarizing the task composition and illustrating how it supports both alignment and unified multi-task learning.
-      </p>
-
-      <div class="image-block"><img src="static/images/dataset1.png"><div class="caption">Dataset comparison</div></div>
-      <div class="image-block"><img src="static/images/dataset2.png" style="max-width: 500px; height: auto;"><div class="caption">FashionX annotation pipeline</div></div>
-      
-      <h3 class="title is-5 mt-6">🤔 How We Build High-Quality Dialogue Samples</h3>
-      <div class="construction-box">
-        <div class="columns is-vcentered">
-          <div class="column is-5 has-text-centered">
-            <span class="tag is-info is-light mb-2">1. Raw Annotation (FashionX)</span>
-            <div class="box" style="background:#f8f9fa;">
-              <p class="is-size-7 has-text-left"><b>Item:</b> Tank top<br><b>design_terms:</b> Sleeveless<br><b>Color:</b> Black,Grey<br><b>Material:</b> Stretch fabric,Synthetic<br><b>Pattern:</b> Abstract<br><b>Style:</b> Athleisure,Sport</p>
-            </div>
-          </div>
-          <div class="column is-2 flow-arrow">➔</div>
-          <div class="column is-5 has-text-centered">
-            <span class="tag is-success is-light mb-2">2. Unified QA Generation</span>
-            <div class="code-block has-text-left">
-              <span style="color:#a78bfa">User:</span> Describe the material and style of the top in the image.<br><br>
-              <span style="color:#34d399">OmniFashion:</span> This is an athleisure-style tank top made from a synthetic stretch fabric. It features a sleeveless design with an abstract pattern in black and grey, making it ideal for sports and active wear.
-            </div>
-          </div>
-        </div>
-        <p class="is-size-7 has-text-centered mt-3 color:gray"><i>By mapping dense attributes into natural language templates, we enable the model to learn complex reasoning.</i></p>
-      </div>
-
-    <h3 class="title is-5 mt-6">📊 Data Insight: Composition & Performance</h3>
-        <div class="columns has-text-centered mb-6">
-          <div class="column">
-            <div class="box" style="background: #f0f7ff; border:none;">
-              <p class="heading">Total Samples</p>
-              <p class="title is-size-3" style="color: #2563eb;">1,032,710</p>
-            </div>
-          </div>
-          <div class="column">
-            <div class="box" style="background: #f0fff4; border:none;">
-              <p class="heading">Unique Styles</p>
-              <p class="title is-size-3" style="color: #10b981;">995</p>
-            </div>
-          </div>
-          <div class="column">
-            <div class="box" style="background: #fffcf0; border:none;">
-              <p class="heading">Unique Materials</p>
-              <p class="title is-size-3" style="color: #f59e0b;">2,836</p>
-            </div>
-          </div>
-        </div>
-      <div class="columns is-multiline">
-        <div class="column is-6">
-          <div class="box">
-            <h4 class="has-text-centered mb-4"><b>Source Dataset Distribution</b></h4>
-            <div id="pie-source" style="width: 100%; height: 350px;"></div>
-          </div>
-        </div>
-
-        <div class="column is-6">
-          <div class="box">
-            <h4 class="has-text-centered mb-4"><b>Hierarchical Attribute & Item Statistics</b></h4>
-            <div id="bar-category" style="width: 100%; height: 350px;"></div>
-          </div>
-        </div>
-
-        <div class="column is-12">
-            <div class="box">
-              <h4 class="title is-6 mb-4 has-text-centered">Global Semantic Distribution (Style, Season, Occasion)</h4>
-              <div id="global-dist-charts" style="width: 100%; height: 320px;"></div>
-            </div>
-          </div>
-
-          <div class="column is-6">
-            <div class="box">
-              <h4 class="title is-6 mb-4 has-text-centered">Top 15 Item Terms</h4>
-              <div id="item-terms-chart" style="width: 100%; height: 400px;"></div>
-            </div>
-          </div>
-
-          <div class="column is-6">
-            <div class="box">
-              <h4 class="title is-6 mb-4 has-text-centered">Color & Material Dominance</h4>
-              <div id="color-material-chart" style="width: 100%; height: 400px;"></div>
-            </div>
-          </div>
-
-      <h2 class="title is-5 mt-6">📊 Diverse Fashion Annotations</h2>
-      <p class="mb-4">Click on any scrolling image to stop the scroll and view its detailed fine-grained annotations.</p>
-                
-
-      <div class="marquee-container">
-        <div class="marquee-track" id="marquee-track">
-          </div>
-      </div>
-
-      <div class="annotation-detail" id="annotation-detail">
-        <div class="columns is-vcentered">
-          <div class="column is-4 has-text-centered">
-            <img id="detail-img" src="" alt="Selected Clothing" style="max-width: 200px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-          </div>
-          <div class="column is-8">
-            <h4 class="title is-5 mb-2" id="detail-title">Item Title</h4>
-            <div class="tags" id="detail-tags">
-              </div>
-            <p class="is-size-6 mt-3 mb-2" id="detail-desc" style="color: #4b5563;"></p>
-            
-            <div class="code-block" style="background: #1e293b; color: #a78bfa;">
-              <pre id="detail-json" style="background: transparent; color: inherit; padding: 0; margin: 0; font-size: 0.85rem;"></pre>
-            </div>
-            <button class="button is-small is-light mt-4" id="resume-scroll-btn">▶ Resume Scrolling</button>
-          </div>
+        <div class="info-pill hero-proof-card">
+          <span class="proof-value">4 task families</span>
+          <span class="proof-label">One dialogue interface</span>
         </div>
       </div>
     </div>
-
-
-    </div> <div class="section-box" id="scenarios">
-      <h2 class="title is-4">Scenarios</h2>
-      <p class="mb-5">Experience how OmniFashion acts as a generalist fashion assistant in real-world interactive dialogues.</p>
-      
-      <div class="demo-container p-5">
-        <div class="tabs is-centered is-boxed is-toggle is-toggle-rounded">
-          <ul>
-            <li class="is-active" data-tab="search"><a><span>🔍 Cross-Modal Search</span></a></li>
-            <li data-tab="styling"><a><span>👗 Outfit Styling</span></a></li>
-            <li data-tab="inquiry"><a><span>💎 Attribute Inquiry</span></a></li>
-          </ul>
-        </div>
-
-        <div id="tab-content-container">
-          <div class="tab-content is-active" id="search">
-            <div class="chat-window">
-              <div class="message user-msg">
-                <img src="static/images/cloth3.png" class="chat-img" alt="Query" style="max-width: 150px; height: auto;">
-                <div class="bubble user-bubble">I really like the fit and the flutter sleeves of this leopard top, but I'm looking for a version with a more vibrant floral print instead. Can you find something with this exact same silhouette?</div>
-              </div>
-              <div class="message ai-msg">
-                <div class="bubble ai-bubble">Understood. I have retrieved this top for you. It perfectly maintains the loose flutter-sleeve design and elasticated hem you like, while featuring a rich, multi-colored floral pattern as requested.</div>
-                <img src="static/images/cloth4.png" class="chat-img" style="max-width: 150px; height: auto;" alt="Result">
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-content" id="styling">
-            <div class="chat-window">
-              <div class="message user-msg">
-                <img src="static/images/cloth1.png" class="chat-img" style="max-width: 150px; height: auto;">
-                <div class="bubble user-bubble">What kind of footwear would perfectly match this skirt?</div>
-              </div>
-              <div class="message ai-msg">
-                <div class="bubble ai-bubble">Pair this structured peplum dress with minimalist strappy heels or pointed stilettos. Slender straps balance the bold jeweled collar, while nude or metallic tones elongate your legs for a polished, sophisticated look. Avoid bulky footwear to maintain its elegant silhouette.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-content" id="inquiry">
-            <div class="chat-window">
-              <div class="message user-msg">
-                <img src="static/images/cloth2.png" class="chat-img" style="max-width: 150px; height: auto;">
-                <div class="bubble user-bubble">Can you analyze the material of this top? Is it breathable enough for hot summer days?</div>
-              </div>
-              <div class="message ai-msg">
-                <div class="bubble ai-bubble">The top appears to be crafted from sheer chiffon or a lightweight lace-mesh blend, featuring delicate textured embroidery. Its airy, semi-transparent weave and loose-fitting cut provide excellent ventilation, making it a highly breathable and stylish choice for hot summer days.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-box" id="training">
-      <h2 class="title is-4">Training</h2>
-      <p class="content has-text-justified">
-        We then introduce a unified task formulation along with a progressive training strategy, explaining how diverse fashion tasks are cast into a consistent paradigm. 
-        Next, we describe the inference setup of the framework. 
-        Finally, we provide statistical analyses of FashionX, summarizing the task composition and illustrating how it supports both alignment and unified multi-task learning.
-      </p>
-
-      <div class="image-block"><img src="static/images/structure.png" style="max-width: 500px; height: auto;"><div class="caption">Pipeline of OmniFashion.</div></div>
-      
-<div class="content mt-5" style="background: #fafafa; padding: 2rem; border-radius: 12px;">
-  <p><b>Training Details</b></p>
-  <p>OmniFashion unifies all fashion tasks into a dialogue-based QA format, enabling retrieval, recognition, and reasoning within a single framework.</p>
-
-  <div class="train-flow">
-    <div class="stage-card">
-      <div class="stage-header">
-        <span class="stage-number">Stage 1</span>
-        <span class="stage-title">Alignment</span>
-      </div>
-      <p class="is-size-7">The model first learns fashion-aware visual-semantic grounding via template-based QA pairs constructed from FashionX annotations.</p>
-    </div>
-
-    <div class="flow-connector">↓</div>
-
-    <div class="stage-card">
-      <div class="stage-header">
-        <span class="stage-number">Stage 2</span>
-        <span class="stage-title">Multi-task Learning</span>
-      </div>
-      <p class="is-size-7">The same QA formulation is extended to multiple fashion tasks through task-specific question-answer templates:</p>
-      
-      <div class="task-grid">
-        <div class="task-item">
-          <b>Recommendation</b>
-          <p>Reasons about style compatibility and scenario suitability via single/multi-image inputs.</p>
-        </div>
-        <div class="task-item">
-          <b>Retrieval</b>
-          <p>Reformulates text-image matching and comparison as dialogue queries over candidate sets.</p>
-        </div>
-        <div class="task-item">
-          <b>Recognition</b>
-          <p>Focuses on fine-grained attributes like color, material, and complex design details.</p>
-        </div>
-        <div class="task-item">
-          <b>Quick Assistance</b>
-          <p>Handles condition-based queries with concise answers for style or occasion judgment.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-
-    <div class="section-box" id="results">
-      <h2 class="title is-4">Results</h2>
-
-      <div class="image-block"><img src="static/images/result.png"><div class="caption">Results.</div></div>
-      <p class="content has-text-justified">
-        Comparison with the SOTA methods across eight fashion dialogue subtasks, 
-        including overall style, part style, occasion, color recognition, and four retrieval dialogue settings (I2T, T2I, I2I, CIR). 
-        The table reports both A@1 and Acc metrics. OmniFashion shows consistently strong performance across all subtasks and achieves the highest mean accuracy among the open- and close-source models.
-      </p>
-
-      <h3 class="title is-5 mt-6">High-Quality Generation Examples</h3>
-      <p class="mb-4">The qualitative results below demonstrate OmniFashion's exceptional capability in visual cue extraction and multi-modal reasoning. By successfully grounding fine-grained concepts (underlined), the model delivers accurate predictions (green) while avoiding common failure modes (red) seen in standard VLMs.</p>
-      
-      <div class="image-block">
-        <img src="static/images/result2.png">
-        <div class="caption">Qualitative comparison across subtasks. Each block shows input queries and model responses. Colored text highlights correct
-        (green), incorrect (red), and uncertain (orange) predictions, while underlined phrases mark key visual cues.</div>
-      </div>
-
-      <hr class="my-6">
-
-      <p class="content has-text-justified">
-        In this work, we present FashionX and OmniFashion as two complementary contributions toward advancing generalist fashion intelligence.
-        FashionX offers large-scale, structured, and automatically generated annotations that address the incompleteness and inconsistency of existing datasets. Its unified, head-to-toe schema integrates global outfit semantics with fine-grained part attributes, providing a coherent foundation for multi-level fashion understanding.
-        Built upon this foundation, OmniFashion reformulates diverse fashion tasks,
-        including reasoning, attribute recognition, and cross-modal retrieval, into a unified fashion dialogue paradigm. This formulation connects detailed visual cues with holistic outfit interpretation and supports consistent learning across heterogeneous objectives. 
-        Surpassing all comparable open-source VLMs and remaining competitive with much stronger closed-source models across style reasoning, multi-image comparison, and fine-grained retrieval, OmniFashion shows that unified dialogue learning and structured fashion supervision can meaningfully advance VLMs toward practical generalist fashion intelligence.
-      </p>
-    </div>
-
   </div>
 </section>
 
-<footer class="footer mt-6" style="background-color: #fff; border-top: 1px solid #eee;">
-  <div class="content has-text-centered is-size-7 color-gray">
-    <p>OmniFashion Project Page. Crafted for academic demonstration.</p>
+<section class="showcase-shell" id="fashionx-showcase">
+  <div class="showcase-inner">
+    <div class="showcase-kicker">FashionX Showcase</div>
+    <h2 class="showcase-title">See the dataset before the method.</h2>
+    <p class="showcase-copy">
+      FashionX is easiest to trust when the labels are visible.
+    </p>
+    <p class="showcase-hint">Autoplay keeps moving. Click to open the structured record.</p>
   </div>
-</footer>
+
+  <div class="showcase-carousel-shell">
+    <div class="showcase-carousel-stage" id="showcase-carousel-stage" aria-live="polite"></div>
+  </div>
+
+  <div class="annotation-detail-wrap">
+    <div class="detail-empty-state" id="detail-empty-state">
+      <span class="eyebrow">Annotation Detail</span>
+      <h3>Pick a sample. See the record.</h3>
+      <p>
+        The detail panel opens the original FashionX schema: <code>general</code>, <code>concise</code>, <code>overall</code>, and grouped <code>parts</code>.
+      </p>
+    </div>
+
+    <div class="annotation-detail" id="annotation-detail" hidden>
+      <div class="detail-media">
+        <div class="detail-image-frame">
+          <img id="detail-img" src="" alt="Selected FashionX sample">
+        </div>
+        <div class="detail-aside-stack">
+          <div class="detail-id-card">
+            Sample identifier
+            <code id="detail-id"></code>
+          </div>
+          <div class="detail-overview-card">
+            <div class="detail-section-label">Concise description</div>
+            <p id="detail-concise"></p>
+          </div>
+          <div class="detail-overall-wrap">
+            <div class="detail-section-label">Overall semantics</div>
+            <div class="detail-overall-groups" id="detail-overall"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-content">
+        <div class="detail-header">
+          <div>
+            <span class="eyebrow">Annotation Detail</span>
+            <h3 id="detail-title">Sample title</h3>
+            <p class="detail-subtitle">
+              FashionX records unify descriptive text and hierarchical attributes in one machine-readable outfit representation.
+            </p>
+          </div>
+          <div class="detail-controls">
+            <button class="json-toggle" id="detail-json-toggle" type="button" aria-expanded="false">Show raw JSON</button>
+          </div>
+        </div>
+
+        <div class="detail-copy-card detail-general-card">
+          <div class="detail-section-label">General description</div>
+          <p id="detail-general"></p>
+        </div>
+
+        <div class="detail-part-meta">
+          <div class="detail-section-label">Part-level annotation</div>
+          <p class="detail-subtitle" id="detail-part-summary"></p>
+        </div>
+
+        <div class="detail-parts-grid" id="detail-parts"></div>
+
+        <div class="detail-json-wrap">
+          <div class="detail-json-panel" id="detail-json-panel" hidden>
+            <pre id="detail-json"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="section-box" id="dataset">
+      <div class="section-header">
+        <div>
+          <span class="eyebrow">Dataset</span>
+          <h2 class="title is-4" style="margin: 0;">The whole outfit. Not one target item.</h2>
+        </div>
+        <p>
+          FashionX keeps description, semantics, and grouped garments in one record.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">01</div>
+          <h3>Whole-outfit scale</h3>
+          <p>Over one million outfits, not isolated crops.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">02</div>
+          <h3>Head-to-toe hierarchy</h3>
+          <p>Global semantics stay aligned with part-level evidence.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">03</div>
+          <h3>Dialogue-ready schema</h3>
+          <p>One record can expand directly into multi-task QA.</p>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-card">
+          <span class="stat-label">Total Samples</span>
+          <span class="stat-value">1.03M</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Garment Groups</span>
+          <span class="stat-value">5</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Source Datasets</span>
+          <span class="stat-value">5</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Core Layers</span>
+          <span class="stat-value">3</span>
+        </div>
+      </div>
+
+      <div class="dataset-figure-stack" id="dataset-figure-stack">
+        <article class="figure-editorial-card comparison-card figure-wide-card">
+          <div class="figure-body">
+            <div class="figure-body-main">
+              <span class="figure-kicker">Dataset comparison</span>
+              <h3>Sparse labels out. Whole-outfit supervision in.</h3>
+              <p>
+                FashionX keeps the visible outfit intact instead of collapsing supervision to one target item.
+              </p>
+            </div>
+            <div class="figure-body-side">
+              <div class="figure-highlight"><strong>Head-to-toe categories</strong> stay explicit.</div>
+              <div class="figure-highlight"><strong>Global and part-level semantics</strong> stay in one schema.</div>
+            </div>
+          </div>
+          <div class="figure-media figure-media-wide">
+            <img src="static/images/dataset1.png" alt="Dataset comparison">
+          </div>
+        </article>
+
+        <article class="figure-editorial-card figure-schema-card figure-wide-card">
+          <div class="figure-body">
+            <div class="figure-body-main">
+              <span class="figure-kicker">Annotation schema evidence</span>
+              <h3>One outfit. One schema. Multiple semantic layers.</h3>
+              <p>
+                Captions, overall semantics, and garment groups are serialized together.
+              </p>
+            </div>
+            <div class="figure-body-side">
+              <div class="figure-highlight"><strong>One aligned sample.</strong> Description, semantics, grouped attributes.</div>
+              <div class="figure-highlight"><strong>Schema transparency.</strong> What you see is the real record.</div>
+            </div>
+          </div>
+          <div class="figure-media figure-media-schema">
+            <img src="static/images/supp_datasetdetails.png" alt="FashionX annotation schema details">
+          </div>
+        </article>
+
+        <article class="figure-editorial-card pipeline-card figure-focus-card figure-wide-card">
+          <div class="figure-body">
+            <div class="figure-body-main">
+              <span class="figure-kicker">Annotation pipeline</span>
+              <h3>One pipeline. Dialogue-ready supervision.</h3>
+              <p>
+                Prompted VLM generation, structured parsing, and self-checks keep the record aligned with the visible outfit.
+              </p>
+            </div>
+            <div class="figure-body-side">
+              <div class="figure-highlight"><strong>Layered garment perception</strong> keeps the schema visual.</div>
+              <div class="figure-highlight"><strong>Consistency control</strong> keeps the JSON usable.</div>
+            </div>
+          </div>
+          <div class="figure-media figure-media-focus">
+            <img src="static/images/dataset2.png" alt="FashionX annotation pipeline">
+          </div>
+        </article>
+      </div>
+
+      <div class="schema-grid">
+        <div class="schema-card">
+          <h3>Descriptions</h3>
+          <p>The dataset keeps both a richer <code>general</code> caption and a compact <code>concise</code> caption so each outfit is grounded in natural language at two granularities.</p>
+        </div>
+        <div class="schema-card">
+          <h3>Overall Semantics</h3>
+          <p><code>style</code>, <code>season</code>, and <code>occasion</code> summarize how the whole look is interpreted, not just how one garment appears in isolation.</p>
+        </div>
+        <div class="schema-card">
+          <h3>Part-level Groups</h3>
+          <p>Items are grouped into <code>one_piece</code>, <code>upper_garment</code>, <code>lower_garment</code>, <code>footwear</code>, and <code>accessories</code>, each with structured attributes.</p>
+        </div>
+      </div>
+
+      <div class="dataset-note">
+        One record. Many tasks.
+      </div>
+    </div>
+      <div class="section-box" id="framework">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Framework</span>
+            <h2 class="title is-4" style="margin: 0;">One dialogue interface. Four task families.</h2>
+          </div>
+          <p>
+            Structured supervision in. Unified fashion dialogue out.
+          </p>
+        </div>
+
+        <div class="image-block">
+          <img src="static/images/framwork_mid_mm_v1.png" alt="OmniFashion multi-task dialogue framework">
+          <div class="caption">From fashion-aware grounding to one shared dialogue interface.</div>
+        </div>
+
+        <div class="framework-grid">
+          <div class="framework-card recommendation">
+            <h3>Recommendation</h3>
+            <p>Compatibility and style fit in dialogue form.</p>
+          </div>
+          <div class="framework-card retrieval">
+            <h3>Retrieval</h3>
+            <p>Cross-modal search through the same interface.</p>
+          </div>
+          <div class="framework-card recognition">
+            <h3>Recognition</h3>
+            <p>Fine-grained cues stay grounded in the same schema.</p>
+          </div>
+          <div class="framework-card assistance">
+            <h3>Quick Assistance</h3>
+            <p>Short fashion judgments, same model.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-box" id="results">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Results</span>
+            <h2 class="title is-4" style="margin: 0;">Benchmarks up. Fashion grounding intact.</h2>
+          </div>
+          <p>
+            Stronger metrics, stronger fashion-specific reasoning.
+          </p>
+        </div>
+
+        <div class="image-block">
+          <img src="static/images/result.png" alt="Quantitative results">
+          <div class="caption">Quantitative gains across dialogue subtasks and retrieval.</div>
+        </div>
+
+        <div class="image-block" style="margin-top: 1.5rem;">
+          <img src="static/images/result2.png" alt="Qualitative examples">
+          <div class="caption">Qualitative evidence shows finer grounding and more stable fashion reasoning.</div>
+        </div>
+
+        <div class="dataset-note" style="margin-top: 1.75rem;">
+          FashionX gives structure. OmniFashion gives behavior.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered is-size-7">
+      <p>Structured fashion supervision first. Unified dialogue second.</p>
+    </div>
+  </footer>
 
 <script>
-  document.querySelectorAll('.tabs li').forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.tabs li').forEach(t => t.classList.remove('is-active'));
-      tab.classList.add('is-active');
-
-      const target = tab.dataset.tab;
-      document.querySelectorAll('.tab-content').forEach(content => {
-        content.classList.remove('is-active');
-      });
-      document.getElementById(target).classList.add('is-active');
-    });
-  });
-
-  // --- ECharts 数据可视化配置 ---
-  document.addEventListener('DOMContentLoaded', function() {
-    
-    // 1. 数据集来源饼图
-    const pieChart = echarts.init(document.getElementById('pie-source'));
-    pieChart.setOption({
-      tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' },
-      legend: { bottom: '0%', left: 'center', itemGap: 10, textStyle: {fontSize: 10} },
-      series: [{
-        name: 'Sources',
-        type: 'pie',
-        radius: ['40%', '70%'],
-        avoidLabelOverlap: false,
-        itemStyle: { borderRadius: 10, borderColor: '#fff', borderWidth: 2 },
-        label: { show: false },
-        data: [
-          { value: 45623, name: 'Fashionpedia' },
-          { value: 52712, name: 'DeepFashion-ICRB' },
-          { value: 239557, name: 'DeepFashion-CSCR' },
-          { value: 289229, name: 'DeepFashion-CAPB' },
-          { value: 405589, name: 'Fashion550k' }
-        ]
-      }]
-    });
-
-    // 3. 细粒度类别柱状图
-    const barChart = echarts.init(document.getElementById('bar-category'));
-    barChart.setOption({
-      tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
-      legend: { data: ['Num. Items', 'Num. Attributes'], top: '0%' },
-      grid: { left: '3%', right: '4%', bottom: '10%', containLabel: true },
-      xAxis: { type: 'category', data: ['One-piece', 'Tops', 'Bottoms', 'Footwear', 'Accessory'] },
-      yAxis: [
-        { type: 'value', name: 'Items', position: 'left' },
-        { type: 'value', name: 'Attributes', position: 'right', splitLine: {show: false} }
-      ],
-      series: [
-        {
-          name: 'Num. Items',
-          type: 'bar',
-          data: [261389, 952229, 729562, 593448, 797970],
-          itemStyle: { color: '#2563eb' }
-        },
-        {
-          name: 'Num. Attributes',
-          type: 'line',
-          yAxisIndex: 1,
-          data: [2656329, 7855390, 5099191, 3964328, 4533838],
-          itemStyle: { color: '#f59e0b' },
-          smooth: true,
-          areaStyle: { opacity: 0.1 }
-        }
-      ]
-    });
-    // --- 新增：4. 全局分布 (三联饼图) ---
-    const globalChart = echarts.init(document.getElementById('global-dist-charts'));
-    globalChart.setOption({
-      tooltip: { trigger: 'item', formatter: '{a} <br/>{b}: {c} ({d}%)' },
-      series: [
-        {
-          name: 'Style', type: 'pie', radius: '45%', center: ['18%', '50%'],
-          data: [
-            { value: 886998, name: 'Casual' }, { value: 176233, name: 'Chic' },
-            { value: 108204, name: 'Streetwear' }, { value: 86163, name: 'Bohemian' },
-            { value: 750000, name: 'Others' }
-          ],
-          label: { show: true, position: 'inner', formatter: '{b}', fontSize: 9 }
-        },
-        {
-          name: 'Season', type: 'pie', radius: '45%', center: ['50%', '50%'],
-          data: [
-            { value: 882572, name: 'Spring' }, { value: 583577, name: 'Summer' },
-            { value: 461389, name: 'Fall' }, { value: 181849, name: 'Winter' }
-          ],
-          label: { show: true, position: 'inner', formatter: '{b}', fontSize: 10 }
-        },
-        {
-          name: 'Occasion', type: 'pie', radius: '45%', center: ['82%', '50%'],
-          data: [
-            { value: 864823, name: 'Daily' }, { value: 755452, name: 'Social' },
-            { value: 237812, name: 'Semi-Formal' }, { value: 35636, name: 'Travel' }
-          ],
-          label: { show: true, position: 'inner', formatter: '{b}', fontSize: 9 }
-        }
-      ]
-    });
-
-    // --- 新增：5. 热门单品 (横向柱状图) ---
-    const itemChart = echarts.init(document.getElementById('item-terms-chart'));
-    itemChart.setOption({
-      grid: { left: '18%', right: '10%', top: '5%', bottom: '10%' },
-      xAxis: { type: 'value', show: false },
-      yAxis: { 
-        type: 'category', 
-        data: ['Top', 'Pants', 'Dress', 'Shoes', 'Skirt', 'Shorts', 'Boots', 'Sandals', 'Jacket', 'Sunglasses', 'Handbag', 'T-shirt', 'Shirt', 'Bag', 'Necklace'].reverse() 
-      },
-      series: [{
-        type: 'bar',
-        data: [361472, 248526, 239606, 197498, 183442, 149988, 149912, 111865, 105970, 99292, 97494, 93674, 89005, 88881, 83639].reverse(),
-        itemStyle: { color: '#3b82f6', borderRadius: [0, 4, 4, 0] },
-        label: { show: true, position: 'right', fontSize: 10 }
-      }]
-    });
-
-    // --- 新增：6. 颜色与材质 (分组对比) ---
-    const cmChart = echarts.init(document.getElementById('color-material-chart'));
-    cmChart.setOption({
-      tooltip: { trigger: 'axis' },
-      legend: { data: ['Color Distribution', 'Material Distribution'], bottom: 0 },
-      xAxis: { type: 'category', data: ['Black/Cotton', 'White/Leather', 'Blue/Denim', 'Brown/Fabric', 'Beige/Metal'] },
-      yAxis: { type: 'value' },
-      series: [
-        {
-          name: 'Color Distribution', type: 'bar',
-          data: [1422636, 796572, 225972, 204433, 192820],
-          itemStyle: { color: '#3b82f6' }
-        },
-        {
-          name: 'Material Distribution', type: 'line', smooth: true,
-          data: [799877, 627858, 245475, 213271, 189623],
-          itemStyle: { color: '#f59e0b' },
-          lineStyle: { width: 3 }
-        }
-      ]
-    });
-        // 响应式处理
-    window.addEventListener('resize', function() {
-      pieChart.resize();
-      barChart.resize();
-    });
-  });
-// --- 新增：自动滚动展示模块逻辑 ---
-  document.addEventListener('DOMContentLoaded', function() {
-    // 1. 准备你的 10+ 个衣物数据示例
+  document.addEventListener('DOMContentLoaded', () => {
     const fashionData = [
       {
-  id: 1, // 根据你的序列继续编号
-  img: 'static/images/img1.png', // 对应图片路径
-  title: 'Tank top & Leggings Set', // 提取上下装的 term 组合
-  tags: ['Athleisure', 'Summer', 'Sport'], // 提取 overall 中的 style 和 season
-  desc: 'The outfit consists of a black sleeveless tank top with patterned straps paired with dark grey leggings.', // 对应 caption.general
-  annotation: '{\n  "category": "Activewear Set",\n  "material": "Stretch fabric",\n  "pattern": "Abstract",\n  "style": "Athleisure"\n}' // 提取核心属性并序列化
-},
-      { id: 2, img: 'static/images/cloth2.png', title: 'Embroidered Top', tags: ['Tops', 'Bohemian', 'Breathable'], desc: 'Sheer chiffon top with delicate embroidery.', annotation: '{\n  "category": "Top",\n  "material": "Chiffon",\n  "details": ["Sheer", "Embroidery"]\n}' },
-      { id: 3, img: 'static/images/cloth3.png', title: 'Leopard Flutter Top', tags: ['Tops', 'Casual', 'Patterned'], desc: 'Loose top with flutter sleeves and leopard print.', annotation: '{\n  "category": "Top",\n  "pattern": "Leopard",\n  "sleeves": "Flutter"\n}' },
-      { id: 4, img: 'static/images/cloth4.png', title: 'Floral Print Top', tags: ['Tops', 'Spring', 'Vibrant'], desc: 'Multi-colored floral pattern silhouette.', annotation: '{\n  "category": "Top",\n  "pattern": "Floral",\n  "colors": ["Multi"]\n}' },
-      { id: 5, img: 'static/images/cloth1.png', title: 'Leather Biker Jacket', tags: ['Outerwear', 'Streetwear', 'Fall'], desc: 'Black leather biker jacket with silver hardware.', annotation: '{\n  "category": "Jacket",\n  "material": "Leather",\n  "hardware": "Silver zips"\n}' },
-      { id: 6, img: 'static/images/cloth1.png', title: 'Straight Denim Jeans', tags: ['Bottoms', 'Casual', 'Daily'], desc: 'Light wash straight-leg denim jeans.', annotation: '{\n  "category": "Jeans",\n  "fit": "Straight",\n  "wash": "Light"\n}' },
-      { id: 7, img: 'static/images/cloth1.png', title: 'Pleated Midi Skirt', tags: ['Bottoms', 'Chic', 'Spring'], desc: 'Pastel green midi-length pleated skirt.', annotation: '{\n  "category": "Skirt",\n  "length": "Midi",\n  "style": "Pleated"\n}' },
-      { id: 8, img: 'static/images/cloth1.png', title: 'Classic Sneakers', tags: ['Footwear', 'Sport', 'Daily'], desc: 'Minimalist white canvas sneakers.', annotation: '{\n  "category": "Footwear",\n  "material": "Canvas",\n  "style": "Minimalist"\n}' },
-      { id: 9, img: 'static/images/cloth1.png', title: 'Silk Button-up Blouse', tags: ['Tops', 'Formal', 'Work'], desc: 'Elegant silk button-up blouse in red.', annotation: '{\n  "category": "Blouse",\n  "material": "Silk",\n  "closure": "Button-up"\n}' },
-      { id: 10, img: 'static/images/cloth1.png', title: 'Utility Cargo Shorts', tags: ['Bottoms', 'Summer', 'Travel'], desc: 'Purple utility cargo shorts with multiple pockets.', annotation: '{\n  "category": "Shorts",\n  "style": "Cargo",\n  "pockets": "Multiple"\n}' }
+        id: 'ICRB/WOMEN/Tees_Tanks/id_00007862/02_1_front',
+        title: 'Crochet layered top with silver accessories',
+        image: 'static/images/cloth2.png',
+        teaser: 'Bohemian layered knit with complete accessory annotation.',
+        caption: {
+          general: 'The outfit consists of a sleeveless crochet knit top layered over a black inner garment, paired with multiple silver accessories. The look features casual and bohemian elements suitable for warm weather.',
+          concise: 'The image shows a sleeveless crochet knit top in white worn over a black inner top. The crochet top has an openwork pattern and a loose fit. The accessories include layered necklaces, bracelets, and an arm cuff, all in silver tones. This outfit is styled for casual or social occasions during spring or summer.'
+        },
+        attributes: {
+          overall: {
+            style: ['Casual', 'Bohemian'],
+            season: ['Spring', 'Summer'],
+            occasion: ['Social', 'Daily']
+          },
+          parts: {
+            one_piece: { count: 0, items: [] },
+            upper_garment: {
+              count: 2,
+              items: [
+                { term: 'Top', design_terms: ['Sleeveless', 'Crochet', 'Loose fit', 'Openwork'], color: ['White'], material: ['Cotton', 'Yarn'], pattern: ['Crochet'], style: ['Bohemian', 'Casual'] },
+                { term: 'Top', design_terms: ['Sleeveless', 'Fitted'], color: ['Black'], material: ['Cotton', 'Jersey'], pattern: ['Solid'], style: ['Casual'] }
+              ]
+            },
+            lower_garment: { count: 0, items: [] },
+            footwear: { count: 0, items: [] },
+            accessories: {
+              count: 4,
+              items: [
+                { term: 'Necklace', design_terms: ['Layered'], color: ['Silver'], material: ['Metal'], pattern: ['Solid'], style: ['Bohemian', 'Casual'] },
+                { term: 'Bracelet', design_terms: [], color: ['Silver'], material: ['Metal'], pattern: ['Solid'], style: ['Bohemian', 'Casual'] },
+                { term: 'Bracelet', design_terms: [], color: ['Silver'], material: ['Metal'], pattern: ['Solid'], style: ['Bohemian', 'Casual'] },
+                { term: 'Arm cuff', design_terms: [], color: ['Silver'], material: ['Metal'], pattern: ['Solid'], style: ['Bohemian', 'Casual'] }
+              ]
+            }
+          }
+        }
+      },
+      {
+        id: 'CSCR/WOMEN/Blouses/id_00018124/01_4_full',
+        title: 'Leopard flutter blouse',
+        image: 'static/images/cloth3.png',
+        teaser: 'Pattern-rich top with explicit design and material cues.',
+        caption: {
+          general: 'The outfit centers on a loose leopard-print top with flutter sleeves and a soft draped silhouette. The visible styling points to a casual, statement-oriented look designed for warm-weather daily wear.',
+          concise: 'The garment is a lightweight blouse featuring flutter sleeves, a relaxed fit, and an all-over leopard pattern. The top uses a flowing woven fabric and is styled as a casual standout piece for spring or summer.'
+        },
+        attributes: {
+          overall: {
+            style: ['Casual', 'Statement'],
+            season: ['Spring', 'Summer'],
+            occasion: ['Daily', 'Social']
+          },
+          parts: {
+            one_piece: { count: 0, items: [] },
+            upper_garment: {
+              count: 1,
+              items: [
+                { term: 'Blouse', design_terms: ['Flutter sleeves', 'Relaxed fit', 'Draped'], color: ['Brown', 'Black', 'Beige'], material: ['Lightweight woven fabric'], pattern: ['Leopard'], style: ['Casual', 'Statement'] }
+              ]
+            },
+            lower_garment: { count: 0, items: [] },
+            footwear: { count: 0, items: [] },
+            accessories: { count: 0, items: [] }
+          }
+        }
+      },
+      {
+        id: 'CAPB/WOMEN/Shirts_Blouses/id_00033410/03_1_front',
+        title: 'Floral print blouse',
+        image: 'static/images/cloth4.png',
+        teaser: 'Vivid multi-color print grounded by structured part-level tags.',
+        caption: {
+          general: 'The outfit features a floral blouse with a loose silhouette and a vivid multi-colored pattern. The top reads as lively and feminine, suitable for daytime social styling in spring or summer.',
+          concise: 'The blouse combines a relaxed fit with an all-over floral print in several saturated colors. The fabric appears light and airy, giving the garment an expressive spring-ready appearance.'
+        },
+        attributes: {
+          overall: {
+            style: ['Feminine', 'Casual'],
+            season: ['Spring', 'Summer'],
+            occasion: ['Social', 'Daily']
+          },
+          parts: {
+            one_piece: { count: 0, items: [] },
+            upper_garment: {
+              count: 1,
+              items: [
+                { term: 'Blouse', design_terms: ['Relaxed silhouette', 'Soft drape'], color: ['Pink', 'Green', 'Blue', 'White'], material: ['Lightweight fabric'], pattern: ['Floral'], style: ['Feminine', 'Casual'] }
+              ]
+            },
+            lower_garment: { count: 0, items: [] },
+            footwear: { count: 0, items: [] },
+            accessories: { count: 0, items: [] }
+          }
+        }
+      },
+      {
+        id: 'FASHION550K/WOMEN/Jackets/id_00124511/00_1_front',
+        title: 'Structured embellished dress look',
+        image: 'static/images/cloth1.png',
+        teaser: 'Evening-oriented silhouette with strong occasion semantics.',
+        caption: {
+          general: 'The look shows a structured dress with a fitted silhouette and an embellished neckline, creating a polished evening impression. The styling suggests formal or semi-formal use, where accessory and footwear choices need to preserve elegance.',
+          concise: 'The outfit appears to be a sleek dress with decorative collar detailing and a sculpted upper-body fit. Its refined construction makes it suitable for evening social events or more formal occasions.'
+        },
+        attributes: {
+          overall: {
+            style: ['Elegant', 'Formal'],
+            season: ['Fall', 'Spring'],
+            occasion: ['Evening', 'Semi-Formal']
+          },
+          parts: {
+            one_piece: {
+              count: 1,
+              items: [
+                { term: 'Dress', design_terms: ['Structured', 'Fitted bodice', 'Decorative neckline'], color: ['Black'], material: ['Structured fabric'], pattern: ['Solid'], style: ['Elegant', 'Formal'] }
+              ]
+            },
+            upper_garment: { count: 0, items: [] },
+            lower_garment: { count: 0, items: [] },
+            footwear: { count: 0, items: [] },
+            accessories: {
+              count: 1,
+              items: [
+                { term: 'Neckline embellishment', design_terms: ['Jewelled'], color: ['Silver'], material: ['Metal', 'Crystal'], pattern: ['Decorative'], style: ['Formal'] }
+              ]
+            }
+          }
+        }
+      },
+      {
+        id: 'DEEPFASHION/SPORT/Activewear/id_00051109/04_1_front',
+        title: 'Athleisure set with leggings',
+        image: 'static/images/img1.png',
+        teaser: 'Complete two-piece set illustrating multi-part annotation.',
+        caption: {
+          general: 'The outfit consists of a black sleeveless tank top with patterned straps paired with dark grey leggings. The overall styling is sporty and functional, aimed at warm-weather activewear use.',
+          concise: 'The image shows an activewear set made of a fitted tank top and performance leggings. The garments use stretch fabrics, a dark palette, and a streamlined athletic silhouette suitable for training or casual sport styling.'
+        },
+        attributes: {
+          overall: {
+            style: ['Athleisure', 'Sport'],
+            season: ['Summer', 'Spring'],
+            occasion: ['Sport', 'Daily']
+          },
+          parts: {
+            one_piece: { count: 0, items: [] },
+            upper_garment: {
+              count: 1,
+              items: [
+                { term: 'Tank top', design_terms: ['Sleeveless', 'Fitted straps'], color: ['Black', 'Grey'], material: ['Stretch fabric', 'Synthetic'], pattern: ['Abstract'], style: ['Athleisure', 'Sport'] }
+              ]
+            },
+            lower_garment: {
+              count: 1,
+              items: [
+                { term: 'Leggings', design_terms: ['High stretch', 'Body-hugging'], color: ['Dark grey'], material: ['Stretch fabric'], pattern: ['Solid'], style: ['Athleisure', 'Sport'] }
+              ]
+            },
+            footwear: { count: 0, items: [] },
+            accessories: { count: 0, items: [] }
+          }
+        }
+      }
     ];
 
-    const track = document.getElementById('marquee-track');
-    
-    // 为了实现无缝滚动，我们将数组复制一遍填入 (10个变20个)，CSS位移50%时刚好能完美衔接
-    const renderList = [...fashionData, ...fashionData];
+    const groupLabels = {
+      one_piece: 'One-piece',
+      upper_garment: 'Upper garment',
+      lower_garment: 'Lower garment',
+      footwear: 'Footwear',
+      accessories: 'Accessories'
+    };
 
-    // 2. 渲染图片到滚动条
-    renderList.forEach((item, index) => {
-      const img = document.createElement('img');
-      img.src = item.img;
-      img.className = 'marquee-item';
-      img.dataset.id = item.id;
-      
-      // 点击图片事件
-      img.addEventListener('click', () => {
-        // 暂停滚动
-        track.classList.add('paused');
-        
-        document.querySelectorAll('.marquee-item').forEach(el => el.classList.remove('is-selected'));
-        document.querySelectorAll(`.marquee-item[data-id="${item.id}"]`).forEach(el => el.classList.add('is-selected'));
-        
-        document.getElementById('detail-img').src = item.img;
-        document.getElementById('detail-title').textContent = item.title;
-        document.getElementById('detail-desc').textContent = item.desc;
-        document.getElementById('detail-json').textContent = item.annotation;
-        
-        const tagsHtml = item.tags.map(tag => `<span class="tag is-info is-light">${tag}</span>`).join('');
-        document.getElementById('detail-tags').innerHTML = tagsHtml;
-        
-        document.getElementById('annotation-detail').style.display = 'block';
-      });
-      
-      track.appendChild(img);
+    const groupOrder = ['one_piece', 'upper_garment', 'lower_garment', 'footwear', 'accessories'];
+
+    const semanticGroups = [
+      { key: 'style', label: 'Style', className: 'style-chip' },
+      { key: 'season', label: 'Season', className: 'season-chip' },
+      { key: 'occasion', label: 'Occasion', className: 'occasion-chip' }
+    ];
+
+    const carouselStage = document.getElementById('showcase-carousel-stage');
+    const detailEmptyState = document.getElementById('detail-empty-state');
+    const annotationDetail = document.getElementById('annotation-detail');
+    const detailImage = document.getElementById('detail-img');
+    const detailId = document.getElementById('detail-id');
+    const detailTitle = document.getElementById('detail-title');
+    const detailGeneral = document.getElementById('detail-general');
+    const detailConcise = document.getElementById('detail-concise');
+    const detailOverall = document.getElementById('detail-overall');
+    const detailParts = document.getElementById('detail-parts');
+    const detailJson = document.getElementById('detail-json');
+    const detailPartSummary = document.getElementById('detail-part-summary');
+    const jsonToggle = document.getElementById('detail-json-toggle');
+    const jsonPanel = document.getElementById('detail-json-panel');
+
+    const AUTO_ROTATE_MS = 2400;
+    let activeIndex = 0;
+    let autoplayHandle = null;
+    let selectedDetailId = null;
+
+    function normalizeIndex(index) {
+      const total = fashionData.length;
+      return ((index % total) + total) % total;
+    }
+
+    function getCircularOffset(index, center) {
+      const total = fashionData.length;
+      let diff = index - center;
+      if (diff > total / 2) diff -= total;
+      if (diff < -total / 2) diff += total;
+      return diff;
+    }
+
+    function createChip(value, className) {
+      return `<span class="semantic-chip ${className}">${value}</span>`;
+    }
+
+    function createItemChip(value, extraClass = '') {
+      const classes = ['item-chip'];
+      if (extraClass) classes.push(extraClass);
+      return `<span class="${classes.join(' ')}">${value}</span>`;
+    }
+
+    function renderTagRow(label, values) {
+      const list = Array.isArray(values) ? values.filter(Boolean) : [];
+      if (!list.length) {
+        return '';
+      }
+
+      return `
+        <div class="item-attribute-row">
+          <span class="item-meta-label">${label}</span>
+          <div class="item-tag-list">${list.map((value) => createItemChip(value)).join('')}</div>
+        </div>
+      `;
+    }
+
+    function renderOverall(item) {
+      detailOverall.innerHTML = semanticGroups.map((group) => {
+        const values = item.attributes.overall[group.key] || [];
+        const chips = values.length ? values.map((value) => createChip(value, group.className)).join('') : createItemChip('Not specified', 'is-muted');
+
+        return `
+          <div class="overall-group">
+            <h4>${group.label}</h4>
+            <div class="tag-list">${chips}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderParts(item) {
+      const parts = item.attributes.parts || {};
+      const populatedGroups = groupOrder
+        .map((key) => ({ key, value: parts[key] || { count: 0, items: [] } }))
+        .filter(({ value }) => value.count > 0 && value.items.length > 0);
+
+      detailParts.innerHTML = populatedGroups.length ? populatedGroups.map(({ key, value }) => {
+        const items = value.items.map((part) => {
+          const attributeRows = [
+            renderTagRow('Design', part.design_terms),
+            renderTagRow('Color', part.color),
+            renderTagRow('Material', part.material),
+            renderTagRow('Pattern', part.pattern),
+            renderTagRow('Style', part.style)
+          ].filter(Boolean).join('');
+
+          return `
+            <div class="item-card">
+              <div class="item-term">${part.term || 'Unspecified item'}</div>
+              <div class="item-attribute-grid">
+                ${attributeRows || `
+                  <div class="item-attribute-row">
+                    <span class="item-meta-label">Details</span>
+                    <div class="item-tag-list">${createItemChip('Not specified', 'is-muted')}</div>
+                  </div>
+                `}
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        return `
+          <div class="part-group-card group-${key}">
+            <div class="part-group-head">
+              <div class="group-badge">${groupLabels[key]}</div>
+              <span class="count-badge">${value.count}</span>
+            </div>
+            ${items}
+          </div>
+        `;
+      }).join('') : '';
+    }
+
+    function renderDetail(item) {
+      detailImage.src = item.image;
+      detailImage.alt = item.title;
+      detailId.textContent = item.id;
+      detailTitle.textContent = item.title;
+      detailGeneral.textContent = item.caption.general || 'No general caption provided.';
+      detailConcise.textContent = item.caption.concise || 'No concise caption provided.';
+      detailPartSummary.textContent = '';
+      detailPartSummary.hidden = true;
+      detailJson.textContent = JSON.stringify({ ID: item.id, caption: item.caption, attributes: item.attributes }, null, 2);
+
+      renderOverall(item);
+      renderParts(item);
+    }
+
+    const cardButtons = fashionData.map((item, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'showcase-carousel-card';
+      button.dataset.itemId = item.id;
+      button.innerHTML = `
+        <img src="${item.image}" alt="${item.title}">
+        <div class="showcase-sample-body">
+          <div class="showcase-sample-title">${item.title}</div>
+          <div class="showcase-sample-meta">${item.teaser}</div>
+        </div>
+      `;
+
+      button.addEventListener('click', () => selectDetail(item));
+      carouselStage.appendChild(button);
+      return button;
     });
 
-    // 3. 恢复滚动按钮逻辑
-    document.getElementById('resume-scroll-btn').addEventListener('click', () => {
-      track.classList.remove('paused');
-      document.querySelectorAll('.marquee-item').forEach(el => el.classList.remove('is-selected'));
-      // 如果你想点击恢复滚动后收起面板，取消注释下面这行：
-      // document.getElementById('annotation-detail').style.display = 'none';
+    function renderCarousel() {
+      cardButtons.forEach((button, index) => {
+        const offset = getCircularOffset(index, activeIndex);
+        const absOffset = Math.abs(offset);
+        button.style.setProperty('--offset', String(offset));
+        button.style.setProperty('--abs-offset', String(absOffset));
+        button.dataset.offset = String(offset);
+        button.dataset.absOffset = String(absOffset);
+        button.classList.toggle('is-active', index === activeIndex);
+        button.classList.toggle('is-hidden', absOffset > 2);
+        button.classList.toggle('is-selected-detail', button.dataset.itemId === selectedDetailId);
+        button.setAttribute('aria-pressed', String(index === activeIndex));
+      });
+    }
+
+    function stopAutoplay() {
+      if (autoplayHandle !== null) {
+        clearInterval(autoplayHandle);
+        autoplayHandle = null;
+      }
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+
+      autoplayHandle = window.setInterval(() => {
+        advanceCarousel(activeIndex + 1);
+      }, AUTO_ROTATE_MS);
+    }
+
+    function advanceCarousel(index) {
+      activeIndex = normalizeIndex(index);
+      renderCarousel();
+    }
+
+    function selectDetail(item) {
+      selectedDetailId = item.id;
+      detailEmptyState.setAttribute('hidden', '');
+      annotationDetail.removeAttribute('hidden');
+      renderDetail(item);
+      renderCarousel();
+    }
+
+    advanceCarousel(0);
+    startAutoplay();
+
+    const initialDetailId = new URLSearchParams(window.location.search).get('detail');
+    if (initialDetailId) {
+      const initialDetailItem = fashionData.find((item) => item.id === initialDetailId);
+      if (initialDetailItem) {
+        selectDetail(initialDetailItem);
+      }
+    }
+
+    jsonToggle.addEventListener('click', () => {
+      const isHidden = jsonPanel.hasAttribute('hidden');
+      if (isHidden) {
+        jsonPanel.removeAttribute('hidden');
+      } else {
+        jsonPanel.setAttribute('hidden', '');
+      }
+
+      jsonToggle.textContent = isHidden ? 'Hide raw JSON' : 'Show raw JSON';
+      jsonToggle.setAttribute('aria-expanded', String(isHidden));
+    });
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        stopAutoplay();
+      } else {
+        startAutoplay();
+      }
     });
   });
-
 </script>
 </body>
 </html>
