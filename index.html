@@ -254,6 +254,7 @@
     .section-header p,
     .feature-card p,
     .schema-card p,
+    .contribution-card p,
     .framework-card p,
     .caption,
     .dataset-note,
@@ -1033,11 +1034,75 @@
     .framework-card.recognition { border-top: 4px solid #0ea5e9; }
     .framework-card.assistance { border-top: 4px solid #2563eb; }
 
+    .contribution-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.6rem;
+    }
+
+    .contribution-card {
+      min-height: 100%;
+      padding: 1.35rem;
+      border-radius: 20px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(248, 250, 252, 0.94) 100%);
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.05);
+    }
+
+    .contribution-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      background: rgba(37, 99, 235, 0.12);
+      color: var(--blue);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
+    .contribution-card h3 {
+      margin-bottom: 0.8rem;
+      color: var(--text-primary);
+      font-size: 1.02rem;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .contribution-card p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .reviewer-note {
+      margin-top: 1.5rem;
+      padding: 1.35rem 1.45rem;
+      border-radius: 20px;
+      background: rgba(21, 32, 51, 0.94);
+      color: #f8fafc;
+      box-shadow: 0 20px 46px rgba(15, 23, 42, 0.12);
+    }
+
+    .reviewer-note strong {
+      color: #ffffff;
+    }
+
+    .reviewer-note span {
+      display: block;
+      margin-top: 0.35rem;
+      color: rgba(248, 250, 252, 0.76);
+      line-height: 1.65;
+    }
+
     .footer {
       margin-top: 4rem;
       background: rgba(255, 255, 255, 0.7);
       border-top: 1px solid rgba(15, 23, 42, 0.08);
       padding: 2.5rem 1.5rem 3rem;
+      padding-bottom: 7rem;
     }
 
     .footer .content { color: var(--text-secondary); }
@@ -1060,7 +1125,8 @@
       .figure-editorial-card,
       .figure-editorial-card.is-reversed,
       .figure-schema-card,
-      .figure-focus-card {
+      .figure-focus-card,
+      .contribution-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1136,6 +1202,7 @@
         <a class="navbar-item" href="#dataset">Dataset</a>
         <a class="navbar-item" href="#framework">Framework</a>
         <a class="navbar-item" href="#results">Results</a>
+        <a class="navbar-item" href="#contributions">Contributions</a>
       </div>
     </div>
   </div>
@@ -1445,6 +1512,41 @@
 
         <div class="dataset-note" style="margin-top: 1.75rem;">
           FashionX gives structure. OmniFashion gives behavior.
+        </div>
+      </div>
+
+      <div class="section-box" id="contributions">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Contributions</span>
+            <h2 class="title is-4" style="margin: 0;">Three things reviewers should take away.</h2>
+          </div>
+          <p>
+            Data, formulation, and evidence move together.
+          </p>
+        </div>
+
+        <div class="contribution-grid">
+          <article class="contribution-card">
+            <div class="contribution-number">01</div>
+            <h3>Million-scale structured supervision</h3>
+            <p>FashionX resolves incomplete fashion labels with head-to-toe JSON records: 1.03M outfits, 3.3M garment instances, and 24.1M attributes, with 95.3% category agreement and targeted human verification.</p>
+          </article>
+          <article class="contribution-card">
+            <div class="contribution-number">02</div>
+            <h3>One dialogue paradigm</h3>
+            <p>OmniFashion reformulates recommendation, retrieval, recognition, and assistance as one QA interface, turning heterogeneous fashion objectives into shared dialogue supervision.</p>
+          </article>
+          <article class="contribution-card">
+            <div class="contribution-number">03</div>
+            <h3>Evidence beyond one benchmark</h3>
+            <p>Results span dialogue subtasks and standard retrieval: strongest open-source performance, competitive closed-source comparison, and direct gains on InShop and Consumer2Shop retrieval.</p>
+          </article>
+        </div>
+
+        <div class="reviewer-note">
+          <strong>The closing claim:</strong>
+          <span>FashionX is not only a larger dataset, and OmniFashion is not only another tuned VLM. Together they test whether structured outfit supervision can become a reusable foundation for generalist fashion intelligence.</span>
         </div>
       </div>
     </div>
