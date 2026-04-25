@@ -1,0 +1,148 @@
+{
+  "ID": "Fashionpedia/838675c200a0b3d1421b4fb47bd3f043",
+  "caption": {
+    "general": "The outfit consists of a black leather jacket paired with a black top and a red tulle skirt. The look is completed with black ankle boots and dark sunglasses.",
+    "concise": "The clothing items include a black leather jacket with a zip-up front worn over a black top. The lower garment is a red tulle skirt with layers creating volume. Footwear consists of black ankle boots made from leather or a similar material. Accessories include a pair of dark sunglasses. The ensemble combines edgy and feminine styles suitable for transitional seasons."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Edgy",
+        "Feminine",
+        "Casual",
+        "Chic"
+      ],
+      "season": [
+        "Fall",
+        "Spring"
+      ],
+      "occasion": [
+        "Social",
+        "Daily",
+        "Semi-Formal"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Jacket",
+            "design_terms": [
+              "Zip-up",
+              "Fitted"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Edgy",
+              "Chic"
+            ]
+          },
+          {
+            "term": "Top",
+            "design_terms": [
+              "Fitted"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Cotton",
+              "Knit"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Skirt",
+            "design_terms": [
+              "Layered",
+              "Tulle"
+            ],
+            "color": [
+              "Red"
+            ],
+            "material": [
+              "Tulle"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Feminine",
+              "Chic"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Boots",
+            "design_terms": [
+              "Ankle-length"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Edgy",
+              "Chic"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Sunglasses",
+            "design_terms": [],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Plastic"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Chic"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "Fashionpedia_838675c200a0b3d1421b4fb47bd3f043",
+  "source_dataset": "merged_fashionpedia"
+}

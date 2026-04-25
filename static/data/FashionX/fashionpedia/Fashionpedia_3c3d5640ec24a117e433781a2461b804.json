@@ -1,0 +1,156 @@
+{
+  "ID": "Fashionpedia/3c3d5640ec24a117e433781a2461b804",
+  "caption": {
+    "general": "The outfit consists of a sleeveless buttoned vest paired with high-waisted shorts and strappy high-heeled sandals. The look is accessorized with statement earrings and a necklace.",
+    "concise": "The model is wearing a sleeveless vest with a fitted silhouette and button closure in a light color, paired with matching high-waisted shorts. The footwear consists of strappy high-heeled sandals in a neutral tone. Accessories include large dangling earrings and a necklace, adding detail to the outfit. This ensemble is suitable for warm weather and casual to semi-formal occasions."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Casual",
+        "Chic",
+        "Summer"
+      ],
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "occasion": [
+        "Social",
+        "Semi-Formal",
+        "Daily"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Vest",
+            "design_terms": [
+              "Sleeveless",
+              "Buttoned",
+              "Fitted"
+            ],
+            "color": [
+              "Light beige"
+            ],
+            "material": [
+              "Cotton",
+              "Polyester"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual",
+              "Chic"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Shorts",
+            "design_terms": [
+              "High-waisted",
+              "Fitted"
+            ],
+            "color": [
+              "Light beige"
+            ],
+            "material": [
+              "Cotton",
+              "Polyester"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual",
+              "Chic"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Sandals",
+            "design_terms": [
+              "Strappy",
+              "High-heeled"
+            ],
+            "color": [
+              "Beige"
+            ],
+            "material": [
+              "Leather",
+              "Synthetic"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Chic",
+              "Semi-Formal"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Earrings",
+            "design_terms": [
+              "Dangling",
+              "Statement"
+            ],
+            "color": [
+              "Gold"
+            ],
+            "material": [
+              "Metal"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Chic",
+              "Semi-Formal"
+            ]
+          },
+          {
+            "term": "Necklace",
+            "design_terms": [
+              "Statement"
+            ],
+            "color": [
+              "Gold"
+            ],
+            "material": [
+              "Metal"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Chic",
+              "Semi-Formal"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "Fashionpedia_3c3d5640ec24a117e433781a2461b804",
+  "source_dataset": "merged_fashionpedia"
+}

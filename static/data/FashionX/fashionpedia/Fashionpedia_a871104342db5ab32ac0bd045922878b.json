@@ -1,0 +1,142 @@
+{
+  "ID": "Fashionpedia/a871104342db5ab32ac0bd045922878b",
+  "caption": {
+    "general": "The outfit consists of a sleeveless graphic tank top paired with slim-fit black jeans and black-and-white sneakers. Accessories include sunglasses and a black fringe shoulder bag.",
+    "concise": "The clothing items include a sleeveless tank top with graphic print in neutral tones, slim-fit black jeans with a slightly distressed look, and casual black-and-white sneakers. Accessories feature dark sunglasses and a black fringe shoulder bag. The outfit is casual and suitable for warm weather seasons and daily social occasions."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Casual",
+        "Streetwear"
+      ],
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "occasion": [
+        "Daily",
+        "Social"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Tank top",
+            "design_terms": [
+              "Sleeveless",
+              "Graphic"
+            ],
+            "color": [
+              "Gray",
+              "Black",
+              "White"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Graphic print"
+            ],
+            "style": [
+              "Casual",
+              "Streetwear"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Jeans",
+            "design_terms": [
+              "Slim-fit",
+              "Distressed"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Denim"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual",
+              "Streetwear"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Sneakers",
+            "design_terms": [
+              "Low-top"
+            ],
+            "color": [
+              "Black",
+              "White"
+            ],
+            "material": [
+              "Canvas",
+              "Rubber"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual",
+              "Streetwear"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Sunglasses",
+            "design_terms": [],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Plastic"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual"
+            ]
+          },
+          {
+            "term": "Bag",
+            "design_terms": [
+              "Fringe",
+              "Shoulder"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual",
+              "Bohemian"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "Fashionpedia_a871104342db5ab32ac0bd045922878b",
+  "source_dataset": "merged_fashionpedia"
+}

@@ -1,0 +1,137 @@
+{
+  "ID": "Fashionpedia/4f50052d55b153b1e6bccbe84bb58d15",
+  "caption": {
+    "general": "The outfit consists of a loose white blouse paired with a light blue satin skirt and nude pointed-toe heels. The look is accessorized with gold jewelry including a necklace and bracelets.",
+    "concise": "The model is wearing a white blouse with wide sleeves and a draped neckline, combined with a light blue satin mini skirt featuring an asymmetrical hem. The footwear consists of nude pointed-toe heels. Accessories include a chunky gold necklace and gold bracelets. The ensemble is suitable for spring or summer social occasions."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Chic",
+        "Elegant",
+        "Contemporary"
+      ],
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "occasion": [
+        "Social",
+        "Semi-Formal"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Blouse",
+            "design_terms": [
+              "Loose",
+              "Draped",
+              "Wide-sleeve"
+            ],
+            "color": [
+              "White"
+            ],
+            "material": [
+              "Lightweight fabric",
+              "Possibly chiffon or silk"
+            ],
+            "pattern": [],
+            "style": [
+              "Chic",
+              "Elegant"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Skirt",
+            "design_terms": [
+              "Asymmetrical hem",
+              "Mini"
+            ],
+            "color": [
+              "Light blue"
+            ],
+            "material": [
+              "Satin"
+            ],
+            "pattern": [],
+            "style": [
+              "Contemporary",
+              "Elegant"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Heels",
+            "design_terms": [
+              "Pointed-toe"
+            ],
+            "color": [
+              "Nude"
+            ],
+            "material": [
+              "Leather or synthetic"
+            ],
+            "pattern": [],
+            "style": [
+              "Elegant",
+              "Chic"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Necklace",
+            "design_terms": [
+              "Chunky"
+            ],
+            "color": [
+              "Gold"
+            ],
+            "material": [
+              "Metal"
+            ],
+            "pattern": [],
+            "style": [
+              "Elegant"
+            ]
+          },
+          {
+            "term": "Bracelet",
+            "design_terms": [],
+            "color": [
+              "Gold"
+            ],
+            "material": [
+              "Metal"
+            ],
+            "pattern": [],
+            "style": [
+              "Elegant"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "Fashionpedia_4f50052d55b153b1e6bccbe84bb58d15",
+  "source_dataset": "merged_fashionpedia"
+}

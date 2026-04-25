@@ -1,0 +1,137 @@
+{
+  "ID": "Fashion550k/839/8392094513-light-purple-crop-top-fcuk-blouse-black-lace-sequin-thrifted-vintage-skirt_400",
+  "caption": {
+    "general": "The outfit consists of a light purple blouse paired with a black lace skirt, complemented by patterned tights and light purple heels. The look is accessorized with a necklace and bracelet.",
+    "concise": "The ensemble features a light purple blouse with a loose fit and short sleeves, matched with a knee-length black lace skirt. The tights are sheer with a polka dot pattern, and the footwear includes light purple heeled shoes. Accessories include a statement necklace and a bracelet. This outfit is suitable for semi-formal occasions in spring or fall."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Elegant",
+        "Feminine",
+        "Semi-Formal"
+      ],
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "occasion": [
+        "Semi-Formal"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Blouse",
+            "design_terms": [
+              "Loose-fit",
+              "Short-sleeve"
+            ],
+            "color": [
+              "Light purple"
+            ],
+            "material": [
+              "Lightweight fabric"
+            ],
+            "pattern": [],
+            "style": [
+              "Elegant",
+              "Feminine"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Skirt",
+            "design_terms": [
+              "Knee-length",
+              "Lace"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Lace"
+            ],
+            "pattern": [
+              "Floral lace"
+            ],
+            "style": [
+              "Elegant",
+              "Feminine"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Shoes",
+            "design_terms": [
+              "Heeled"
+            ],
+            "color": [
+              "Light purple"
+            ],
+            "material": [
+              "Leather or synthetic"
+            ],
+            "pattern": [],
+            "style": [
+              "Elegant"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Necklace",
+            "design_terms": [
+              "Statement"
+            ],
+            "color": [
+              "Pink",
+              "Gold"
+            ],
+            "material": [
+              "Metal",
+              "Beads"
+            ],
+            "pattern": [],
+            "style": [
+              "Elegant"
+            ]
+          },
+          {
+            "term": "Bracelet",
+            "design_terms": [],
+            "color": [
+              "Pink"
+            ],
+            "material": [
+              "Beads"
+            ],
+            "pattern": [],
+            "style": [
+              "Elegant"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "Fashion550k_839_8392094513-light-purple-crop-top-fcuk-blouse-black-lace-sequin-thrifted-vintage-skirt_400",
+  "source_dataset": "merged_fashion550k"
+}

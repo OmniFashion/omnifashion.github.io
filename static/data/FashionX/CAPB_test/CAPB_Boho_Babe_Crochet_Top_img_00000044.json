@@ -1,0 +1,136 @@
+{
+  "ID": "CAPB/Boho_Babe_Crochet_Top/img_00000044",
+  "caption": {
+    "general": "The outfit consists of a sleeveless top, denim shorts, a crocheted vest, sandals, and a floral headband. The clothing items are casual and suitable for warm weather.",
+    "concise": "The child is wearing a short-sleeve top paired with denim shorts. Over the top, there is a white crocheted vest with a boho style. The footwear consists of open-toe sandals in a neutral color. A yellow floral headband completes the outfit, adding a decorative accessory. This ensemble is appropriate for casual daily wear in spring or summer."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Boho",
+        "Casual"
+      ],
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "occasion": [
+        "Daily",
+        "Social"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Top",
+            "design_terms": [
+              "Sleeveless"
+            ],
+            "color": [
+              "Light yellow"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual"
+            ]
+          },
+          {
+            "term": "Vest",
+            "design_terms": [
+              "Crocheted",
+              "Sleeveless",
+              "Open-front"
+            ],
+            "color": [
+              "White"
+            ],
+            "material": [
+              "Yarn"
+            ],
+            "pattern": [
+              "Crochet"
+            ],
+            "style": [
+              "Boho"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Shorts",
+            "design_terms": [
+              "Denim"
+            ],
+            "color": [
+              "Blue"
+            ],
+            "material": [
+              "Denim"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Sandals",
+            "design_terms": [
+              "Open-toe",
+              "Strappy"
+            ],
+            "color": [
+              "Brown"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Headband",
+            "design_terms": [
+              "Floral"
+            ],
+            "color": [
+              "Yellow"
+            ],
+            "material": [
+              "Fabric"
+            ],
+            "pattern": [],
+            "style": [
+              "Boho"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "CAPB_Boho_Babe_Crochet_Top_img_00000044",
+  "source_dataset": "merged_CAPB_test"
+}

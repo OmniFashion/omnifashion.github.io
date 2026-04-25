@@ -153,8 +153,7 @@
     .detail-copy-card,
     .overall-group,
     .image-block,
-    .dataset-note,
-    .detail-id-card {
+    .dataset-note {
       border-radius: var(--radius-md);
       border: 1px solid rgba(15, 23, 42, 0.08);
     }
@@ -288,16 +287,25 @@
 
     .showcase-carousel-stage {
       position: relative;
-      height: 332px;
+      min-height: 336px;
       margin: 0 auto;
-      --carousel-step: clamp(134px, 15vw, 194px);
+      overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent 0, black 7%, black 93%, transparent 100%);
+      --showcase-marquee-duration: 88s;
+    }
+
+    .showcase-carousel-track {
+      display: flex;
+      width: max-content;
+      gap: 14px;
+      padding: 0.2rem 0 1rem;
+      animation: fashionx-marquee var(--showcase-marquee-duration) linear infinite;
+      will-change: transform;
     }
 
     .showcase-carousel-card {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: clamp(164px, 16vw, 214px);
+      flex: 0 0 clamp(178px, 16vw, 224px);
+      width: clamp(178px, 16vw, 224px);
       padding: 0;
       overflow: hidden;
       cursor: pointer;
@@ -306,20 +314,7 @@
       border: 1px solid rgba(15, 23, 42, 0.1);
       background: rgba(255, 255, 255, 0.94);
       box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
-      will-change: transform, opacity;
-      transition:
-        transform 1.04s cubic-bezier(0.22, 1, 0.36, 1),
-        opacity 0.62s ease,
-        box-shadow 0.45s ease,
-        border-color 0.45s ease;
-      transform:
-        translate(
-          calc(-50% + (var(--offset) * var(--carousel-step))),
-          calc(-50% + (var(--abs-offset) * 14px))
-        )
-        scale(calc(1 - (var(--abs-offset) * 0.08)));
-      opacity: calc(1 - (var(--abs-offset) * 0.18));
-      z-index: calc(20 - var(--abs-offset));
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
     }
 
     .showcase-carousel-card:hover,
@@ -327,28 +322,27 @@
       outline: none;
       border-color: rgba(37, 99, 235, 0.28);
       box-shadow: 0 22px 48px rgba(15, 23, 42, 0.12);
-    }
-
-    .showcase-carousel-card.is-active {
-      border-color: rgba(37, 99, 235, 0.34);
-      box-shadow: 0 28px 58px rgba(37, 99, 235, 0.14);
+      transform: translateY(-3px);
     }
 
     .showcase-carousel-card.is-selected-detail {
+      border-color: rgba(37, 99, 235, 0.34);
       box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18), 0 22px 48px rgba(15, 23, 42, 0.12);
-    }
-
-    .showcase-carousel-card.is-hidden {
-      opacity: 0;
-      pointer-events: none;
     }
 
     .showcase-carousel-card img {
       display: block;
       width: 100%;
-      height: 214px;
-      object-fit: cover;
-      background: #eef2f7;
+      height: 218px;
+      padding: 0.45rem;
+      object-fit: contain;
+      background: #ffffff;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    @keyframes fashionx-marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(calc(-50% - 7px)); }
     }
 
     .showcase-sample-body {
@@ -369,6 +363,10 @@
     .showcase-sample-title {
       margin-bottom: 0.42rem;
       font-size: 0.92rem;
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
     }
 
     .showcase-sample-meta {
@@ -437,7 +435,7 @@
       border-radius: 22px;
       aspect-ratio: 4 / 5;
       padding: 0.85rem;
-      background: linear-gradient(180deg, #f4f8fd 0%, #ebf1f7 100%);
+      background: #ffffff;
       border: 1px solid rgba(15, 23, 42, 0.08);
       box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
     }
@@ -448,12 +446,6 @@
       height: 100%;
       max-height: 340px;
       object-fit: contain;
-    }
-
-    .detail-id-card {
-      padding: 0.9rem 1rem;
-      background: #f6f8fb;
-      font-size: 0.85rem;
     }
 
     .detail-figure-facts {
@@ -485,19 +477,11 @@
       letter-spacing: -0.04em;
     }
 
-    .detail-id-card code,
     .detail-json-panel pre {
       display: block;
       white-space: pre-wrap;
       word-break: break-word;
       font-family: "SFMono-Regular", Consolas, monospace;
-    }
-
-    .detail-id-card code {
-      margin-top: 0.4rem;
-      color: var(--text-primary);
-      background: transparent;
-      font-size: 0.8rem;
     }
 
     .detail-header,
@@ -1090,8 +1074,7 @@
       }
 
       .showcase-carousel-stage {
-        height: 314px;
-        --carousel-step: clamp(114px, 17vw, 162px);
+        min-height: 318px;
       }
     }
 
@@ -1102,18 +1085,14 @@
       .showcase-inner { padding: 0 1.1rem; }
       .showcase-carousel-shell { padding: 0 0.6rem; }
       .showcase-carousel-stage {
-        height: 276px;
-        --carousel-step: clamp(66px, 17vw, 92px);
+        min-height: 284px;
       }
       .showcase-carousel-card {
+        flex-basis: min(58vw, 184px);
         width: min(58vw, 184px);
       }
       .showcase-carousel-card img {
         height: 180px;
-      }
-      .showcase-carousel-card[data-abs-offset="2"] {
-        opacity: 0;
-        pointer-events: none;
       }
       .annotation-detail,
       .feature-grid,
@@ -1231,10 +1210,6 @@
           <img id="detail-img" src="" alt="Selected FashionX sample">
         </div>
         <div class="detail-aside-stack">
-          <div class="detail-id-card">
-            Sample identifier
-            <code id="detail-id"></code>
-          </div>
           <div class="detail-overview-card">
             <div class="detail-section-label">Concise description</div>
             <p id="detail-concise"></p>
@@ -1481,174 +1456,12 @@
     </div>
   </footer>
 
+<script src="static/data/fashionx-showcase.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const fashionData = [
-      {
-        id: 'ICRB/WOMEN/Tees_Tanks/id_00007862/02_1_front',
-        title: 'Crochet layered top with silver accessories',
-        image: 'static/images/cloth2.png',
-        teaser: 'Bohemian layered knit with complete accessory annotation.',
-        caption: {
-          general: 'The outfit consists of a sleeveless crochet knit top layered over a black inner garment, paired with multiple silver accessories. The look features casual and bohemian elements suitable for warm weather.',
-          concise: 'The image shows a sleeveless crochet knit top in white worn over a black inner top. The crochet top has an openwork pattern and a loose fit. The accessories include layered necklaces, bracelets, and an arm cuff, all in silver tones. This outfit is styled for casual or social occasions during spring or summer.'
-        },
-        attributes: {
-          overall: {
-            style: ['Casual', 'Bohemian'],
-            season: ['Spring', 'Summer'],
-            occasion: ['Social', 'Daily']
-          },
-          parts: {
-            one_piece: { count: 0, items: [] },
-            upper_garment: {
-              count: 2,
-              items: [
-                { term: 'Top', design_terms: ['Sleeveless', 'Crochet', 'Loose fit', 'Openwork'], color: ['White'], material: ['Cotton', 'Yarn'], pattern: ['Crochet'], style: ['Bohemian', 'Casual'] },
-                { term: 'Top', design_terms: ['Sleeveless', 'Fitted'], color: ['Black'], material: ['Cotton', 'Jersey'], pattern: ['Solid'], style: ['Casual'] }
-              ]
-            },
-            lower_garment: { count: 0, items: [] },
-            footwear: { count: 0, items: [] },
-            accessories: {
-              count: 4,
-              items: [
-                { term: 'Necklace', design_terms: ['Layered'], color: ['Silver'], material: ['Metal'], pattern: ['Solid'], style: ['Bohemian', 'Casual'] },
-                { term: 'Bracelet', design_terms: [], color: ['Silver'], material: ['Metal'], pattern: ['Solid'], style: ['Bohemian', 'Casual'] },
-                { term: 'Bracelet', design_terms: [], color: ['Silver'], material: ['Metal'], pattern: ['Solid'], style: ['Bohemian', 'Casual'] },
-                { term: 'Arm cuff', design_terms: [], color: ['Silver'], material: ['Metal'], pattern: ['Solid'], style: ['Bohemian', 'Casual'] }
-              ]
-            }
-          }
-        }
-      },
-      {
-        id: 'CSCR/WOMEN/Blouses/id_00018124/01_4_full',
-        title: 'Leopard flutter blouse',
-        image: 'static/images/cloth3.png',
-        teaser: 'Pattern-rich top with explicit design and material cues.',
-        caption: {
-          general: 'The outfit centers on a loose leopard-print top with flutter sleeves and a soft draped silhouette. The visible styling points to a casual, statement-oriented look designed for warm-weather daily wear.',
-          concise: 'The garment is a lightweight blouse featuring flutter sleeves, a relaxed fit, and an all-over leopard pattern. The top uses a flowing woven fabric and is styled as a casual standout piece for spring or summer.'
-        },
-        attributes: {
-          overall: {
-            style: ['Casual', 'Statement'],
-            season: ['Spring', 'Summer'],
-            occasion: ['Daily', 'Social']
-          },
-          parts: {
-            one_piece: { count: 0, items: [] },
-            upper_garment: {
-              count: 1,
-              items: [
-                { term: 'Blouse', design_terms: ['Flutter sleeves', 'Relaxed fit', 'Draped'], color: ['Brown', 'Black', 'Beige'], material: ['Lightweight woven fabric'], pattern: ['Leopard'], style: ['Casual', 'Statement'] }
-              ]
-            },
-            lower_garment: { count: 0, items: [] },
-            footwear: { count: 0, items: [] },
-            accessories: { count: 0, items: [] }
-          }
-        }
-      },
-      {
-        id: 'CAPB/WOMEN/Shirts_Blouses/id_00033410/03_1_front',
-        title: 'Floral print blouse',
-        image: 'static/images/cloth4.png',
-        teaser: 'Vivid multi-color print grounded by structured part-level tags.',
-        caption: {
-          general: 'The outfit features a floral blouse with a loose silhouette and a vivid multi-colored pattern. The top reads as lively and feminine, suitable for daytime social styling in spring or summer.',
-          concise: 'The blouse combines a relaxed fit with an all-over floral print in several saturated colors. The fabric appears light and airy, giving the garment an expressive spring-ready appearance.'
-        },
-        attributes: {
-          overall: {
-            style: ['Feminine', 'Casual'],
-            season: ['Spring', 'Summer'],
-            occasion: ['Social', 'Daily']
-          },
-          parts: {
-            one_piece: { count: 0, items: [] },
-            upper_garment: {
-              count: 1,
-              items: [
-                { term: 'Blouse', design_terms: ['Relaxed silhouette', 'Soft drape'], color: ['Pink', 'Green', 'Blue', 'White'], material: ['Lightweight fabric'], pattern: ['Floral'], style: ['Feminine', 'Casual'] }
-              ]
-            },
-            lower_garment: { count: 0, items: [] },
-            footwear: { count: 0, items: [] },
-            accessories: { count: 0, items: [] }
-          }
-        }
-      },
-      {
-        id: 'FASHION550K/WOMEN/Jackets/id_00124511/00_1_front',
-        title: 'Structured embellished dress look',
-        image: 'static/images/cloth1.png',
-        teaser: 'Evening-oriented silhouette with strong occasion semantics.',
-        caption: {
-          general: 'The look shows a structured dress with a fitted silhouette and an embellished neckline, creating a polished evening impression. The styling suggests formal or semi-formal use, where accessory and footwear choices need to preserve elegance.',
-          concise: 'The outfit appears to be a sleek dress with decorative collar detailing and a sculpted upper-body fit. Its refined construction makes it suitable for evening social events or more formal occasions.'
-        },
-        attributes: {
-          overall: {
-            style: ['Elegant', 'Formal'],
-            season: ['Fall', 'Spring'],
-            occasion: ['Evening', 'Semi-Formal']
-          },
-          parts: {
-            one_piece: {
-              count: 1,
-              items: [
-                { term: 'Dress', design_terms: ['Structured', 'Fitted bodice', 'Decorative neckline'], color: ['Black'], material: ['Structured fabric'], pattern: ['Solid'], style: ['Elegant', 'Formal'] }
-              ]
-            },
-            upper_garment: { count: 0, items: [] },
-            lower_garment: { count: 0, items: [] },
-            footwear: { count: 0, items: [] },
-            accessories: {
-              count: 1,
-              items: [
-                { term: 'Neckline embellishment', design_terms: ['Jewelled'], color: ['Silver'], material: ['Metal', 'Crystal'], pattern: ['Decorative'], style: ['Formal'] }
-              ]
-            }
-          }
-        }
-      },
-      {
-        id: 'DEEPFASHION/SPORT/Activewear/id_00051109/04_1_front',
-        title: 'Athleisure set with leggings',
-        image: 'static/images/img1.png',
-        teaser: 'Complete two-piece set illustrating multi-part annotation.',
-        caption: {
-          general: 'The outfit consists of a black sleeveless tank top with patterned straps paired with dark grey leggings. The overall styling is sporty and functional, aimed at warm-weather activewear use.',
-          concise: 'The image shows an activewear set made of a fitted tank top and performance leggings. The garments use stretch fabrics, a dark palette, and a streamlined athletic silhouette suitable for training or casual sport styling.'
-        },
-        attributes: {
-          overall: {
-            style: ['Athleisure', 'Sport'],
-            season: ['Summer', 'Spring'],
-            occasion: ['Sport', 'Daily']
-          },
-          parts: {
-            one_piece: { count: 0, items: [] },
-            upper_garment: {
-              count: 1,
-              items: [
-                { term: 'Tank top', design_terms: ['Sleeveless', 'Fitted straps'], color: ['Black', 'Grey'], material: ['Stretch fabric', 'Synthetic'], pattern: ['Abstract'], style: ['Athleisure', 'Sport'] }
-              ]
-            },
-            lower_garment: {
-              count: 1,
-              items: [
-                { term: 'Leggings', design_terms: ['High stretch', 'Body-hugging'], color: ['Dark grey'], material: ['Stretch fabric'], pattern: ['Solid'], style: ['Athleisure', 'Sport'] }
-              ]
-            },
-            footwear: { count: 0, items: [] },
-            accessories: { count: 0, items: [] }
-          }
-        }
-      }
-    ];
+    const fashionData = Array.isArray(window.FASHIONX_SHOWCASE_DATA)
+      ? window.FASHIONX_SHOWCASE_DATA
+      : [];
 
     const groupLabels = {
       one_piece: 'One-piece',
@@ -1670,7 +1483,6 @@
     const detailEmptyState = document.getElementById('detail-empty-state');
     const annotationDetail = document.getElementById('annotation-detail');
     const detailImage = document.getElementById('detail-img');
-    const detailId = document.getElementById('detail-id');
     const detailTitle = document.getElementById('detail-title');
     const detailGeneral = document.getElementById('detail-general');
     const detailConcise = document.getElementById('detail-concise');
@@ -1681,23 +1493,11 @@
     const jsonToggle = document.getElementById('detail-json-toggle');
     const jsonPanel = document.getElementById('detail-json-panel');
 
-    const AUTO_ROTATE_MS = 2400;
-    let activeIndex = 0;
-    let autoplayHandle = null;
     let selectedDetailId = null;
-
-    function normalizeIndex(index) {
-      const total = fashionData.length;
-      return ((index % total) + total) % total;
-    }
-
-    function getCircularOffset(index, center) {
-      const total = fashionData.length;
-      let diff = index - center;
-      if (diff > total / 2) diff -= total;
-      if (diff < -total / 2) diff += total;
-      return diff;
-    }
+    const carouselTrack = document.createElement('div');
+    carouselTrack.className = 'showcase-carousel-track';
+    carouselStage.appendChild(carouselTrack);
+    carouselStage.style.setProperty('--showcase-marquee-duration', `${Math.max(72, fashionData.length * 2.9)}s`);
 
     function createChip(value, className) {
       return `<span class="semantic-chip ${className}">${value}</span>`;
@@ -1707,6 +1507,22 @@
       const classes = ['item-chip'];
       if (extraClass) classes.push(extraClass);
       return `<span class="${classes.join(' ')}">${value}</span>`;
+    }
+
+    function getDisplayTitle(item) {
+      const text = item.caption?.concise || item.caption?.general || '';
+      const sentence = text.split(/[.!?]/).find(Boolean) || '';
+      const cleaned = sentence
+        .replace(/^the image shows\s+/i, '')
+        .replace(/^the outfit (consists of|features|centers on|appears to be|shows)\s+/i, '')
+        .replace(/^the look shows\s+/i, '')
+        .replace(/^the garment is\s+/i, '')
+        .replace(/^this outfit\s+/i, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+      const fallback = item.dataset_label ? `${item.dataset_label} sample` : 'FashionX sample';
+      const title = cleaned || fallback;
+      return title.length > 72 ? `${title.slice(0, 69).trim()}...` : title;
     }
 
     function renderTagRow(label, values) {
@@ -1782,9 +1598,8 @@
 
     function renderDetail(item) {
       detailImage.src = item.image;
-      detailImage.alt = item.title;
-      detailId.textContent = item.id;
-      detailTitle.textContent = item.title;
+      detailImage.alt = getDisplayTitle(item);
+      detailTitle.textContent = getDisplayTitle(item);
       detailGeneral.textContent = item.caption.general || 'No general caption provided.';
       detailConcise.textContent = item.caption.concise || 'No concise caption provided.';
       detailPartSummary.textContent = '';
@@ -1795,57 +1610,39 @@
       renderParts(item);
     }
 
-    const cardButtons = fashionData.map((item, index) => {
+    function createCarouselCard(item) {
+      const displayTitle = getDisplayTitle(item);
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'showcase-carousel-card';
       button.dataset.itemId = item.id;
+      button.setAttribute('aria-label', `Open annotation detail for ${displayTitle}`);
       button.innerHTML = `
-        <img src="${item.image}" alt="${item.title}">
+        <img src="${item.image}" alt="${displayTitle}">
         <div class="showcase-sample-body">
-          <div class="showcase-sample-title">${item.title}</div>
+          <div class="showcase-sample-title">${displayTitle}</div>
           <div class="showcase-sample-meta">${item.teaser}</div>
         </div>
       `;
 
       button.addEventListener('click', () => selectDetail(item));
-      carouselStage.appendChild(button);
       return button;
-    });
+    }
 
-    function renderCarousel() {
-      cardButtons.forEach((button, index) => {
-        const offset = getCircularOffset(index, activeIndex);
-        const absOffset = Math.abs(offset);
-        button.style.setProperty('--offset', String(offset));
-        button.style.setProperty('--abs-offset', String(absOffset));
-        button.dataset.offset = String(offset);
-        button.dataset.absOffset = String(absOffset);
-        button.classList.toggle('is-active', index === activeIndex);
-        button.classList.toggle('is-hidden', absOffset > 2);
-        button.classList.toggle('is-selected-detail', button.dataset.itemId === selectedDetailId);
-        button.setAttribute('aria-pressed', String(index === activeIndex));
+    const cardButtons = [];
+    for (let duplicate = 0; duplicate < 2; duplicate += 1) {
+      fashionData.forEach((item) => {
+        const button = createCarouselCard(item);
+        carouselTrack.appendChild(button);
+        cardButtons.push(button);
       });
     }
 
-    function stopAutoplay() {
-      if (autoplayHandle !== null) {
-        clearInterval(autoplayHandle);
-        autoplayHandle = null;
-      }
-    }
-
-    function startAutoplay() {
-      stopAutoplay();
-
-      autoplayHandle = window.setInterval(() => {
-        advanceCarousel(activeIndex + 1);
-      }, AUTO_ROTATE_MS);
-    }
-
-    function advanceCarousel(index) {
-      activeIndex = normalizeIndex(index);
-      renderCarousel();
+    function renderCarouselSelection() {
+      cardButtons.forEach((button) => {
+        button.classList.toggle('is-selected-detail', button.dataset.itemId === selectedDetailId);
+        button.setAttribute('aria-pressed', String(button.dataset.itemId === selectedDetailId));
+      });
     }
 
     function selectDetail(item) {
@@ -1853,11 +1650,10 @@
       detailEmptyState.setAttribute('hidden', '');
       annotationDetail.removeAttribute('hidden');
       renderDetail(item);
-      renderCarousel();
+      renderCarouselSelection();
     }
 
-    advanceCarousel(0);
-    startAutoplay();
+    renderCarouselSelection();
 
     const initialDetailId = new URLSearchParams(window.location.search).get('detail');
     if (initialDetailId) {
@@ -1877,14 +1673,6 @@
 
       jsonToggle.textContent = isHidden ? 'Hide raw JSON' : 'Show raw JSON';
       jsonToggle.setAttribute('aria-expanded', String(isHidden));
-    });
-
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) {
-        stopAutoplay();
-      } else {
-        startAutoplay();
-      }
     });
   });
 </script>

@@ -1,0 +1,166 @@
+{
+  "ID": "Fashion550k/839/8394652062-silver-asos-coat-navy-asos-jeans-black-asos-bag-black-zara-sandals_400",
+  "caption": {
+    "general": "The outfit consists of a striped top, dark skinny jeans, a long sleeveless coat, open-toe heels, and a small handbag. The look is completed with a black hijab.",
+    "concise": "The outfit features a black and white striped short-sleeve top paired with dark blue skinny jeans. Over the top, there is a long, sleeveless gray coat with a structured design. The footwear consists of black open-toe heels with ankle straps. Accessories include a small black handbag and a black hijab. This ensemble is suitable for casual or semi-formal occasions in transitional seasons."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Casual",
+        "Chic",
+        "Modern"
+      ],
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "occasion": [
+        "Semi-Formal",
+        "Daily",
+        "Social"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Top",
+            "design_terms": [
+              "Striped",
+              "Short-sleeve",
+              "Fitted"
+            ],
+            "color": [
+              "Black",
+              "White"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Striped"
+            ],
+            "style": [
+              "Casual",
+              "Chic"
+            ]
+          },
+          {
+            "term": "Coat",
+            "design_terms": [
+              "Sleeveless",
+              "Long",
+              "Structured"
+            ],
+            "color": [
+              "Gray"
+            ],
+            "material": [
+              "Wool",
+              "Polyester"
+            ],
+            "pattern": [],
+            "style": [
+              "Modern",
+              "Chic"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Pants",
+            "design_terms": [
+              "Skinny-fit"
+            ],
+            "color": [
+              "Dark Blue"
+            ],
+            "material": [
+              "Denim"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual",
+              "Modern"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Heels",
+            "design_terms": [
+              "Open-toe",
+              "Ankle-strap"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [],
+            "style": [
+              "Chic",
+              "Semi-Formal"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Handbag",
+            "design_terms": [
+              "Small",
+              "Structured"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [],
+            "style": [
+              "Chic",
+              "Modern"
+            ]
+          },
+          {
+            "term": "Hijab",
+            "design_terms": [
+              "Plain"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Cotton",
+              "Jersey"
+            ],
+            "pattern": [],
+            "style": [
+              "Modest",
+              "Casual"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "Fashion550k_839_8394652062-silver-asos-coat-navy-asos-jeans-black-asos-bag-black-zara-sandals_400",
+  "source_dataset": "merged_fashion550k"
+}

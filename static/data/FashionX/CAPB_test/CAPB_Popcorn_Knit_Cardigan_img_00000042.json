@@ -1,0 +1,147 @@
+{
+  "ID": "CAPB/Popcorn_Knit_Cardigan/img_00000042",
+  "caption": {
+    "general": "The outfit consists of a striped top paired with black pants and a patterned open-front jacket. The look is completed with dark ankle boots and a statement necklace.",
+    "concise": "The outfit features a striped long-sleeve top with a round neckline, layered under a patterned open-front jacket with a relaxed fit. The lower garment is a pair of slim black pants. Footwear includes dark ankle boots with a pointed toe. Accessories include a bold necklace with a large pendant. The ensemble is suitable for casual or daily wear in transitional seasons."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Casual",
+        "Relaxed",
+        "Contemporary"
+      ],
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "occasion": [
+        "Daily",
+        "Social"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Top",
+            "design_terms": [
+              "Striped",
+              "Long-sleeve",
+              "Round neckline"
+            ],
+            "color": [
+              "Black",
+              "White"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Striped"
+            ],
+            "style": [
+              "Casual"
+            ]
+          },
+          {
+            "term": "Jacket",
+            "design_terms": [
+              "Open-front",
+              "Relaxed fit",
+              "Long-sleeve"
+            ],
+            "color": [
+              "Burgundy",
+              "White"
+            ],
+            "material": [
+              "Lightweight fabric"
+            ],
+            "pattern": [
+              "Abstract"
+            ],
+            "style": [
+              "Casual",
+              "Contemporary"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Pants",
+            "design_terms": [
+              "Slim-fit"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Cotton blend"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Boots",
+            "design_terms": [
+              "Ankle-length",
+              "Pointed toe"
+            ],
+            "color": [
+              "Dark brown"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Necklace",
+            "design_terms": [
+              "Statement",
+              "Pendant"
+            ],
+            "color": [
+              "Gold",
+              "Black"
+            ],
+            "material": [
+              "Metal",
+              "Stone"
+            ],
+            "pattern": [],
+            "style": [
+              "Contemporary"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "CAPB_Popcorn_Knit_Cardigan_img_00000042",
+  "source_dataset": "merged_CAPB_test"
+}

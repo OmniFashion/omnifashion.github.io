@@ -1,0 +1,173 @@
+{
+  "ID": "CAPB/Open-Front_Crepe_Jacket/img_00000042",
+  "caption": {
+    "general": "The outfit consists of a light green blazer, a light blue blouse with a ruffle detail, white pants, black and white heeled sandals, a black handbag with white handles, and a silver bracelet.",
+    "concise": "This ensemble features a tailored light green blazer paired with a light blue blouse that has a ruffle detail at the neckline. The white pants are straight-cut, complementing the pastel tones of the upper garments. Footwear includes black and white heeled sandals with ankle straps. Accessories consist of a black handbag with white handles and a silver bracelet. The outfit is suitable for spring or summer seasons and appropriate for semi-formal or social occasions."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Tailored",
+        "Chic",
+        "Elegant"
+      ],
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "occasion": [
+        "Semi-Formal",
+        "Social"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Blazer",
+            "design_terms": [
+              "Tailored",
+              "Single-breasted"
+            ],
+            "color": [
+              "Light green"
+            ],
+            "material": [
+              "Cotton",
+              "Polyester"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Chic",
+              "Elegant"
+            ]
+          },
+          {
+            "term": "Blouse",
+            "design_terms": [
+              "Ruffle detail",
+              "Button-up"
+            ],
+            "color": [
+              "Light blue"
+            ],
+            "material": [
+              "Silk",
+              "Polyester"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Elegant"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Pants",
+            "design_terms": [
+              "Straight-cut"
+            ],
+            "color": [
+              "White"
+            ],
+            "material": [
+              "Cotton",
+              "Polyester"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Chic"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Sandals",
+            "design_terms": [
+              "Heeled",
+              "Ankle strap"
+            ],
+            "color": [
+              "Black",
+              "White"
+            ],
+            "material": [
+              "Leather",
+              "Synthetic"
+            ],
+            "pattern": [
+              "Color-block"
+            ],
+            "style": [
+              "Elegant",
+              "Chic"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Handbag",
+            "design_terms": [
+              "Structured"
+            ],
+            "color": [
+              "Black",
+              "White"
+            ],
+            "material": [
+              "Leather",
+              "Synthetic"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Chic",
+              "Elegant"
+            ]
+          },
+          {
+            "term": "Bracelet",
+            "design_terms": [
+              "Chain"
+            ],
+            "color": [
+              "Silver"
+            ],
+            "material": [
+              "Metal"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Elegant"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "CAPB_Open-Front_Crepe_Jacket_img_00000042",
+  "source_dataset": "merged_CAPB_test"
+}

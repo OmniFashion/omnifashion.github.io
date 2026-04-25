@@ -1,0 +1,143 @@
+{
+  "ID": "CAPB/Clean_Wash_Denim_Joggers/img_00000043",
+  "caption": {
+    "general": "The outfit consists of a light gray blazer, a white t-shirt, black pants, white sneakers with red and gray accents, and a black backward cap. The look combines casual and semi-formal elements suitable for mild weather.",
+    "concise": "The man is wearing a light gray blazer with a slim fit over a plain white t-shirt. He pairs this with slim black pants and white sneakers featuring red and gray details. A black cap worn backward completes the outfit. The combination suggests a casual yet polished style appropriate for spring or fall seasons and social or daily occasions."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Casual",
+        "Semi-Formal",
+        "Streetwear"
+      ],
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "occasion": [
+        "Social",
+        "Daily"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Jacket",
+            "design_terms": [
+              "Slim-fit"
+            ],
+            "color": [
+              "Light gray"
+            ],
+            "material": [
+              "Cotton blend"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Semi-Formal"
+            ]
+          },
+          {
+            "term": "T-shirt",
+            "design_terms": [],
+            "color": [
+              "White"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Pants",
+            "design_terms": [
+              "Slim-fit"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Denim"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Sneakers",
+            "design_terms": [],
+            "color": [
+              "White",
+              "Red",
+              "Gray"
+            ],
+            "material": [
+              "Leather",
+              "Mesh"
+            ],
+            "pattern": [
+              "Color-block"
+            ],
+            "style": [
+              "Casual",
+              "Streetwear"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Cap",
+            "design_terms": [
+              "Backward"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual",
+              "Streetwear"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "CAPB_Clean_Wash_Denim_Joggers_img_00000043",
+  "source_dataset": "merged_CAPB_test"
+}

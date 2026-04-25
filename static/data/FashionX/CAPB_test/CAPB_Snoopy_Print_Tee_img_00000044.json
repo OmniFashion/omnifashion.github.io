@@ -1,0 +1,134 @@
+{
+  "ID": "CAPB/Snoopy_Print_Tee/img_00000044",
+  "caption": {
+    "general": "The outfit consists of a white graphic t-shirt paired with a black skirt, mismatched knee-high socks, and casual sneakers. The look is accessorized with a black and white patterned scarf and a checked jacket.",
+    "concise": "The clothing items include a white short-sleeve t-shirt featuring a large Snoopy graphic, a plain black skirt, and two different knee-high socks—one with polka dots and the other with stripes. The footwear is a pair of casual sneakers in a light color. Accessories include a black scarf with white patterns and a black and white checked jacket held in hand. The outfit is casual and suitable for daily wear in mild seasons."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Casual",
+        "Streetwear"
+      ],
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "occasion": [
+        "Daily",
+        "Social"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "T-shirt",
+            "design_terms": [
+              "Short-sleeve",
+              "Graphic"
+            ],
+            "color": [
+              "White",
+              "Black"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Graphic"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Skirt",
+            "design_terms": [],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Sneakers",
+            "design_terms": [],
+            "color": [
+              "White",
+              "Black"
+            ],
+            "material": [
+              "Canvas"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Scarf",
+            "design_terms": [],
+            "color": [
+              "Black",
+              "White"
+            ],
+            "material": [
+              "Knit"
+            ],
+            "pattern": [
+              "Patterned"
+            ],
+            "style": [
+              "Casual"
+            ]
+          },
+          {
+            "term": "Jacket",
+            "design_terms": [],
+            "color": [
+              "Black",
+              "White"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Checked"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "CAPB_Snoopy_Print_Tee_img_00000044",
+  "source_dataset": "merged_CAPB_test"
+}

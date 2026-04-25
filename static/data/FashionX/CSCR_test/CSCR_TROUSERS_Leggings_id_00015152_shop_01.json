@@ -1,0 +1,138 @@
+{
+  "ID": "CSCR/TROUSERS/Leggings/id_00015152/shop_01",
+  "caption": {
+    "general": "The outfit features black slim-fit pants paired with silver pointed-toe heels and a light-colored blazer. The look is completed with a striped top underneath the blazer.",
+    "concise": "The clothing items include a pair of black slim-fit pants made from a stretch material, a light mint blazer with a tailored fit, a white and black vertically striped top, and silver metallic pointed-toe heels. The outfit is suitable for spring or fall seasons and fits well for semi-formal or daily occasions. Accessories include a small black handbag with a chain strap."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Tailored",
+        "Slim-fit",
+        "Modern"
+      ],
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "occasion": [
+        "Semi-Formal",
+        "Daily"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Blazer",
+            "design_terms": [
+              "Tailored",
+              "Single-breasted"
+            ],
+            "color": [
+              "Light mint"
+            ],
+            "material": [
+              "Wool blend"
+            ],
+            "pattern": [],
+            "style": [
+              "Tailored",
+              "Modern"
+            ]
+          },
+          {
+            "term": "Top",
+            "design_terms": [],
+            "color": [
+              "White",
+              "Black"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Striped"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Pants",
+            "design_terms": [
+              "Slim-fit",
+              "Stretch"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Stretch fabric"
+            ],
+            "pattern": [],
+            "style": [
+              "Modern",
+              "Tailored"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Heels",
+            "design_terms": [
+              "Pointed-toe"
+            ],
+            "color": [
+              "Silver"
+            ],
+            "material": [
+              "Metallic leather"
+            ],
+            "pattern": [],
+            "style": [
+              "Elegant",
+              "Modern"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Handbag",
+            "design_terms": [
+              "Chain strap"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [],
+            "style": [
+              "Modern"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "CSCR_TROUSERS_Leggings_id_00015152_shop_01",
+  "source_dataset": "merged_CSCR_test"
+}

@@ -1,0 +1,142 @@
+{
+  "ID": "CSCR/CLOTHING/Polo_Shirt/id_00026376/shop_01",
+  "caption": {
+    "general": "The outfit consists of a short-sleeve polo shirt paired with slim-fit pants and casual sneakers. The look is accessorized with a wristwatch and a clutch bag.",
+    "concise": "The clothing includes a white short-sleeve polo shirt with a small chest pocket detail, navy slim-fit pants, and white low-top sneakers. The outfit is accessorized with a wristwatch and a white clutch bag with a strap. The style is casual and suitable for spring or summer seasons, appropriate for daily or social occasions."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Casual",
+        "Slim-fit"
+      ],
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "occasion": [
+        "Daily",
+        "Social"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Shirt",
+            "design_terms": [
+              "Short-sleeve",
+              "Polo",
+              "Chest pocket"
+            ],
+            "color": [
+              "White"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Pants",
+            "design_terms": [
+              "Slim-fit"
+            ],
+            "color": [
+              "Navy"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Sneakers",
+            "design_terms": [
+              "Low-top"
+            ],
+            "color": [
+              "White"
+            ],
+            "material": [
+              "Leather",
+              "Rubber"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Watch",
+            "design_terms": [],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather",
+              "Metal"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual"
+            ]
+          },
+          {
+            "term": "Bag",
+            "design_terms": [
+              "Clutch",
+              "Strap"
+            ],
+            "color": [
+              "White"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "CSCR_CLOTHING_Polo_Shirt_id_00026376_shop_01",
+  "source_dataset": "merged_CSCR_test"
+}

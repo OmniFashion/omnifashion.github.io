@@ -1,0 +1,143 @@
+{
+  "ID": "ICRB/WOMEN/Jackets_Coats/id_00006009/02_1_front",
+  "caption": {
+    "general": "The outfit consists of a light blue denim jacket, a white top, black ripped skinny jeans, a red and black plaid shirt tied around the waist, and black sneakers. The look is casual and suitable for everyday wear.",
+    "concise": "The clothing items include a light blue denim jacket with a classic design, a plain white top underneath, black skinny jeans featuring ripped knees, a red and black plaid shirt tied around the waist as an accessory, and black low-top sneakers. The materials appear to be denim, cotton, and synthetic fabric for the shoes. This outfit is styled for casual daily wear, appropriate for spring or fall seasons."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Casual",
+        "Streetwear"
+      ],
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "occasion": [
+        "Daily",
+        "Social"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Jacket",
+            "design_terms": [
+              "Denim",
+              "Classic"
+            ],
+            "color": [
+              "Light Blue"
+            ],
+            "material": [
+              "Denim"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          },
+          {
+            "term": "Top",
+            "design_terms": [],
+            "color": [
+              "White"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Pants",
+            "design_terms": [
+              "Skinny-fit",
+              "Ripped"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Denim"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Sneakers",
+            "design_terms": [
+              "Low-top"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Synthetic"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Shirt",
+            "design_terms": [
+              "Plaid",
+              "Tied"
+            ],
+            "color": [
+              "Red",
+              "Black"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Plaid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "ICRB_WOMEN_Jackets_Coats_id_00006009_02_1_front",
+  "source_dataset": "merged_ICRB_test"
+}

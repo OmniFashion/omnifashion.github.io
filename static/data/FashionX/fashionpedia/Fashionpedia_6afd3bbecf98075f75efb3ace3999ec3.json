@@ -1,0 +1,167 @@
+{
+  "ID": "Fashionpedia/6afd3bbecf98075f75efb3ace3999ec3",
+  "caption": {
+    "general": "The outfit features a man wearing a patterned tuxedo jacket with black pants and a woman in a strapless black evening gown. Both outfits are formal and suitable for a red carpet event.",
+    "concise": "The man is dressed in a blue patterned tuxedo jacket with black lapels, paired with black formal pants, a white dress shirt, and a black bow tie. His footwear consists of black formal shoes. The woman is wearing a strapless black evening gown with a fitted silhouette and a slight train, accessorized with a silver clutch and a statement necklace. Both outfits are formal, elegant, and appropriate for a formal event such as an awards ceremony."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Formal",
+        "Evening",
+        "Elegant"
+      ],
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "occasion": [
+        "Formal"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Dress",
+            "design_terms": [
+              "Strapless",
+              "Fitted",
+              "Floor-length",
+              "Train"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Silk",
+              "Satin"
+            ],
+            "pattern": [],
+            "style": [
+              "Evening",
+              "Formal"
+            ]
+          }
+        ]
+      },
+      "upper_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Jacket",
+            "design_terms": [
+              "Patterned",
+              "Tuxedo",
+              "Slim-fit"
+            ],
+            "color": [
+              "Blue",
+              "Black"
+            ],
+            "material": [
+              "Velvet",
+              "Silk"
+            ],
+            "pattern": [
+              "Geometric"
+            ],
+            "style": [
+              "Formal",
+              "Evening"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Pants",
+            "design_terms": [
+              "Slim-fit"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Wool",
+              "Polyester"
+            ],
+            "pattern": [],
+            "style": [
+              "Formal"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Shoes",
+            "design_terms": [
+              "Formal",
+              "Leather"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [],
+            "style": [
+              "Formal"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Clutch",
+            "design_terms": [
+              "Handheld"
+            ],
+            "color": [
+              "Silver"
+            ],
+            "material": [
+              "Metallic",
+              "Fabric"
+            ],
+            "pattern": [],
+            "style": [
+              "Evening",
+              "Formal"
+            ]
+          },
+          {
+            "term": "Necklace",
+            "design_terms": [
+              "Statement"
+            ],
+            "color": [
+              "Silver"
+            ],
+            "material": [
+              "Metal",
+              "Gemstone"
+            ],
+            "pattern": [],
+            "style": [
+              "Evening",
+              "Formal"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "Fashionpedia_6afd3bbecf98075f75efb3ace3999ec3",
+  "source_dataset": "merged_fashionpedia"
+}

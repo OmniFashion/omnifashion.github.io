@@ -1,0 +1,149 @@
+{
+  "ID": "ICRB/WOMEN/Jackets_Coats/id_00007881/06_7_additional",
+  "caption": {
+    "general": "The outfit consists of a light pink jacket paired with a black top and a sheer black skirt with floral embroidery, complemented by black ankle boots. The look combines layered textures and contrasting colors.",
+    "concise": "The ensemble features a light pink jacket with a structured design worn over a black top. The lower half includes a sheer black skirt with floral embroidery, layered over black shorts or lining. The footwear consists of black ankle boots with a chunky heel. The outfit is styled for transitional seasons and casual to semi-formal occasions."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Casual",
+        "Edgy",
+        "Layered"
+      ],
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "occasion": [
+        "Daily",
+        "Semi-Formal"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Jacket",
+            "design_terms": [
+              "Structured",
+              "Lightweight"
+            ],
+            "color": [
+              "Light Pink"
+            ],
+            "material": [
+              "Cotton",
+              "Polyester"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual",
+              "Layered"
+            ]
+          },
+          {
+            "term": "Top",
+            "design_terms": [
+              "Basic",
+              "Fitted"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Cotton",
+              "Jersey"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Skirt",
+            "design_terms": [
+              "Sheer",
+              "Embroidered",
+              "Layered"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Tulle",
+              "Lace"
+            ],
+            "pattern": [
+              "Floral"
+            ],
+            "style": [
+              "Edgy",
+              "Layered"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Boots",
+            "design_terms": [
+              "Ankle",
+              "Chunky Heel"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather",
+              "Synthetic"
+            ],
+            "pattern": [],
+            "style": [
+              "Edgy",
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Necklace",
+            "design_terms": [
+              "Statement"
+            ],
+            "color": [
+              "Silver",
+              "Black"
+            ],
+            "material": [
+              "Metal",
+              "Beads"
+            ],
+            "pattern": [],
+            "style": [
+              "Edgy",
+              "Casual"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "ICRB_WOMEN_Jackets_Coats_id_00007881_06_7_additional",
+  "source_dataset": "merged_ICRB_test"
+}

@@ -1,0 +1,147 @@
+{
+  "ID": "CAPB/Faux_Leather_Pencil_Skirt/img_00000001",
+  "caption": {
+    "general": "The outfit consists of a sleeveless crop top paired with a high-waisted pencil skirt and platform open-toe shoes.",
+    "concise": "The clothing includes a sleeveless crop top in a light color made from a smooth fabric, combined with a black high-waisted pencil skirt featuring a fitted silhouette. The footwear consists of black platform open-toe shoes. The outfit is styled for warm seasons and suitable for social or semi-formal occasions."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Chic",
+        "Modern",
+        "Fitted"
+      ],
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "occasion": [
+        "Social",
+        "Semi-Formal"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Top",
+            "design_terms": [
+              "Sleeveless",
+              "Crop"
+            ],
+            "color": [
+              "White"
+            ],
+            "material": [
+              "Cotton",
+              "Stretch fabric"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual",
+              "Modern"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Skirt",
+            "design_terms": [
+              "High-waisted",
+              "Pencil-fit"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather",
+              "Faux leather"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Chic",
+              "Modern"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Shoes",
+            "design_terms": [
+              "Platform",
+              "Open-toe"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather",
+              "Synthetic"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Chic",
+              "Modern"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Bracelet",
+            "design_terms": [],
+            "color": [
+              "Silver"
+            ],
+            "material": [
+              "Metal"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Minimalist"
+            ]
+          },
+          {
+            "term": "Bracelet",
+            "design_terms": [],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Minimalist"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "CAPB_Faux_Leather_Pencil_Skirt_img_00000001",
+  "source_dataset": "merged_CAPB_test"
+}

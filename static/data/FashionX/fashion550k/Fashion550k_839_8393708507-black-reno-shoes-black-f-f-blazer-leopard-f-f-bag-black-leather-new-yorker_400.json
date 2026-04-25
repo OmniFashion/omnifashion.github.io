@@ -1,0 +1,149 @@
+{
+  "ID": "Fashion550k/839/8393708507-black-reno-shoes-black-f-f-blazer-leopard-f-f-bag-black-leather-new-yorker_400",
+  "caption": {
+    "general": "The outfit consists of a black blazer, a graphic white t-shirt, black leather shorts, black strappy high-heeled sandals, and a patterned handbag. The look combines casual and edgy elements suitable for warm weather.",
+    "concise": "The outfit features a black blazer with a tailored fit worn over a white graphic t-shirt. The lower garment is a pair of black leather shorts with a slim fit. Footwear includes black strappy high-heeled sandals. Accessories include a small handbag with a snake print pattern. This ensemble is styled for a casual or social occasion during spring or summer."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Casual",
+        "Edgy",
+        "Chic"
+      ],
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "occasion": [
+        "Social",
+        "Daily"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Blazer",
+            "design_terms": [
+              "Tailored",
+              "Fitted"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Unknown"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Chic",
+              "Casual"
+            ]
+          },
+          {
+            "term": "T-shirt",
+            "design_terms": [
+              "Graphic"
+            ],
+            "color": [
+              "White",
+              "Black"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Graphic"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Shorts",
+            "design_terms": [
+              "Slim-fit"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Edgy",
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Sandals",
+            "design_terms": [
+              "Strappy",
+              "High-heeled"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Chic",
+              "Edgy"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Handbag",
+            "design_terms": [
+              "Small"
+            ],
+            "color": [
+              "Beige",
+              "Black"
+            ],
+            "material": [
+              "Unknown"
+            ],
+            "pattern": [
+              "Snake print"
+            ],
+            "style": [
+              "Chic"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "Fashion550k_839_8393708507-black-reno-shoes-black-f-f-blazer-leopard-f-f-bag-black-leather-new-yorker_400",
+  "source_dataset": "merged_fashion550k"
+}

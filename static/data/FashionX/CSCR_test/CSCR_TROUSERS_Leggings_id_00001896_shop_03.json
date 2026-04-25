@@ -1,0 +1,151 @@
+{
+  "ID": "CSCR/TROUSERS/Leggings/id_00001896/shop_03",
+  "caption": {
+    "general": "The outfit consists of a white long-sleeve top paired with metallic gold leggings and black-and-white sneakers. The look is accessorized with bracelets and a black handbag.",
+    "concise": "The clothing items include a white long-sleeve top made of a lightweight fabric, metallic gold leggings with a shiny finish, and black-and-white athletic sneakers. Accessories include multiple bracelets and a black handbag. The outfit is casual and suitable for daily wear, combining sporty and modern elements."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Casual",
+        "Sporty",
+        "Modern"
+      ],
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "occasion": [
+        "Daily",
+        "Travel"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Top",
+            "design_terms": [
+              "Long-sleeve",
+              "Fitted"
+            ],
+            "color": [
+              "White"
+            ],
+            "material": [
+              "Cotton",
+              "Jersey"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Leggings",
+            "design_terms": [
+              "Fitted",
+              "Shiny"
+            ],
+            "color": [
+              "Metallic gold"
+            ],
+            "material": [
+              "Spandex",
+              "Polyester"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Sporty",
+              "Modern"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Sneakers",
+            "design_terms": [
+              "Athletic"
+            ],
+            "color": [
+              "Black",
+              "White"
+            ],
+            "material": [
+              "Mesh",
+              "Rubber"
+            ],
+            "pattern": [
+              "Color-block"
+            ],
+            "style": [
+              "Sporty",
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Bracelets",
+            "design_terms": [],
+            "color": [
+              "Silver",
+              "Black"
+            ],
+            "material": [
+              "Metal",
+              "Leather"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          },
+          {
+            "term": "Handbag",
+            "design_terms": [
+              "Structured"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual",
+              "Modern"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "CSCR_TROUSERS_Leggings_id_00001896_shop_03",
+  "source_dataset": "merged_CSCR_test"
+}

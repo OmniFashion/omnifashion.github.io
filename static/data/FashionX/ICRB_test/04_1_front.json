@@ -1,0 +1,148 @@
+{
+  "ID": "ICRB/WOMEN/Dresses/id_00002598/04_1_front",
+  "caption": {
+    "general": "The outfit consists of a black mini dress paired with a navy blue faux fur jacket, black sheer tights, and black ankle boots. The look is accessorized with a pendant necklace.",
+    "concise": "The ensemble features a black mini dress with a fitted silhouette, complemented by a navy blue faux fur jacket with a plush texture. Sheer black tights add a layer of coverage, while black ankle boots provide a sleek footwear option. A pendant necklace serves as a minimal accessory. This outfit is suitable for cooler seasons and semi-formal or social occasions."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Chic",
+        "Contemporary",
+        "Elegant"
+      ],
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "occasion": [
+        "Semi-Formal",
+        "Social"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Dress",
+            "design_terms": [
+              "Fitted",
+              "Mini"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Unknown"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Chic",
+              "Contemporary"
+            ]
+          }
+        ]
+      },
+      "upper_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Jacket",
+            "design_terms": [
+              "Faux Fur",
+              "Plush"
+            ],
+            "color": [
+              "Navy Blue"
+            ],
+            "material": [
+              "Faux Fur"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Elegant",
+              "Contemporary"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Tights",
+            "design_terms": [
+              "Sheer"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Nylon"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Chic"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Boots",
+            "design_terms": [
+              "Ankle"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Suede"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Chic",
+              "Contemporary"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Necklace",
+            "design_terms": [
+              "Pendant"
+            ],
+            "color": [
+              "Silver"
+            ],
+            "material": [
+              "Metal"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Minimalist"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "04_1_front",
+  "source_dataset": "merged_ICRB_test"
+}

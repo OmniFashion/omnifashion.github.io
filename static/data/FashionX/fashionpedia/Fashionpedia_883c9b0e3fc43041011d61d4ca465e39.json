@@ -1,0 +1,147 @@
+{
+  "ID": "Fashionpedia/883c9b0e3fc43041011d61d4ca465e39",
+  "caption": {
+    "general": "The outfit consists of a loose gray top, a white button-up shirt worn open, black scalloped leather shorts, and black platform heels. The look is styled for casual or semi-formal occasions in warmer seasons.",
+    "concise": "The model wears a gray henley-style top with a white open button-up shirt as an overlay. Black leather shorts with a scalloped hem provide a distinctive design detail. Black platform heels with ankle straps complete the footwear. This combination features casual and edgy elements suitable for spring or summer social occasions."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Casual",
+        "Edgy",
+        "Streetwear"
+      ],
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "occasion": [
+        "Social",
+        "Semi-Formal"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Top",
+            "design_terms": [
+              "Loose-fit",
+              "Henley"
+            ],
+            "color": [
+              "Gray"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          },
+          {
+            "term": "Shirt",
+            "design_terms": [
+              "Button-up",
+              "Open"
+            ],
+            "color": [
+              "White"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Striped"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Shorts",
+            "design_terms": [
+              "Scalloped hem"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Edgy",
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Heels",
+            "design_terms": [
+              "Platform",
+              "Ankle strap"
+            ],
+            "color": [
+              "Black",
+              "Beige"
+            ],
+            "material": [
+              "Leather",
+              "Wood"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Edgy",
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Earrings",
+            "design_terms": [],
+            "color": [
+              "Gold"
+            ],
+            "material": [
+              "Metal"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "Fashionpedia_883c9b0e3fc43041011d61d4ca465e39",
+  "source_dataset": "merged_fashionpedia"
+}

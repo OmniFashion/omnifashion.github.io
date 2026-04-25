@@ -1,0 +1,153 @@
+{
+  "ID": "Fashion550k/839/8395136965-white-jovonna-shirt-pink-valentino-bag-white-dinh-van-paris-necklace_400",
+  "caption": {
+    "general": "The outfit consists of a light-colored long-sleeve blouse paired with a dark, knee-length tulle skirt and pink shoes. The look is accessorized with sunglasses and a clutch bag.",
+    "concise": "The clothing includes a long-sleeve blouse in a light color with a classic collar, made from a lightweight fabric. The skirt is knee-length, dark-colored, and features a layered tulle design. Footwear consists of pink closed-toe shoes with a slight heel. Accessories include round sunglasses and a beige clutch bag. The outfit is suitable for spring or summer seasons and casual to semi-formal social occasions."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Classic",
+        "Feminine",
+        "Elegant"
+      ],
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "occasion": [
+        "Semi-Formal",
+        "Social"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Blouse",
+            "design_terms": [
+              "Long-sleeve",
+              "Collared",
+              "Lightweight"
+            ],
+            "color": [
+              "Light beige"
+            ],
+            "material": [
+              "Cotton",
+              "Chiffon"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Classic",
+              "Elegant"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Skirt",
+            "design_terms": [
+              "Knee-length",
+              "Layered",
+              "Tulle"
+            ],
+            "color": [
+              "Dark blue"
+            ],
+            "material": [
+              "Tulle",
+              "Lining fabric"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Feminine",
+              "Elegant"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Shoes",
+            "design_terms": [
+              "Closed-toe",
+              "Heeled"
+            ],
+            "color": [
+              "Pink"
+            ],
+            "material": [
+              "Leather",
+              "Synthetic"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Classic",
+              "Feminine"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Sunglasses",
+            "design_terms": [
+              "Round frame"
+            ],
+            "color": [
+              "Pink"
+            ],
+            "material": [
+              "Plastic"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Classic"
+            ]
+          },
+          {
+            "term": "Clutch",
+            "design_terms": [
+              "Handheld"
+            ],
+            "color": [
+              "Beige"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Elegant"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "Fashion550k_839_8395136965-white-jovonna-shirt-pink-valentino-bag-white-dinh-van-paris-necklace_400",
+  "source_dataset": "merged_fashion550k"
+}

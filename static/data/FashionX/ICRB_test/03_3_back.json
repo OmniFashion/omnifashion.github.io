@@ -1,0 +1,150 @@
+{
+  "ID": "ICRB/WOMEN/Sweaters/id_00007056/03_3_back",
+  "caption": {
+    "general": "The outfit consists of a long, beige knitted cardigan layered over a white lace dress paired with beige pants and brown ankle boots, accessorized with a brown wide-brimmed hat. The ensemble features a mix of textures and neutral tones.",
+    "concise": "The clothing includes a long, beige knitted cardigan with an asymmetrical hem, worn over a white lace dress that extends below the cardigan. The lower part of the outfit features beige pants and brown ankle boots. Accessories include a brown wide-brimmed hat. The combination of knitwear, lace, and leather materials suggests a layered look suitable for cooler seasons and casual or social occasions."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Bohemian",
+        "Casual",
+        "Layered"
+      ],
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "occasion": [
+        "Social",
+        "Daily"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Dress",
+            "design_terms": [
+              "Lace",
+              "Long"
+            ],
+            "color": [
+              "White"
+            ],
+            "material": [
+              "Lace"
+            ],
+            "pattern": [
+              "Floral"
+            ],
+            "style": [
+              "Bohemian"
+            ]
+          }
+        ]
+      },
+      "upper_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Cardigan",
+            "design_terms": [
+              "Knitted",
+              "Asymmetrical",
+              "Long"
+            ],
+            "color": [
+              "Beige"
+            ],
+            "material": [
+              "Wool",
+              "Acrylic"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual",
+              "Bohemian"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Pants",
+            "design_terms": [
+              "Straight-leg"
+            ],
+            "color": [
+              "Beige"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Boots",
+            "design_terms": [
+              "Ankle-length"
+            ],
+            "color": [
+              "Brown"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Hat",
+            "design_terms": [
+              "Wide-brimmed"
+            ],
+            "color": [
+              "Brown"
+            ],
+            "material": [
+              "Felt"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Bohemian",
+              "Casual"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "03_3_back",
+  "source_dataset": "merged_ICRB_test"
+}

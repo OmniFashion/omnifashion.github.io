@@ -1,0 +1,150 @@
+{
+  "ID": "Fashion550k/839/8398111001-black-micah-gianneli-micah-gianneli-top_400",
+  "caption": {
+    "general": "The outfit consists of a black blazer, white top, black leather pants, and nude high-heeled shoes, accessorized with black sunglasses. The look is sleek and modern, suitable for transitional seasons.",
+    "concise": "The ensemble features a black blazer with a tailored fit worn over a plain white top. The lower garment is a pair of black leather pants with a slim fit. Footwear includes nude pointed-toe high heels. Accessories consist of black sunglasses. This outfit is styled for a contemporary, urban look appropriate for spring or fall and suitable for semi-formal or social occasions."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Modern",
+        "Tailored",
+        "Urban"
+      ],
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "occasion": [
+        "Semi-Formal",
+        "Social"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Blazer",
+            "design_terms": [
+              "Tailored",
+              "Fitted"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Wool",
+              "Polyester"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Modern",
+              "Tailored"
+            ]
+          },
+          {
+            "term": "Top",
+            "design_terms": [
+              "Basic"
+            ],
+            "color": [
+              "White"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Casual",
+              "Basic"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Pants",
+            "design_terms": [
+              "Slim-fit"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Modern",
+              "Urban"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Shoes",
+            "design_terms": [
+              "Pointed-toe",
+              "High-heeled"
+            ],
+            "color": [
+              "Nude"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Elegant",
+              "Modern"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Sunglasses",
+            "design_terms": [
+              "Oversized"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Plastic"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Modern",
+              "Chic"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "Fashion550k_839_8398111001-black-micah-gianneli-micah-gianneli-top_400",
+  "source_dataset": "merged_fashion550k"
+}

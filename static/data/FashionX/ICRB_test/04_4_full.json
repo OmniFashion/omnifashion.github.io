@@ -1,0 +1,141 @@
+{
+  "ID": "ICRB/WOMEN/Dresses/id_00001701/04_4_full",
+  "caption": {
+    "general": "The outfit features a sleeveless pink dress paired with black ankle boots and sheer black tights, complemented by a black jacket draped over the shoulder and a silver bracelet.",
+    "concise": "The outfit consists of a sleeveless pink dress with a fitted bodice and flared skirt, suitable for spring or summer. Sheer black tights and black ankle boots add a layered look appropriate for transitional weather. A black jacket is casually draped over the shoulder, adding an edgy element. A silver bracelet serves as a minimal accessory, completing the ensemble for a semi-formal or social occasion."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Casual",
+        "Chic",
+        "Edgy"
+      ],
+      "season": [
+        "Spring",
+        "Summer",
+        "Fall"
+      ],
+      "occasion": [
+        "Semi-Formal",
+        "Social"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Dress",
+            "design_terms": [
+              "Sleeveless",
+              "Fitted",
+              "Flared skirt",
+              "V-neck"
+            ],
+            "color": [
+              "Pink"
+            ],
+            "material": [
+              "Lightweight fabric"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual",
+              "Chic"
+            ]
+          }
+        ]
+      },
+      "upper_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Jacket",
+            "design_terms": [
+              "Draped",
+              "Biker"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [],
+            "style": [
+              "Edgy",
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Tights",
+            "design_terms": [
+              "Sheer"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Nylon"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual",
+              "Chic"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Boots",
+            "design_terms": [
+              "Ankle-length",
+              "Heeled"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Suede"
+            ],
+            "pattern": [],
+            "style": [
+              "Chic",
+              "Edgy"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Bracelet",
+            "design_terms": [],
+            "color": [
+              "Silver"
+            ],
+            "material": [
+              "Metal"
+            ],
+            "pattern": [],
+            "style": [
+              "Minimalist"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "04_4_full",
+  "source_dataset": "merged_ICRB_test"
+}

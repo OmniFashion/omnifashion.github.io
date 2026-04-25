@@ -1,0 +1,147 @@
+{
+  "ID": "CSCR/TROUSERS/Leggings/id_00006074/shop_01",
+  "caption": {
+    "general": "The outfit consists of a striped long-sleeve shirt paired with high-waisted black pants and black ankle boots. The look is accessorized with a black handbag and a wristwatch.",
+    "concise": "The clothing items include a long-sleeve shirt with vertical black and white stripes, high-waisted slim-fit black pants, and black ankle boots. The shirt features a button-up design, while the pants have a fitted silhouette with decorative buttons at the waist. Accessories include a structured black handbag and a gold wristwatch. This outfit is suitable for daily or semi-formal occasions during transitional seasons."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Casual",
+        "Chic",
+        "Smart Casual"
+      ],
+      "season": [
+        "Spring",
+        "Autumn"
+      ],
+      "occasion": [
+        "Daily",
+        "Semi-Formal"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Shirt",
+            "design_terms": [
+              "Long-sleeve",
+              "Button-up",
+              "Striped"
+            ],
+            "color": [
+              "White",
+              "Black"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Striped"
+            ],
+            "style": [
+              "Casual",
+              "Chic"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Pants",
+            "design_terms": [
+              "High-waisted",
+              "Slim-fit",
+              "Buttoned"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Denim",
+              "Cotton"
+            ],
+            "pattern": [],
+            "style": [
+              "Chic",
+              "Smart Casual"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Boots",
+            "design_terms": [
+              "Ankle-length",
+              "Slip-on"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [],
+            "style": [
+              "Chic",
+              "Smart Casual"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Bag",
+            "design_terms": [
+              "Structured",
+              "Handheld"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [],
+            "style": [
+              "Chic",
+              "Smart Casual"
+            ]
+          },
+          {
+            "term": "Watch",
+            "design_terms": [
+              "Wristwatch"
+            ],
+            "color": [
+              "Gold"
+            ],
+            "material": [
+              "Metal"
+            ],
+            "pattern": [],
+            "style": [
+              "Chic",
+              "Smart Casual"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "CSCR_TROUSERS_Leggings_id_00006074_shop_01",
+  "source_dataset": "merged_CSCR_test"
+}

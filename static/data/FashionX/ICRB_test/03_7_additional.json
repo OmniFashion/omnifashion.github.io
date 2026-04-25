@@ -1,0 +1,158 @@
+{
+  "ID": "ICRB/WOMEN/Dresses/id_00001989/03_7_additional",
+  "caption": {
+    "general": "The outfit consists of a white dress paired with a black jacket, black tights, black shoes, and a black beret. The ensemble is accessorized with a small black handbag.",
+    "concise": "The clothing items include a white dress with a textured pattern, a black tailored jacket with a belt, black opaque tights, black leather shoes with a chunky sole, and a black beret. The outfit is complemented by a small black handbag. The style is a mix of casual and chic, suitable for cooler seasons like fall or early spring, and appropriate for social or daily occasions."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Casual",
+        "Chic"
+      ],
+      "season": [
+        "Fall",
+        "Spring"
+      ],
+      "occasion": [
+        "Social",
+        "Daily"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Dress",
+            "design_terms": [
+              "Textured",
+              "Knee-length"
+            ],
+            "color": [
+              "White"
+            ],
+            "material": [
+              "Cotton",
+              "Lace"
+            ],
+            "pattern": [
+              "Textured"
+            ],
+            "style": [
+              "Casual",
+              "Chic"
+            ]
+          }
+        ]
+      },
+      "upper_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Jacket",
+            "design_terms": [
+              "Tailored",
+              "Belted"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual",
+              "Chic"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Tights",
+            "design_terms": [
+              "Opaque"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Nylon"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Shoes",
+            "design_terms": [
+              "Chunky sole",
+              "Leather"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual",
+              "Chic"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Hat",
+            "design_terms": [],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Wool"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual",
+              "Chic"
+            ]
+          },
+          {
+            "term": "Handbag",
+            "design_terms": [
+              "Small",
+              "Structured"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual",
+              "Chic"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "03_7_additional",
+  "source_dataset": "merged_ICRB_test"
+}

@@ -1,0 +1,149 @@
+{
+  "ID": "CAPB/Windowpane-Patterned_Open-Front_Cardigan/img_00000005",
+  "caption": {
+    "general": "The outfit consists of a black crop top, white leggings, a long checkered cardigan, black heeled sandals, and sunglasses. The look combines casual and chic elements suitable for mild weather.",
+    "concise": "The outfit features a black crop top with a sleeveless design paired with white slim-fit leggings. Over the top, there is a long, open-front cardigan with a black and white checkered pattern. The footwear includes black heeled sandals with ankle straps. Accessories include dark sunglasses, completing a casual yet stylish ensemble appropriate for spring or fall seasons and daily or social occasions."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Casual",
+        "Chic",
+        "Minimalist"
+      ],
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "occasion": [
+        "Daily",
+        "Social"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Top",
+            "design_terms": [
+              "Crop",
+              "Sleeveless",
+              "Fitted"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Cotton",
+              "Stretch fabric"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual",
+              "Minimalist"
+            ]
+          },
+          {
+            "term": "Cardigan",
+            "design_terms": [
+              "Long",
+              "Open-front"
+            ],
+            "color": [
+              "White",
+              "Black"
+            ],
+            "material": [
+              "Knit"
+            ],
+            "pattern": [
+              "Checkered"
+            ],
+            "style": [
+              "Casual",
+              "Chic"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Leggings",
+            "design_terms": [
+              "Slim-fit",
+              "High-waisted"
+            ],
+            "color": [
+              "White"
+            ],
+            "material": [
+              "Stretch fabric",
+              "Cotton blend"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual",
+              "Minimalist"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Sandals",
+            "design_terms": [
+              "Heeled",
+              "Ankle strap",
+              "Open-toe"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather",
+              "Synthetic"
+            ],
+            "pattern": [],
+            "style": [
+              "Chic",
+              "Casual"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 1,
+        "items": [
+          {
+            "term": "Sunglasses",
+            "design_terms": [
+              "Oversized"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Plastic"
+            ],
+            "pattern": [],
+            "style": [
+              "Casual",
+              "Chic"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "CAPB_Windowpane-Patterned_Open-Front_Cardigan_img_00000005",
+  "source_dataset": "merged_CAPB_test"
+}

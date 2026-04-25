@@ -1,0 +1,233 @@
+{
+  "ID": "Fashionpedia/d0b86514251a73670ce42ac2605cb54e",
+  "caption": {
+    "general": "The image shows two men wearing tailored suits with dress shoes, suitable for formal occasions. One man wears a burgundy suit with a hat, while the other wears a black suit with a decorative brooch.",
+    "concise": "The first man is dressed in a burgundy suit consisting of a blazer and matching trousers, paired with a dark shirt and a brown wide-brimmed hat. The second man wears a black suit with a white shirt, accessorized with a brooch on the blazer lapel. Both men wear black dress shoes. The outfits are formal, tailored, and appropriate for an indoor formal event or award ceremony."
+  },
+  "attributes": {
+    "overall": {
+      "style": [
+        "Tailored",
+        "Formal"
+      ],
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "occasion": [
+        "Formal"
+      ]
+    },
+    "parts": {
+      "one_piece": {
+        "count": 0,
+        "items": []
+      },
+      "upper_garment": {
+        "count": 4,
+        "items": [
+          {
+            "term": "Blazer",
+            "design_terms": [
+              "Tailored",
+              "Single-breasted"
+            ],
+            "color": [
+              "Burgundy"
+            ],
+            "material": [
+              "Wool"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Formal"
+            ]
+          },
+          {
+            "term": "Blazer",
+            "design_terms": [
+              "Tailored",
+              "Single-breasted"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Wool"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Formal"
+            ]
+          },
+          {
+            "term": "Shirt",
+            "design_terms": [
+              "Button-up"
+            ],
+            "color": [
+              "Dark Blue"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Formal"
+            ]
+          },
+          {
+            "term": "Shirt",
+            "design_terms": [
+              "Button-up"
+            ],
+            "color": [
+              "White"
+            ],
+            "material": [
+              "Cotton"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Formal"
+            ]
+          }
+        ]
+      },
+      "lower_garment": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Trousers",
+            "design_terms": [
+              "Tailored",
+              "Slim-fit"
+            ],
+            "color": [
+              "Burgundy"
+            ],
+            "material": [
+              "Wool"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Formal"
+            ]
+          },
+          {
+            "term": "Trousers",
+            "design_terms": [
+              "Tailored",
+              "Slim-fit"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Wool"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Formal"
+            ]
+          }
+        ]
+      },
+      "footwear": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Shoes",
+            "design_terms": [
+              "Dress"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Formal"
+            ]
+          },
+          {
+            "term": "Shoes",
+            "design_terms": [
+              "Dress"
+            ],
+            "color": [
+              "Black"
+            ],
+            "material": [
+              "Leather"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Formal"
+            ]
+          }
+        ]
+      },
+      "accessories": {
+        "count": 2,
+        "items": [
+          {
+            "term": "Hat",
+            "design_terms": [
+              "Wide-brimmed"
+            ],
+            "color": [
+              "Brown"
+            ],
+            "material": [
+              "Felt"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Formal"
+            ]
+          },
+          {
+            "term": "Brooch",
+            "design_terms": [],
+            "color": [
+              "Silver"
+            ],
+            "material": [
+              "Metal"
+            ],
+            "pattern": [
+              "Solid"
+            ],
+            "style": [
+              "Formal"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "save_id": "Fashionpedia_d0b86514251a73670ce42ac2605cb54e",
+  "source_dataset": "merged_fashionpedia"
+}
